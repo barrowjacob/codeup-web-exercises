@@ -4,22 +4,156 @@
     <meta charset="UTF-8">
     <title>Github</title>
     <style>
+        body {
+            background-color: white;
+        }
         header {
             background: black;
             color: lightgrey;
+            margin: -8px -8px 20px -8px;
+            padding: 10px 10px 10px 10px;
         }
-        a:visited {
+        header a {
+            margin: 0px 25px 0px 25px;
+            text-decoration: none;
+        }
+        header a:visited {
             color: lightgrey;
         }
+        header #span_nav {
+            margin-bottom: 50px;
+        }
+        #codeup_txt {
+            font-size: 2em;
+        }
+        main {
+            margin: 10px 0px 10px 0px;
+        }
+        #main_nav a:visited {
+            color: dimgrey;
+        }
+        #main_nav a {
+            color: dimgrey;
+            text-decoration: none;
+            margin: 0px 10px 0px 10px;
+            background-color: lightgrey;
+        }
+        #main_nav {
+            margin: 15px 25px 35px 25px;
+        }
+        #dev_table {
+            background-color: white;
+            width: 98%;
+            border: 1px solid dimgrey;
+            border-collapse: border;
+        }
+        #th1 {
+            background-color: lightgrey;
+            height: 50px;
+            text-align: left;
+            margin: -10px -10px -10px -10px;
+        }
+        td img {
+            margin-left: 10px;
+            margin-right: -10px;
+            width: 50px;
+        }
+        body #table_bg {
+            height: 250px;
+            width: 100%;
+            background-color: white;
+        }
+        hr {
+            background-color: white;
+        }
+        .names {
+            width: 750px;
+
+        }
+        .last_col {
+            width: 100px;
+        }
+        #b_left {
+            display: inline-block;
+        }
+        #b_right {
+            display: inline-block;
+            margin-left: 300px;
+        }
+        #bg {
+            height: 120px;
+            width: 100%;
+            position: absolute;
+            background-color: lightgrey;
+            left: -5px;
+            top: 30px;
+            z-index: -10;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <img src="img/github_icon.png" height="38px" width="40px" alt="github icon">
-        <a href="">Pull Requests</a><a href="">Issues</a><a href="">Marketplace</a><a href="">Explore</a>
+        <img src="img/github_icon.png" height="30px" width="30px" alt="github icon">
+        <span id="span_nav"><a href="">Pull Requests</a>
+        <a href="">Issues</a>
+        <a href="">Marketplace</a>
+        <a href="">Explore</a></span>
     </header>
     <main>
-        <img src=img/codeup_icon.jpg" height="50px" width="50px">
+        <img src="img/codeup_icon.jpg" height="30px" width="30px" alt="codeup icon">
+        <span id="codeup_txt">Codeup</span>
+        <div id="main_nav">
+                <a href="">Repositories</a>
+                <a href="">People</a>
+                <a href="">Teams</a>
+                <a href="">Projects</a>
+                <a href="">Settings</a>
+        </div>
+        <div id="table_bg">
+            <div id="main_table">
+                <table id="dev_table">
+                    <tr id>
+                        <th colspan="4" id="th1">Codeup's dev team</th>
+                    </tr>
+                    <tr>
+                        <td><img src="img/48x48_placeholder.svg" alt="Placeholder picture"></td>
+                        <td class="names"><a href="">Kent Beck</a><br>KentBeck</td>
+                        <td class="last_col">Member 1 team</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/48x48_placeholder.svg" alt="Placeholder picture"></td>
+                        <td class="names"><a href="">Codeup Instruction Staff</a><br>CodeupInstructors</td>
+                        <td class="last_col">Member 1 team</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/48x48_placeholder.svg" alt="Placeholder picture"></td>
+                        <td class="names"><a href="">Martin Fowler</a></td>
+                        <td class="last_col">Member 0 teams</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <span>©2018 GitHub, Inc.</span>
+            <div id="b_left">
+                <a href="">Terms</a>
+                <a href="">Privacy</a>
+                <a href="">Security</a>
+                <a href="">Status</a>
+                <a href="">Help</a>
+            </div>
+            <div id="b_right">
+                <a href="">Contact GitHub</a>
+                <a href="">API</a>
+                <a href="">Training</a>
+                <a href="">Shop</a>
+                <a href="">Blog</a>
+                <a href="">About</a>
+            </div>
+        </footer>
     </main>
+    <div id="bg"></div>
 </body>
 </html>
