@@ -31,6 +31,15 @@
             padding-left: 12.5%;
             padding-right: 12.5%;
         }
+        .full_indent {
+            margin-left: 5%;
+        }
+        .half_indent {
+            margin-left: 2.5%;
+        }
+        .new_section {
+            margin-top: 10%;
+        }
     </style>
 </head>
 <body>
@@ -57,8 +66,32 @@
     <hr>
     <main>
         <label for="pty_addy">Property Address:</label>
-        <input id="pty_addy" name="pty_addy" type="text" size="157%">
-
+        <input id="pty_addy" name="pty_addy" type="text" size="156%">
+        <br>
+        <label for="move_in" class="full_indent">Anticipated Move-in Date:</label>
+        <input id="move_in" name="move_in" type="text" size="31%">
+        <label for="monthly_rent">Monthly Rent: $</label>
+        <input id="monthly_rent" name="monthly_rent" type="text" size="31%">
+        <label for="sec_dep">Security Deposit: $</label>
+        <input id="sec_dep" name="sec_dep" type="text" size="31%">
+        <span class="new_section">Applicant was referred to Landlord by:</span>
+        <br>
+        <label for="real_estate">
+            <input id="real_estate" name="real_estate" type="checkbox" class="half_indent">Real Estate Agent
+        </label>
+        <input id="real_name" name="real_name" type="text" size="85%">
+        <label for="real_name">(name)</label>
+        <input id="real_ph" name="real_ph" type="text" size="44.5%">
+        <label for="real_ph">(phone)</label>
+        <input id="newsppr" name="referred" type="checkbox" class="half_indent">
+        <label for="newsppr">Newspaper</label>
+        <input id="sign" name="referred" type="checkbox">
+        <label for="sign">Sign</label>
+        <input id="internet" name="referred" type="checkbox">
+        <label for="internet">Internet</label>
+        <input id="other" name="referred" type="checkbox">
+        <label for="other">Other</label>
+        <input type="text" size="123%">
     </main>
 </body>
 </html>
