@@ -37,8 +37,13 @@
         .half_indent {
             margin-left: 2.5%;
         }
-        .new_section {
-            margin-top: 10%;
+        .margin_top {
+            margin-top: 1%;
+        }
+        #if_yes {
+            font-weight: bold;
+            font-style: italic;
+            margin-left: 5%;
         }
     </style>
 </head>
@@ -65,33 +70,58 @@
     </header>
     <hr>
     <main>
-        <label for="pty_addy">Property Address:</label>
-        <input id="pty_addy" name="pty_addy" type="text" size="156%">
-        <br>
-        <label for="move_in" class="full_indent">Anticipated Move-in Date:</label>
-        <input id="move_in" name="move_in" type="text" size="31%">
-        <label for="monthly_rent">Monthly Rent: $</label>
-        <input id="monthly_rent" name="monthly_rent" type="text" size="31%">
-        <label for="sec_dep">Security Deposit: $</label>
-        <input id="sec_dep" name="sec_dep" type="text" size="31%">
-        <span class="new_section">Applicant was referred to Landlord by:</span>
-        <br>
-        <label for="real_estate">
-            <input id="real_estate" name="real_estate" type="checkbox" class="half_indent">Real Estate Agent
-        </label>
-        <input id="real_name" name="real_name" type="text" size="85%">
-        <label for="real_name">(name)</label>
-        <input id="real_ph" name="real_ph" type="text" size="44.5%">
-        <label for="real_ph">(phone)</label>
-        <input id="newsppr" name="referred" type="checkbox" class="half_indent">
-        <label for="newsppr">Newspaper</label>
-        <input id="sign" name="referred" type="checkbox">
-        <label for="sign">Sign</label>
-        <input id="internet" name="referred" type="checkbox">
-        <label for="internet">Internet</label>
-        <input id="other" name="referred" type="checkbox">
-        <label for="other">Other</label>
-        <input type="text" size="123%">
+        <div id="div1">
+            <label for="pty_addy">Property Address:</label>
+            <input id="pty_addy" name="pty_addy" type="text" size="156%">
+            <br>
+            <label for="move_in" class="full_indent">Anticipated Move-in Date:</label>
+            <input id="move_in" name="move_in" type="text" size="31%">
+            <label for="monthly_rent">Monthly Rent: $</label>
+            <input id="monthly_rent" name="monthly_rent" type="text" size="31%">
+            <label for="sec_dep">Security Deposit: $</label>
+            <input id="sec_dep" name="sec_dep" type="text" size="31%">
+        </div>
+        <div id="div2" class="margin_top">
+            <span class="new_section">Applicant was referred to Landlord by:</span>
+            <br>
+            <label for="real_estate">
+                <input id="real_estate" name="real_estate" type="checkbox" class="half_indent">Real Estate Agent
+            </label>
+            <label for="real_name">
+                <input id="real_name" name="real_name" type="text" size="85%">(name)
+            </label>
+            <label for="real_ph">
+                <input id="real_ph" name="real_ph" type="text" size="44.5%">(phone)
+            </label>
+            <label for="newsppr">
+                <input id="newsppr" name="referred" type="checkbox" class="half_indent">Newspaper
+            </label>
+            <label for="sign">
+                <input id="sign" name="referred" type="checkbox">Sign
+            </label>
+            <label for="internet">
+                <input id="internet" name="referred" type="checkbox">Internet
+            </label>
+            <label for="other">
+                <input id="other" name="referred" type="checkbox">Other
+            </label>
+            <input type="text" size="126%">
+        </div>
+        <div id="div3" class="margin_top">
+            <label for="app_name">Applicant's name (first, middle, last)</label>
+            <input id="app_name" name="app_name" type="text" size="136%">
+            <span class="full_indent">Is there a co-applicant?</span>
+            <label for="co_ap">
+                <input id="co_ap" name="co_ap" type="checkbox">yes
+            </label>
+            <label for="no_ap">
+                <input id="no_ap" name="co_ap" type="checkbox">no
+            </label>
+            <span id="if_yes">If yes, co-applicant must submit a separate application.</span>
+            <br>
+            <label for="prev_name" class="full_indent">Applicant's former last name (maiden or married)</label>
+            <input id="prev_name" name="prev_name" type="text" size="122%">
+        </div>
     </main>
 </body>
 </html>
