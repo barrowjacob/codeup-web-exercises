@@ -2,9 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Lease Application</title>
+    <style>
+        #rcvd_div {
+            text-align: right;
+            padding-right: 12.5%;
+        }
+        #heading {
+            text-align: center;
+        }
+        #title {
+            font-size: 2em;
+            font-weight: lighter;
+        }
+        #bold_title {
+            font-size: 2em;
+            font-weight: bolder;
+        }
+        #bold_subtitle {
+            font-weight: bold;
+        }
+        hr {
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 75%;
+        }
+        main {
+            padding-left: 12.5%;
+            padding-right: 12.5%;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <header>
+        <div id="rcvd_div">
+            <label for="rcvd_date">Received on</label>
+            <input id="rcvd_date" name="rcvd_date" type="date">
+            <label for="rcvd_time">(date) at </label>
+            <input id="rcvd_time" name="rcvd_time" type="time"> (time)
+        </div>
+        <div id="heading">
+            <img src="img/blurry.jpeg" height="50px" width="50px" alt="img">
+            <br>
+            <span id="title">Texas Association of Realtors</span>
+            <br>
+            <span id="bold_title">RESIDENTIAL LEASE APPLICATION</span>
+            <br>
+            <span>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS® IS NOT AUTHORIZED</span>
+            <br>
+            <span id="bold_subtitle">©Texas Association of REALTORS®, Inc 2007</span><br>
+            <h3>Each applicant and co-applicant 18 years or older must submit a separate application.</h3>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <label for="pty_addy">Property Address:</label>
+        <input id="pty_addy" name="pty_addy" type="text" size="157%">
+
+    </main>
 </body>
 </html>
