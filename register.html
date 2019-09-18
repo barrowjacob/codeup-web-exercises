@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Registration</title>
 </head>
 <body>
-$END$
+    <form method="POST" action="https://www.elformo.com/forms/2114e780-5487-4d9b-965d-2f0c9e09a708">
+        <div id="user_div">
+            <label for="username">Username:</label>
+            <input id="username" name="username" type="text" placeholder="Username" required autofocus>
+        </div>
+        <div id="email_div">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" placeholder="Email" required>
+        </div>
+        <div id="pw_div">
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" placeholder="At Least 6 Characters Long" minlength=6 size=25px required>
+        </div>
+        <div id="conf_pw_div">
+            <label for="conf_password">Confirm Password:</label>
+            <input id="conf_password" name="password" type="password" placeholder="Passwords Must Match" minlength=6 size=25px required>
+        </div>
+        <label for="sign_up">Sign me up to the newsletter:</label>
+        <input id="sign_up" type="checkbox" value="yes" checked>
+        <br>
+        <button type="submit">Create New Account</button>
+    </form>
 </body>
 </html>
