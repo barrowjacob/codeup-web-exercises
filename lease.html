@@ -45,88 +45,143 @@
             font-style: italic;
             margin-left: 5%;
         }
+        .double_indent {
+            margin-left: 12%;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div id="rcvd_div">
-            <label for="rcvd_date">Received on</label>
-            <input id="rcvd_date" name="rcvd_date" type="date">
-            <label for="rcvd_time">(date) at </label>
-            <input id="rcvd_time" name="rcvd_time" type="time"> (time)
-        </div>
-        <div id="heading">
-            <img src="img/blurry.jpeg" height="50px" width="50px" alt="img">
-            <br>
-            <span id="title">Texas Association of Realtors</span>
-            <br>
-            <span id="bold_title">RESIDENTIAL LEASE APPLICATION</span>
-            <br>
-            <span>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS® IS NOT AUTHORIZED</span>
-            <br>
-            <span id="bold_subtitle">©Texas Association of REALTORS®, Inc 2007</span><br>
-            <h3>Each applicant and co-applicant 18 years or older must submit a separate application.</h3>
-        </div>
-    </header>
-    <hr>
-    <main>
-        <div id="div1">
-            <label for="pty_addy">Property Address:</label>
-            <input id="pty_addy" name="pty_addy" type="text" size="156%">
-            <br>
-            <label for="move_in" class="full_indent">Anticipated Move-in Date:</label>
-            <input id="move_in" name="move_in" type="text" size="31%">
-            <label for="monthly_rent">Monthly Rent: $</label>
-            <input id="monthly_rent" name="monthly_rent" type="text" size="31%">
-            <label for="sec_dep">Security Deposit: $</label>
-            <input id="sec_dep" name="sec_dep" type="text" size="31%">
-        </div>
-        <div id="div2" class="margin_top">
-            <span class="new_section">Applicant was referred to Landlord by:</span>
-            <br>
-            <label for="real_estate">
-                <input id="real_estate" name="real_estate" type="checkbox" class="half_indent">Real Estate Agent
-            </label>
-            <label for="real_name">
-                <input id="real_name" name="real_name" type="text" size="85%">(name)
-            </label>
-            <label for="real_ph">
-                <input id="real_ph" name="real_ph" type="text" size="44.5%">(phone)
-            </label>
-            <label for="newsppr">
-                <input id="newsppr" name="referred" type="checkbox" class="half_indent">Newspaper
-            </label>
-            <label for="sign">
-                <input id="sign" name="referred" type="checkbox">Sign
-            </label>
-            <label for="internet">
-                <input id="internet" name="referred" type="checkbox">Internet
-            </label>
-            <label for="other">
-                <input id="other" name="referred" type="checkbox">Other
-            </label>
-            <input type="text" size="126%">
-        </div>
-        <div id="div3" class="margin_top">
-            <label for="app_name">Applicant's name (first, middle, last)</label>
-            <input id="app_name" name="app_name" type="text" size="136%">
-            <span class="full_indent">Is there a co-applicant?</span>
-            <label for="co_ap">
-                <input id="co_ap" name="co_ap" type="checkbox">yes
-            </label>
-            <label for="no_ap">
-                <input id="no_ap" name="co_ap" type="checkbox">no
-            </label>
-            <span id="if_yes">If yes, co-applicant must submit a separate application.</span>
-            <br>
-            <label for="prev_name" class="full_indent">Applicant's former last name (maiden or married)</label>
-            <input id="prev_name" name="prev_name" type="text" size="113%">
-            <br>
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" size="65%">
-            <label for="home_ph">Home Phone</label>
-            <input id="home_ph" name="home_ph" type="text" size="86%">
-        </div>
-    </main>
+    <div id="all">
+        <header>
+            <div id="rcvd_div">
+                <label for="rcvd_date">Received on</label>
+                <input id="rcvd_date" name="rcvd_date" type="date">
+                <label for="rcvd_time">(date) at </label>
+                <input id="rcvd_time" name="rcvd_time" type="time"> (time)
+            </div>
+            <div id="heading">
+                <img src="img/blurry.jpeg" height="50px" width="50px" alt="img">
+                <br>
+                <span id="title">Texas Association of Realtors</span>
+                <br>
+                <span id="bold_title">RESIDENTIAL LEASE APPLICATION</span>
+                <br>
+                <span>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS® IS NOT AUTHORIZED</span>
+                <br>
+                <span id="bold_subtitle">©Texas Association of REALTORS®, Inc 2007</span><br>
+                <h3>Each applicant and co-applicant 18 years or older must submit a separate application.</h3>
+            </div>
+        </header>
+        <hr>
+        <main>
+            <div id="div1">
+                <label for="pty_addy">Property Address:</label>
+                <input id="pty_addy" name="pty_addy" type="text" size="156%">
+                <br>
+                <label for="move_in" class="full_indent">Anticipated Move-in Date:</label>
+                <input id="move_in" name="move_in" type="text" size="31%">
+                <label for="monthly_rent">Monthly Rent: $</label>
+                <input id="monthly_rent" name="monthly_rent" type="text" size="31%">
+                <label for="sec_dep">Security Deposit: $</label>
+                <input id="sec_dep" name="sec_dep" type="text" size="31%">
+            </div>
+            <div id="div2" class="margin_top">
+                <span class="new_section">Applicant was referred to Landlord by:</span>
+                <br>
+                <label for="real_estate">
+                    <input id="real_estate" name="real_estate" type="checkbox" class="half_indent">Real Estate Agent
+                </label>
+                <label for="real_name">
+                    <input id="real_name" name="real_name" type="text" size="85%">(name)
+                </label>
+                <label for="real_ph">
+                    <input id="real_ph" name="real_ph" type="text" size="46%">(phone)
+                </label>
+                <label for="newsppr">
+                    <input id="newsppr" name="referred" type="checkbox" class="half_indent">Newspaper
+                </label>
+                <label for="sign">
+                    <input id="sign" name="referred" type="checkbox">Sign
+                </label>
+                <label for="internet">
+                    <input id="internet" name="referred" type="checkbox">Internet
+                </label>
+                <label for="other">
+                    <input id="other" name="referred" type="checkbox">Other
+                </label>
+                <input type="text" size="126%">
+            </div>
+            <div id="div3" class="margin_top">
+                <label for="app_name">Applicant's name (first, middle, last)</label>
+                <input id="app_name" name="app_name" type="text" size="136%">
+                <span class="full_indent">Is there a co-applicant?</span>
+                <label for="co_ap">
+                    <input id="co_ap" name="co_ap" type="checkbox">yes
+                </label>
+                <label for="no_ap">
+                    <input id="no_ap" name="co_ap" type="checkbox">no
+                </label>
+                <span id="if_yes">If yes, co-applicant must submit a separate application.</span>
+                <br>
+                <label for="prev_name" class="full_indent">Applicant's former last name (maiden or married)</label>
+                <input id="prev_name" name="prev_name" type="text" size="113%">
+                <br>
+            </div>
+            <div id="div4">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" size="65%">
+                <label for="home_ph">&nbsp;Home Phone</label>
+                <input id="home_ph" name="home_ph" type="text" size="85%">
+                <br>
+                <label for="work_ph">Work Phone</label>
+                <input id="work_ph" name="work_ph" type="text" size="59%">
+                <label for="mobile">Mobile/Pager</label>
+                <input id="mobile" name="mobile" type="text" size="85%">
+                <label for="ssn">Soc. Sec. No.</label>
+                <input id="ssn" name="ssn" type="text" size="35%">
+                <label for="dl_no">Driver License No.</label>
+                <input id="dl_no" name="dl_no" type="text" size="65%">
+                <label for="state"> in </label>
+                <input id="state" name="state" type="text" size="24%">
+                <span>(state)</span>
+                <br>
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" type="text" size="32%">
+                <label for="height">Height</label>
+                <input id="height" name="height" type="text" size="28%">
+                <label for="weight">Weight</label>
+                <input id="weight" name="weight" type="text" size="28%">
+                <label for="eye">Eye Color</label>
+                <input id="eye" name="eye" type="text" size="38%">
+                <label for="hair">Hair Color</label>
+                <input id="hair" name="hair" type="text" size="30%">
+                <label for="marital">Marital Status</label>
+                <input id="marital" name="marital" type="text" size="50%">
+                <label for="citizenship">Citizenship</label>
+                <input id="citizenship" name="citizenship" type="text" size="39%">
+                <span> (country)</span>
+            </div>
+            <div id="div5">
+                <label for="em_contact">Emergency Contact: Name:&nbsp;</label>
+                <input id="em_contact" name="em_contact" type="text" size="145%">
+                <label for="em_addy" class="double_indent">Address:</label>
+                <input id="em_addy" name="em_addy" type="text" size="144%">
+                <label for="em_ph" class="double_indent">Phone:</label>
+                <input id="em_ph" name="em_ph" type="text" size="75%">
+                <label for="em_email">E-mail:</label>
+                <input id="em_email" name="em_email" type="text" size="60%">
+            </div>
+            <div id="div6" class="margin_top">
+                <span>Name all other persons who will occupy the Property:</span>
+                <br>
+                <label for="name1">Name:</label>
+                <input id="name1" name="name1" type="text" size="85%">
+                <label for="rel1">Relationship:</label>
+                <input id="rel1" name="rel1" type="text" size="42%">
+                <label for="age1">Age:</label>
+                <input id="age1" name="age1" type="text" size="15%">
+            </div>
+        </main>
+    </div>
 </body>
 </html>
