@@ -48,6 +48,13 @@
         .double_indent {
             margin-left: 12%;
         }
+        .flex-container {
+            display: flex;
+            align-items: stretch;
+        }
+        #div3 {
+            margin-top: 1%;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +67,7 @@
                 <input id="rcvd_time" name="rcvd_time" type="time"> (time)
             </div>
             <div id="heading">
-                <img src="img/blurry.jpeg" height="50px" width="50px" alt="img">
+                <img src="img/lease_icon.png" height="50px" width="70px" alt="img">
                 <br>
                 <span id="title">Texas Association of Realtors</span>
                 <br>
@@ -74,16 +81,17 @@
         </header>
         <hr>
         <main>
-            <div id="div1">
+            <div id="div1" class="flex-container">
                 <label for="pty_addy">Property Address:</label>
-                <input id="pty_addy" name="pty_addy" type="text" size="156%">
-                <br>
+                <input id="pty_addy" name="pty_addy" type="text" style="flex-grow: 1">
+            </div>
+            <div class="flex-container">
                 <label for="move_in" class="full_indent">Anticipated Move-in Date:</label>
-                <input id="move_in" name="move_in" type="text" size="31%">
+                <input id="move_in" name="move_in" type="text" style="flex-grow: 1">
                 <label for="monthly_rent">Monthly Rent: $</label>
-                <input id="monthly_rent" name="monthly_rent" type="text" size="31%">
+                <input id="monthly_rent" name="monthly_rent" type="text" style="flex-grow: 1">
                 <label for="sec_dep">Security Deposit: $</label>
-                <input id="sec_dep" name="sec_dep" type="text" size="31%">
+                <input id="sec_dep" name="sec_dep" type="text" style="flex-grow: 1">
             </div>
             <div id="div2" class="margin_top">
                 <span class="new_section">Applicant was referred to Landlord by:</span>
@@ -111,9 +119,11 @@
                 </label>
                 <input type="text" size="126%">
             </div>
-            <div id="div3" class="margin_top">
+            <div id="div3" class="flex-container">
                 <label for="app_name">Applicant's name (first, middle, last)</label>
-                <input id="app_name" name="app_name" type="text" size="136%">
+                <input id="app_name" name="app_name" type="text" style="flex-grow: 1">
+            </div>
+            <div>
                 <span class="full_indent">Is there a co-applicant?</span>
                 <label for="co_ap">
                     <input id="co_ap" name="co_ap" type="checkbox">yes
@@ -122,64 +132,77 @@
                     <input id="no_ap" name="co_ap" type="checkbox">no
                 </label>
                 <span id="if_yes">If yes, co-applicant must submit a separate application.</span>
-                <br>
+            </div>
+            <div class="flex-container">
                 <label for="prev_name" class="full_indent">Applicant's former last name (maiden or married)</label>
-                <input id="prev_name" name="prev_name" type="text" size="113%">
+                <input id="prev_name" name="prev_name" type="text" style="flex-grow: 1">
+            </div>
+            <div id="div4" class="flex-container">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" style="flex-grow: 1">
+                <label for="home_ph">&nbsp;Home Phone</label>
+                <input id="home_ph" name="home_ph" type="text" style="flex-grow: 2">
                 <br>
             </div>
-            <div id="div4">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" size="65%">
-                <label for="home_ph">&nbsp;Home Phone</label>
-                <input id="home_ph" name="home_ph" type="text" size="85%">
-                <br>
+            <div class="flex-container">
                 <label for="work_ph">Work Phone</label>
-                <input id="work_ph" name="work_ph" type="text" size="59%">
+                <input id="work_ph" name="work_ph" type="text" style="flex-grow: 1">
                 <label for="mobile">Mobile/Pager</label>
-                <input id="mobile" name="mobile" type="text" size="85%">
+                <input id="mobile" name="mobile" type="text" style="flex-grow: 1">
+            </div>
+            <div class="flex-container">
                 <label for="ssn">Soc. Sec. No.</label>
-                <input id="ssn" name="ssn" type="text" size="35%">
+                <input id="ssn" name="ssn" type="text" style="flex-grow: 1">
                 <label for="dl_no">Driver License No.</label>
-                <input id="dl_no" name="dl_no" type="text" size="65%">
+                <input id="dl_no" name="dl_no" type="text" style="flex-grow: 1">
                 <label for="state"> in </label>
-                <input id="state" name="state" type="text" size="24%">
+                <input id="state" name="state" type="text" style="flex-grow: 1">
                 <span>(state)</span>
                 <br>
+            </div>
+            <div class="flex-container">
                 <label for="dob">Date of Birth</label>
-                <input id="dob" name="dob" type="text" size="32%">
+                <input id="dob" name="dob" type="text" style="flex-grow: 1">
                 <label for="height">Height</label>
-                <input id="height" name="height" type="text" size="28%">
+                <input id="height" name="height" type="text" style="flex-grow: 1">
                 <label for="weight">Weight</label>
-                <input id="weight" name="weight" type="text" size="28%">
+                <input id="weight" name="weight" type="text" style="flex-grow: 1">
                 <label for="eye">Eye Color</label>
-                <input id="eye" name="eye" type="text" size="38%">
+                <input id="eye" name="eye" type="text" style="flex-grow: 1">
+            </div>
+            <div class="flex-container">
                 <label for="hair">Hair Color</label>
-                <input id="hair" name="hair" type="text" size="30%">
+                <input id="hair" name="hair" type="text" style="flex-grow: 1">
                 <label for="marital">Marital Status</label>
-                <input id="marital" name="marital" type="text" size="50%">
+                <input id="marital" name="marital" type="text" style="flex-grow: 3">
                 <label for="citizenship">Citizenship</label>
-                <input id="citizenship" name="citizenship" type="text" size="39%">
+                <input id="citizenship" name="citizenship" type="text" style="flex-grow: 3">
                 <span> (country)</span>
             </div>
-            <div id="div5">
+            <div id="div5" class="flex-container">
                 <label for="em_contact">Emergency Contact: Name:&nbsp;</label>
-                <input id="em_contact" name="em_contact" type="text" size="145%">
-                <label for="em_addy" class="double_indent">Address:</label>
-                <input id="em_addy" name="em_addy" type="text" size="144%">
-                <label for="em_ph" class="double_indent">Phone:</label>
-                <input id="em_ph" name="em_ph" type="text" size="75%">
-                <label for="em_email">E-mail:</label>
-                <input id="em_email" name="em_email" type="text" size="60%">
+                <input id="em_contact" name="em_contact" type="text" style="flex-grow: 1">
             </div>
-            <div id="div6" class="margin_top">
+            <div class="flex-container">
+                <label for="em_addy" class="double_indent">Address:</label>
+                <input id="em_addy" name="em_addy" type="text" style="flex-grow: 1">
+            </div>
+            <div class="flex-container">
+                <label for="em_ph" class="double_indent">Phone:</label>
+                <input id="em_ph" name="em_ph" type="text" style="flex-grow: 1">
+                <label for="em_email">E-mail:</label>
+                <input id="em_email" name="em_email" type="text" style="flex-grow: 3">
+            </div>
+            <div class="margin_top">
                 <span>Name all other persons who will occupy the Property:</span>
-                <br>
+            </div>
+            <div id="occupants" class="flex-container">
                 <label for="name1">Name:</label>
-                <input id="name1" name="name1" type="text" size="85%">
+                <input id="name1" name="name1" type="text" style="flex-grow: 5">
                 <label for="rel1">Relationship:</label>
-                <input id="rel1" name="rel1" type="text" size="42%">
+                <input id="rel1" name="rel1" type="text" style="flex-grow: 3">
                 <label for="age1">Age:</label>
-                <input id="age1" name="age1" type="text" size="15%">
+                <input id="age1" name="age1" type="text" style="flex-grow: 1">
             </div>
         </main>
     </div>
