@@ -14,9 +14,11 @@
         console.log(sum(2,2));
 
         function triArea(a, b, c) {
-            return a * b * c;
+            var half = (a + b + c)/2;
+            var area = (Math.sqrt((half * (half - a) * (half - b) * (half - c))));
+            return area;
         }
-        console.log(triArea(5, 6, 7));
+        console.log(triArea(5,6,7));
 
     </script>
 </body>
