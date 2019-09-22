@@ -117,7 +117,6 @@ table {
     table-layout: fixed;
     position: relative;
     top: 15px;
-    z-index: -1;
 }
 td {
     width: 150px;
@@ -141,4 +140,18 @@ tr .td1 {
 #fine_box {
     text-align: center;
 }
+main {
+    position: relative;
+}
 
+#bur1 {
+    position: absolute;
+    bottom: 250px;
+    left: 700px;
+    box-shadow: 400px 0 500px 300px #ff0,
+                 -400px 0 500px 300px #00aaff,
+                0 200px 500px 300px #f00,
+                0 -200px 500px 300px #0f0,
+                0 0 10px 5px #483d8b inset;
+    z-index: -1;
+}
