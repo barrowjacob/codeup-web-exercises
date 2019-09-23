@@ -84,11 +84,11 @@ li.nav-item {
 .profile-details {
     float: left;
     width: calc(25% - 1em);
-    margin: 0 .5em 0 .5em;
+    margin: 0 .5em 0 -1em;
 }
 .timeline {
     float: left;
-    width: calc(50% - 1em);
+    width: 52%;
     margin: 0 .5em 0 .5em;
 }
 .who-to-follow {
