@@ -80,18 +80,18 @@ this
 }
 #bur1 {
     position: absolute;
+    z-index: -1;
     bottom: 250px;
     left: 700px;
-    z-index: -1;
-    animation: spin 20s infinite linear;
+    animation: spin 10s infinite linear;
     box-shadow: 400px 0 500px 300px #ff0,
                 -400px 0 500px 300px #00aaff,
                 0 200px 500px 300px #f00,
                 0 -200px 500px 300px #0f0;
-
 }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg);
     transform:rotate(360deg); } }
+
 /*
 classes
 after
