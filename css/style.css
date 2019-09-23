@@ -29,6 +29,7 @@ this
     font-size: 2em;
     padding: 15% 10% 15% 10%;
     box-shadow: 0 0 5px 2px;
+    text-shadow: 1px 1px 2px white;
 }
 #three_cont {
     display: flex;
@@ -82,10 +83,9 @@ this
     bottom: 250px;
     left: 700px;
     box-shadow: 400px 0 500px 300px #ff0,
-    -400px 0 500px 300px #00aaff,
-    0 200px 500px 300px #f00,
-    0 -200px 500px 300px #0f0,
-    0 0 10px 5px #483d8b inset;
+                -400px 0 500px 300px #00aaff,
+                0 200px 500px 300px #f00,
+                0 -200px 500px 300px #0f0;
     z-index: -1;
 }
 
