@@ -1,8 +1,8 @@
 :root {
-    --blueish: rgba(78, 73, 157);
-    --greenish: rgba(49, 133, 90);
-    --yellowish: rgba(148, 129, 56);
-    --reddish: rgba(130, 16, 46);
+    --blueish: rgb(78, 73, 157);
+    --greenish: rgb(49, 133, 90);
+    --yellowish: rgb(148, 129, 56);
+    --reddish: rgb(130, 16, 46);
 }
 body, html {
     height: 100%;
@@ -11,7 +11,7 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-div {
+.message {
     border-radius: 10px;
     border: 1px solid lightgrey;
     margin: 10px;
@@ -21,19 +21,19 @@ div {
 }
 .message-info {
     margin-top: 20px;
-    background-color: rgba(205, 222, 252);
+    background-color: rgb(205, 222, 252);
     color: var(--blueish)
 }
 .message-success {
-    background-color: rgba(204, 243, 220);
+    background-color: rgb(204, 243, 220);
     color: var(--greenish);
 }
 .message-warning {
-    background-color: rgba(252, 251, 206);
+    background-color: rgb(252, 251, 206);
     color: var(--yellowish);
 }
 .message-error {
-    background-color: rgba(252, 211, 215);
+    background-color: rgb(252, 211, 215);
     color: var(--reddish);
 }
 
