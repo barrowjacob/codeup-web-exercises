@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+div {
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    margin: 10px;
+    width: 90%;
+    font-weight: bold;
+    padding: 10px;
+}
+.message-info {
+    margin-top: 20px;
+    background-color: rgba(205, 222, 252);
+    color: rgba(78, 73, 157);
+}
+.message-success {
+    background-color: rgba(204, 243, 220);
+    color: rgba(49, 133, 90);
+}
+.message-warning {
+    background-color: rgba(252, 251, 206);
+    color: rgba(148, 129, 56);
+}
+.message-error {
+    background-color: rgba(252, 211, 215);
+    color: rgba(130, 16, 46);
+}
+
