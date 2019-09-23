@@ -1,3 +1,9 @@
+:root {
+    --blueish: rgba(78, 73, 157);
+    --greenish: rgba(49, 133, 90);
+    --yellowish: rgba(148, 129, 56);
+    --reddish: rgba(130, 16, 46);
+}
 body, html {
     height: 100%;
     width: 100%;
@@ -16,18 +22,18 @@ div {
 .message-info {
     margin-top: 20px;
     background-color: rgba(205, 222, 252);
-    color: rgba(78, 73, 157);
+    color: var(--blueish)
 }
 .message-success {
     background-color: rgba(204, 243, 220);
-    color: rgba(49, 133, 90);
+    color: var(--greenish);
 }
 .message-warning {
     background-color: rgba(252, 251, 206);
-    color: rgba(148, 129, 56);
+    color: var(--yellowish);
 }
 .message-error {
     background-color: rgba(252, 211, 215);
-    color: rgba(130, 16, 46);
+    color: var(--reddish);
 }
 
