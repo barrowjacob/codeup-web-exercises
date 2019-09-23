@@ -125,6 +125,7 @@ nav li {
     padding: 1%;
     border-right: 1px solid #000;
     transition: 0.5s;
+    list-style: none;
 }
 nav li:hover {
     background-color: #133159;
