@@ -66,9 +66,13 @@ a {
 }
 
 .container {
+    display: flex;
+    align-items: center;
+
     /* This is a flex container */
 }
 
 .card {
+    margin: 15px;
     /* This is a flex item */
 }
