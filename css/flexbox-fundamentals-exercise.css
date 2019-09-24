@@ -44,7 +44,6 @@ section {
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
