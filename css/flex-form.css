@@ -61,6 +61,5 @@ justify-content: center;
     flex-grow: .1;
 }
 .destination {
-    display: flex;
     flex-grow: 1;
 }
