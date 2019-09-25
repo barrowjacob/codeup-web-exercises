@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+main {
+    display: inline-grid;
+    width: 500px;
+    height: 500px;
+    background-color: lightgrey;
+    grid-template-areas:
+            "blue blue red red red red red red"
+            "blue blue red red red red red red"
+            "yellow yellow red red red red red red"
+            "yellow yellow white white white white white white"
+            "yellow yellow white white white white white white"
+            "white white white white yellow yellow yellow yellow"
+            "white white white white yellow yellow yellow yellow"
+            "red red blue blue blue blue blue blue";
+}
+
+.blue {
+    grid-area: blue;
+    background-color: blue;
+}
+.red {
+    grid-area: red;
+    background-color: red;
+}
+.white {
+    grid-area: white;
+    background-color: white;
+}
+.yellow {
+    grid-area: yellow;
+    background-color: yellow;
+}
