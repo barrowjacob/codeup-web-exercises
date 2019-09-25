@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: lightgrey;
+
+}
+li {
+    list-style-type: none;
+    line-height: 51px;
+
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo {
+    font-size: 3em;
+    padding: .2em 0;
+    position: absolute;
+}
+a {
+    text-decoration: none;
+    padding: 0 15px;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: blue;
+    color: white;
+}
+#search_bar:hover #search {
+    animation: spin .5s infinite linear;
+}
+
+#push {
+    margin-right: auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
