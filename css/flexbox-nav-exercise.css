@@ -8,11 +8,8 @@ body {
 }
 
 nav {
-    width: 100%;
     background-color: lightgrey;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+
 }
 li {
     list-style-type: none;
@@ -27,7 +24,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
 }
 #logo {
     font-size: 3em;
@@ -40,8 +36,8 @@ a {
     display: inline-block;
     color: black;
     font-weight: bold;
-
 }
+
 a:hover {
     background-color: blue;
     color: white;
