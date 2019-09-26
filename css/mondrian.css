@@ -97,13 +97,12 @@ div div {
                 300px -300px 300px 150px yellow,
                 -300px 300px 300px 150px green;
     animation: spin 10s infinite linear;
+    background-color: black;
     z-index: -1;
 }
 @keyframes spin {
     from {
         transform: rotate(360deg);
     }
-}   to {
-        transform: rotate(360deg);
-  }
+}
 
