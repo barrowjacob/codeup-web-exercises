@@ -130,6 +130,7 @@ body {
     box-shadow: 0 0 4px 4px blue;
     z-index: 0;
     position: absolute;
+    border-radius: 10px;
 }
 #work1 {
     height: 5px;
@@ -139,7 +140,7 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
-
+    border-radius: 25px;
 }
 #work2 {
     height: 5px;
@@ -149,6 +150,7 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
+    border-radius: 25px;
 }
 #work3 {
     height: 5px;
@@ -158,6 +160,7 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
+    border-radius: 25px;
 }
 #work4 {
     height: 5px;
@@ -167,6 +170,7 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
+    border-radius: 25px;
 }
 #work5 {
     height: 5px;
@@ -176,7 +180,7 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
-
+    border-radius: 25px;
 }
 #work6 {
     height: 5px;
@@ -186,6 +190,7 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
+    border-radius: 25px;
 }
 #work7 {
     height: 5px;
@@ -195,6 +200,7 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
+    border-radius: 25px;
 }
 #work8 {
     height: 5px;
@@ -204,6 +210,87 @@ body {
     position: absolute;
     bottom: 500px;
     left: -2px;
+    border-radius: 25px;
+}
+#work9 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
+}
+#work10 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
+}
+#work11 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
+}
+#work12 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
+}
+#work13 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
+}
+#work14 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
+}
+#work15 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
+}
+#work16 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+    border-radius: 25px;
 }
 /* #seven #eight #ten #eleven #thirteen #fourteen are in the ad-space grid,
  nested in the body grid */
@@ -342,8 +429,8 @@ h1 {
         transform: translateX(-500px);
         box-shadow: 0 0 4px 4px red;
         background: red;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
 
     }
 }
@@ -364,8 +451,8 @@ h1 {
         transform: translateX(500px);
         box-shadow: 0 0 4px 4px green;
         background: green;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
 
     }
 }
@@ -386,8 +473,8 @@ h1 {
         transform: translateY(-500px);
         box-shadow: 0 0 4px 4px yellow;
         background: yellow;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
     }
 }
 #span1:hover ~ #laser_div #work4 {
@@ -407,8 +494,8 @@ h1 {
         transform: translateY(500px);
         background: blueviolet;
         box-shadow: 0 0 4px 4px blueviolet;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
 
     }
 }
@@ -429,8 +516,8 @@ h1 {
         transform: translateX(-500px) translateY(-500px);
         box-shadow: 0 0 4px 4px darkgreen;
         background: darkgreen;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
     }
 }
 #span1:hover ~ #laser_div #work6 {
@@ -450,8 +537,8 @@ h1 {
         transform: translateX(500px)translateY(-500px);
         box-shadow: 0 0 4px 4px cornflowerblue;
         background: cornflowerblue;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
 
     }
 }
@@ -473,8 +560,8 @@ h1 {
         transform: translateY(500px) translateX(-500px);
         box-shadow: 0 0 4px 4px goldenrod;
         background: goldenrod;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
 
     }
 }
@@ -495,8 +582,183 @@ h1 {
         transform: translateY(500px) translateX(500px);
         box-shadow: 0 0 4px 4px blueviolet;
         background: blueviolet;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+#span1:hover ~ #laser_div #work9 {
+    animation: left2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes left2 {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px red;
+        background: red;
+    }
+    100% {
+        transform: translateX(-500px) translateY(-250px);
+        box-shadow: 0 0 4px 4px red;
+        background: red;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+#span1:hover ~ #laser_div #work10 {
+    animation: right2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes right2 {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px green;
+        background-color: green;
+    }
+    100% {
+        transform: translateX(500px) translateY(250px);
+        box-shadow: 0 0 4px 4px green;
+        background: green;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+#span1:hover ~ #laser_div #work11 {
+    animation: up2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes up2 {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px yellow;
+        background: yellow;
+    }
+    100% {
+        transform: translateY(-500px) translateX(250px);
+        box-shadow: 0 0 4px 4px yellow;
+        background: yellow;
+        width: 50px;
+        height: 50px;
+    }
+}
+#span1:hover ~ #laser_div #work12 {
+    animation: down2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes down2 {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px blueviolet;
+        background: blueviolet;
+    }
+    100% {
+        transform: translateY(500px) translateX(-250px);
+        background: blueviolet;
+        box-shadow: 0 0 4px 4px blueviolet;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+#span1:hover ~ #laser_div #work13 {
+    animation: left-up2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes left-up2 {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px darkgreen;
+        background: darkgreen;
+    }
+    100% {
+        transform: translateX(-700px) translateY(-300px);
+        box-shadow: 0 0 4px 4px darkgreen;
+        background: darkgreen;
+        width: 50px;
+        height: 50px;
+    }
+}
+#span1:hover ~ #laser_div #work14 {
+    animation: right-up2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes right-up2 {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px cornflowerblue;
+        background: cornflowerblue;
+    }
+    100% {
+        transform: translateX(700px)translateY(-300px);
+        box-shadow: 0 0 4px 4px cornflowerblue;
+        background: cornflowerblue;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+#span1:hover ~ #laser_div #work15 {
+    animation: left-down2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes left-down2 {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px goldenrod;
+        background: goldenrod;
+    ;
+    }
+    100% {
+        transform: translateY(700px) translateX(-300px);
+        box-shadow: 0 0 4px 4px goldenrod;
+        background: goldenrod;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+#span1:hover ~ #laser_div #work16 {
+    animation: right-down2 500ms ease-out;
+    animation-delay: 2.4s;
+}
+
+@keyframes right-down2 {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        box-shadow: 0 0 4px 4px blueviolet;
+        background: blueviolet;
+    }
+    100% {
+        transform: translateY(700px) translateX(300px);
+        box-shadow: 0 0 4px 4px blueviolet;
+        background: blueviolet;
+        width: 50px;
+        height: 50px;
 
     }
 }
