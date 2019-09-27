@@ -115,6 +115,9 @@ body {
     z-index: 1;
 
 }
+
+/* fireworks code */
+
 #laser_div {
     height: 1px;
     width: 1px;
@@ -399,6 +402,8 @@ h1 {
     color: teal;
     padding: 10px 0 10px 0;
 }
+
+/* begin keyframes animation */
 
 #span1:hover ~ #laser_div #fire{
     animation: fire 2.4s;
