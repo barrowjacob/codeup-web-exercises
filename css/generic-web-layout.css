@@ -304,6 +304,7 @@ body {
     grid-area: four;
     grid-template-rows: 1.2fr 1.9fr repeat(2, 1fr 2fr);
     grid-row-gap: 10px;
+    margin: 0 25px 0 15px;
     grid-template-areas:
             "seven"
             "eight"
