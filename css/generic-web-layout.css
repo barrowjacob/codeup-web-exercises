@@ -124,63 +124,87 @@ body {
     bottom: 112px;
     left: 720px;
 }
-#laser1 {
+#fire {
     height: 0;
     width: 0;
     box-shadow: 0 0 4px 4px blue;
     z-index: 0;
     position: absolute;
 }
-#laser2 {
-    height: 0;
-    width: 0;
-    box-shadow: 0 0 4px 4px yellow;
-    z-index: 0;
+#work1 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
     position: absolute;
-}
-#laser3 {
-    height: 0;
-    width: 0;
-    box-shadow: 0 0 4px 4px red;
-    z-index: 0;
-    position: absolute;
-}
-#laser4 {
-    height: 0;
-    width: 0;
-    box-shadow: 0 0 4px 4px green;
-    z-index: 0;
-    position: absolute;
-}
-#laser5 {
-    height: 0;
-    width: 0;
-    box-shadow: 0 0 4px 4px blue;
-    z-index: 0;
-    position: absolute;
-}
-#laser6 {
-    height: 0;
-    width: 0;
-    box-shadow: 0 0 4px 4px yellow;
-    z-index: 0;
-    position: absolute;
-}
-#laser7 {
-    height: 0;
-    width: 0;
-    box-shadow: 0 0 4px 4px red;
-    z-index: 0;
-    position: absolute;
-}
-#laser8 {
-    height: 0;
-    width: 0;
-    box-shadow: 0 0 4px 4px green;
-    z-index: 0;
-    position: absolute;
-}
+    bottom: 500px;
+    left: -2px;
 
+}
+#work2 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+}
+#work3 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+}
+#work4 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+}
+#work5 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+
+}
+#work6 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+}
+#work7 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+}
+#work8 {
+    height: 5px;
+    width: 5px;
+    box-shadow: 0 0 4px 4px white;
+    z-index: 2;
+    position: absolute;
+    bottom: 500px;
+    left: -2px;
+}
 /* #seven #eight #ten #eleven #thirteen #fourteen are in the ad-space grid,
  nested in the body grid */
 
@@ -288,192 +312,191 @@ h1 {
     color: teal;
     padding: 10px 0 10px 0;
 }
-#span1:hover ~ #laser_div {
-   animation: spin 350ms infinite linear;
+
+#span1:hover ~ #laser_div #fire{
+    animation: fire 2.4s;
 }
-@keyframes spin {
+
+@keyframes fire {
     0% {
-        transform: rotate(0);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(270deg);
+        transform: translateY(0);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translateY(-500px);
     }
 }
-#span1:hover ~ #laser_div #laser1{
-    animation: laser1 125ms infinite;
+#span1:hover ~ #laser_div #work1 {
+    animation: left 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser1 {
+@keyframes left {
     0% {
-        transform: translateY(-1px);
+        transform: translateX(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px red;
+        background: red;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
-            }
-    50% {
-        animation-play-state: paused;
+    100% {
+        transform: translateX(-500px);
+        box-shadow: 0 0 4px 4px red;
+        background: red;
+        width: 25px;
+        height: 25px;
+
     }
 }
-
-#span1:hover ~ #laser_div #laser2{
-    animation: laser2 125ms infinite;
-    animation-delay: 125ms;
+#span1:hover ~ #laser_div #work2 {
+    animation: right 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser2 {
+@keyframes right {
     0% {
-        transform: translateY(-1px);
+        transform: translateX(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px green;
+        background-color: green;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
-    }
-    50% {
-        animation-play-state: paused;
+    100% {
+        transform: translateX(500px);
+        box-shadow: 0 0 4px 4px green;
+        background: green;
+        width: 25px;
+        height: 25px;
+
     }
 }
-#span1:hover ~ #laser_div #laser3{
-    animation: laser3 125ms infinite;
-    animation-delay: 250ms;
+#span1:hover ~ #laser_div #work3 {
+    animation: up 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser3 {
+@keyframes up {
     0% {
-        transform: translateY(-1px);
+        transform: translateY(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px yellow;
+        background: yellow;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
+    100% {
+        transform: translateY(-500px);
+        box-shadow: 0 0 4px 4px yellow;
+        background: yellow;
+        width: 25px;
+        height: 25px;
     }
-    50% {
-         animation-play-state: paused;
-     }
 }
-#span1:hover ~ #laser_div #laser4{
-    animation: laser4 125ms infinite;
-    animation-delay: 375ms;
+#span1:hover ~ #laser_div #work4 {
+    animation: down 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser4 {
+@keyframes down {
     0% {
-        transform: translateY(-1px);
+        transform: translateY(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px blueviolet;
+        background: blueviolet;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
-    }
-    50% {
-        animation-play-state: paused;
+    100% {
+        transform: translateY(500px);
+        background: blueviolet;
+        box-shadow: 0 0 4px 4px blueviolet;
+        width: 25px;
+        height: 25px;
+
     }
 }
-#span1:hover ~ #laser_div #laser5{
-    animation: laser5 125ms infinite;
-    animation-delay: 500ms;
+#span1:hover ~ #laser_div #work5 {
+    animation: left-up 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser5 {
+@keyframes left-up {
     0% {
-        transform: translateY(-1px);
+        transform: translateX(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px darkgreen;
+        background: darkgreen;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
-    }
-    50% {
-        animation-play-state: paused;
+    100% {
+        transform: translateX(-500px) translateY(-500px);
+        box-shadow: 0 0 4px 4px darkgreen;
+        background: darkgreen;
+        width: 25px;
+        height: 25px;
     }
 }
-
-#span1:hover ~ #laser_div #laser6{
-    animation: laser6 125ms infinite;
-    animation-delay: 625ms;
+#span1:hover ~ #laser_div #work6 {
+    animation: right-up 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser6 {
+@keyframes right-up {
     0% {
-        transform: translateY(-1px);
+        transform: translateX(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px cornflowerblue;
+        background: cornflowerblue;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
-    }
-    50% {
-        animation-play-state: paused;
+    100% {
+        transform: translateX(500px)translateY(-500px);
+        box-shadow: 0 0 4px 4px cornflowerblue;
+        background: cornflowerblue;
+        width: 25px;
+        height: 25px;
+
     }
 }
-#span1:hover ~ #laser_div #laser7{
-    animation: laser7 125ms infinite;
-    animation-delay: 750ms;
+#span1:hover ~ #laser_div #work7 {
+    animation: left-down 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser7 {
+@keyframes left-down {
     0% {
-        transform: translateY(-1px);
+        transform: translateY(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px goldenrod;
+        background: goldenrod;
+    ;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
-    }
-    50% {
-        animation-play-state: paused;
+    100% {
+        transform: translateY(500px) translateX(-500px);
+        box-shadow: 0 0 4px 4px goldenrod;
+        background: goldenrod;
+        width: 25px;
+        height: 25px;
+
     }
 }
-#span1:hover ~ #laser_div #laser8{
-    animation: laser8 125ms infinite;
-    animation-delay: 875ms;
+#span1:hover ~ #laser_div #work8 {
+    animation: right-down 500ms ease-out;
+    animation-delay: 2.4s;
 }
 
-@keyframes laser8 {
+@keyframes right-down {
     0% {
-        transform: translateY(-1px);
+        transform: translateY(0);
     }
-    12% {
-        transform: translateY(-250px);
-        height: 250px;
+    10% {
+        box-shadow: 0 0 4px 4px blueviolet;
+        background: blueviolet;
     }
-    25% {
-        transform: translateY(-1000px);
-        height: 250px;
-    }
-    50% {
-        animation-play-state: paused;
+    100% {
+        transform: translateY(500px) translateX(500px);
+        box-shadow: 0 0 4px 4px blueviolet;
+        background: blueviolet;
+        width: 25px;
+        height: 25px;
+
     }
 }
