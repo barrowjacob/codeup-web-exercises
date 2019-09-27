@@ -111,6 +111,74 @@ body {
     background: black;
     color: white;
     height: 20px;
+    position: absolute;
+    z-index: 1;
+
+}
+#laser_div {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    background: yellow;
+    z-index: 0;
+    bottom: 112px;
+    left: 720px;
+}
+#laser1 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px blue;
+    z-index: 0;
+    position: absolute;
+}
+#laser2 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px yellow;
+    z-index: 0;
+    position: absolute;
+}
+#laser3 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px red;
+    z-index: 0;
+    position: absolute;
+}
+#laser4 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px green;
+    z-index: 0;
+    position: absolute;
+}
+#laser5 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px blue;
+    z-index: 0;
+    position: absolute;
+}
+#laser6 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px yellow;
+    z-index: 0;
+    position: absolute;
+}
+#laser7 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px red;
+    z-index: 0;
+    position: absolute;
+}
+#laser8 {
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 4px 4px green;
+    z-index: 0;
+    position: absolute;
 }
 
 /* #seven #eight #ten #eleven #thirteen #fourteen are in the ad-space grid,
@@ -219,4 +287,193 @@ body {
 h1 {
     color: teal;
     padding: 10px 0 10px 0;
+}
+#span1:hover ~ #laser_div {
+   animation: spin 350ms infinite linear;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#span1:hover ~ #laser_div #laser1{
+    animation: laser1 125ms infinite;
+}
+
+@keyframes laser1 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+            }
+    50% {
+        animation-play-state: paused;
+    }
+}
+
+#span1:hover ~ #laser_div #laser2{
+    animation: laser2 125ms infinite;
+    animation-delay: 125ms;
+}
+
+@keyframes laser2 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+    }
+    50% {
+        animation-play-state: paused;
+    }
+}
+#span1:hover ~ #laser_div #laser3{
+    animation: laser3 125ms infinite;
+    animation-delay: 250ms;
+}
+
+@keyframes laser3 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+    }
+    50% {
+         animation-play-state: paused;
+     }
+}
+#span1:hover ~ #laser_div #laser4{
+    animation: laser4 125ms infinite;
+    animation-delay: 375ms;
+}
+
+@keyframes laser4 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+    }
+    50% {
+        animation-play-state: paused;
+    }
+}
+#span1:hover ~ #laser_div #laser5{
+    animation: laser5 125ms infinite;
+    animation-delay: 500ms;
+}
+
+@keyframes laser5 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+    }
+    50% {
+        animation-play-state: paused;
+    }
+}
+
+#span1:hover ~ #laser_div #laser6{
+    animation: laser6 125ms infinite;
+    animation-delay: 625ms;
+}
+
+@keyframes laser6 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+    }
+    50% {
+        animation-play-state: paused;
+    }
+}
+#span1:hover ~ #laser_div #laser7{
+    animation: laser7 125ms infinite;
+    animation-delay: 750ms;
+}
+
+@keyframes laser7 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+    }
+    50% {
+        animation-play-state: paused;
+    }
+}
+#span1:hover ~ #laser_div #laser8{
+    animation: laser8 125ms infinite;
+    animation-delay: 875ms;
+}
+
+@keyframes laser8 {
+    0% {
+        transform: translateY(-1px);
+    }
+    12% {
+        transform: translateY(-250px);
+        height: 250px;
+    }
+    25% {
+        transform: translateY(-1000px);
+        height: 250px;
+    }
+    50% {
+        animation-play-state: paused;
+    }
 }
