@@ -164,8 +164,31 @@ span {
     grid-area: sixteen;
     height: 50px;
 }
-
+#fifteen span {
+    padding: 0 10px 0 10px;
+}
+#span1 {
+    background: black;
+    color: white;
+    height: 20px;
+}
 .five {
     grid-area: five;
     background-color: gray;
+    color: white;
+    padding: 15px 0 0 0;
+
+}
+.five h3 {
+    padding-left: 15px;
+}
+.five p {
+    font-size: .8em;
+    padding-left: 15px;
+}
+#science {
+    background: black;
+    padding: 0;
+    line-height: 25px;
+    margin-top: 10px;
 }
