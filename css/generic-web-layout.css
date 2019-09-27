@@ -2,17 +2,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     display: grid;
     height: 100vh;
     grid-template-columns: 1.2fr 5fr 2fr;
     grid-template-rows: .5fr 9fr 1fr;
+    font-family: "Arial Unicode MS", monospace;
     grid-template-areas:
             "one one one"
             "two three four"
             "two five five";
-    font-family: "Arial Unicode MS", monospace;
 }
+
+/* .one .two .three .four .five are in the body grid */
+
 .one {
     grid-area: one;
     background-color: black;
@@ -36,27 +40,28 @@ body {
     grid-area: two;
     background-color: lightgrey;
     justify-content: flex-start;
+    padding: 0;
 }
 .two h3 {
     display: flex;
     padding: 17px 0 14px 17px;
 }
-.two ul {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0 0 8px;
-    justify-content: space-around;
-}
 .two li {
+    display: flex;
     list-style-type: none;
-    padding: 10px
+    padding: 10px 10px 10px 0;
+    margin-left: -22px;
 }
+
+/* #six #nine #twelve #fifteen are in the main grid,
+  nested in the body grid */
+
 .three {
     font-size: .8em;
     grid-area: three;
     background-color: white;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr 2fr) 1fr;
     grid-template-areas:
             "six"
             "six"
@@ -66,37 +71,57 @@ body {
             "twelve"
             "fifteen";
 }
-h1 {
-    color: teal;
-    padding: 10px 0 10px 0;
-}
+
 .three #six {
     grid-area: six;
     padding-left: 15px;
 }
+
 .three #nine {
     grid-area: nine;
     padding-left: 15px;
 }
+
 .three #twelve {
     grid-area: twelve;
     padding-left: 15px
 }
+
+/* #fifteen is the bottom page-number grid,
+ nested in the main grid */
+
 .three #fifteen {
     grid-area: fifteen;
     padding-top: 20px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1.3fr) 2fr 1fr ;
+    grid-template-areas:
+            ". . .  area . .";
 }
-span {
 
+#fifteen #area {
+    grid-area: area;
 }
+
+#fifteen span {
+    padding: 0 10px 0 10px;
+}
+
+#span1 {
+    background: black;
+    color: white;
+    height: 20px;
+}
+
+/* #seven #eight #ten #eleven #thirteen #fourteen are in the ad-space grid,
+ nested in the body grid */
+
 .four {
-    grid-area: four;
     background-color: white;
     display: grid;
-    grid-template-rows: 1.2fr 1.9fr 1fr 2fr 1fr 2fr;
+    grid-area: four;
+    grid-template-rows: 1.2fr 1.9fr repeat(2, 1fr 2fr);
+    grid-row-gap: 10px;
     grid-template-areas:
             "seven"
             "eight"
@@ -105,8 +130,8 @@ span {
             "thirteen"
             "fourteen"
             "sixteen";
-    grid-row-gap: 10px;
 }
+
 .four #seven {
     grid-area: seven;
     border: 2px solid lightgrey;
@@ -114,8 +139,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .four #eight {
     grid-area: eight;
     border: 2px solid lightgrey;
@@ -123,8 +148,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .four #ten {
     grid-area: ten;
     border: 2px solid lightgrey;
@@ -132,8 +157,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .four #eleven {
     grid-area: eleven;
     border: 2px solid lightgrey;
@@ -141,9 +166,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
+
 .four #thirteen {
     grid-area: thirteen;
     border: 2px solid lightgrey;
@@ -152,6 +176,7 @@ span {
     justify-content: center;
     align-items: center;
 }
+
 .four #fourteen {
     grid-area: fourteen;
     border: 2px solid lightgrey;
@@ -160,35 +185,38 @@ span {
     justify-content: center;
     align-items: center;
 }
+
 .four #sixteen {
     grid-area: sixteen;
     height: 50px;
 }
-#fifteen span {
-    padding: 0 10px 0 10px;
-}
-#span1 {
-    background: black;
-    color: white;
-    height: 20px;
-}
+
 .five {
     grid-area: five;
     background-color: gray;
     color: white;
     padding: 15px 0 0 0;
-
 }
+
 .five h3 {
     padding-left: 15px;
 }
+
 .five p {
     font-size: .8em;
     padding-left: 15px;
 }
+
+/* #science is the black bottom nav div */
+
 #science {
     background: black;
     padding: 0;
     line-height: 25px;
     margin-top: 10px;
+}
+
+h1 {
+    color: teal;
+    padding: 10px 0 10px 0;
 }
