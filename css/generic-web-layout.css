@@ -437,7 +437,6 @@ h1 {
         background: red;
         width: 50px;
         height: 50px;
-
     }
 }
 #span1:hover ~ #laser_div #work2 {
@@ -459,7 +458,6 @@ h1 {
         background: green;
         width: 50px;
         height: 50px;
-
     }
 }
 #span1:hover ~ #laser_div #work3 {
