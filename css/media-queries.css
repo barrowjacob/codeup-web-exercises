@@ -85,10 +85,10 @@ footer {
 }
 footer span {
     color: lightgrey;
-    margin-left: 20px;
+    margin-left: auto;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 768px) {
 
     body {
         display: grid;
@@ -98,37 +98,47 @@ footer span {
                 "two three"
                 "four four"
                 "five six"
+                "one one"
                 "seven seven"
     }
+
     h1 {
         display: flex;
         justify-content: flex-start;
         margin-left: 10px;
     }
+
     ul {
         display: flex;
         justify-content: flex-end;
         margin-top: 35px;
 
     }
+
     li {
         margin: 0 10px 0 10px;
         background-color: white;
         font-size: 1em;
         display: flex;
     }
+
     img {
         min-width: 100%;
     }
+
     .hidden-on-desktop {
         visibility: hidden;
     }
+
     footer {
         display: flex;
-        justify-content: stretch;
-        align-items: flex-end;
+        justify-content: space-between;
     }
+
     .sub-section {
         margin: 5px;
+    }
+    footer span {
+        margin-left: auto;
     }
 }
