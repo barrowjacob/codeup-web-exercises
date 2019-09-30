@@ -42,15 +42,16 @@ nav {
     grid-area: three;
     margin: 10px 0;
 }
+ul {
+    padding: 0;
+}
 li {
     background-color: lightgrey;
     display: flex;
     justify-content: center;
     padding: 13px 0 20px 0;
-    margin: 10px 0 5px -42px;
     list-style-type: none;
     font-size: 1.5em;
-
 }
 img {
     max-width: 100%;
@@ -101,7 +102,6 @@ footer span {
                 "one one"
                 "seven seven"
     }
-
     h1 {
         display: flex;
         justify-content: flex-start;
