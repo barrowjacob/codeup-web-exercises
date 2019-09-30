@@ -93,7 +93,6 @@ footer span {
 
     body {
         display: grid;
-        background-image: linear-gradient(white, lightgrey);
         grid-template-columns: 60% 40%;
         grid-template-areas:
                 "two three"
