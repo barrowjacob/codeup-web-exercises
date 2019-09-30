@@ -106,7 +106,66 @@ footer span {
         display: flex;
         justify-content: flex-start;
         margin-left: 10px;
+        animation: move 2s linear infinite;
     }
+    @keyframes move {
+        0% {
+            text-shadow:
+                    4px -4px 0 red,
+                    3px -3px 0 red,
+                    2px -2px 0 red,
+                    1px -1px 0 red,
+                    -4px 4px 0 blue,
+                    -3px 3px 0 blue,
+                    -2px 2px 0 blue,
+                    -1px 1px 0 blue;
+        }
+        25% {
+            text-shadow:
+                    4px 4px 0 blue,
+                    3px 3px 0 blue,
+                    2px 2px 0 blue,
+                    1px 1px 0 blue,
+                    -4px -4px 0 red,
+                    -3px -3px 0 red,
+                    -2px -2px 0 red,
+                    -1px -1px 0 red;
+        }
+        50% {
+            text-shadow:
+                    4px -4px 0 red,
+                    3px -3px 0 red,
+                    2px -2px 0 red,
+                    1px -1px 0 red,
+                    -4px 4px 0 blue,
+                    -3px 3px 0 blue,
+                    -2px 2px 0 blue,
+                    -1px 1px 0 blue;
+        }
+        75% {
+            text-shadow:
+                    4px 4px 0 blue,
+                    3px 3px 0 blue,
+                    2px 2px 0 blue,
+                    1px 1px 0 blue,
+                    -4px -4px 0 red,
+                    -3px -3px 0 red,
+                    -2px -2px 0 red,
+                    -1px -1px 0 red;
+        }
+        100% {
+            text-shadow:
+                    4px -4px 0 red,
+                    3px -3px 0 red,
+                    2px -2px 0 red,
+                    1px -1px 0 red,
+                    -4px 4px 0 blue,
+                    -3px 3px 0 blue,
+                    -2px 2px 0 blue,
+                    -1px 1px 0 blue;
+        }
+    }
+
 
     ul {
         display: flex;
