@@ -1,17 +1,13 @@
 .jumbotron {
     background-image: url("../img/pizza.png");
-    width: 100vw;
     position: relative;
     left: -15px;
 }
 .jumbotron h1 {
     background-color: #ffffff;
-    font-size: 3em;
     opacity: .6;
     position: relative;
     left: -30px;
-    width: 100vw;
-    text-align: center;
 }
 .card {
     margin: 1em;
