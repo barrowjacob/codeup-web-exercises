@@ -35,7 +35,7 @@
    </div>
    <div id="social">
       <i class="fas fa-user"></i>
-      <a class="navbar-brand href="#">Sign Up</a>
+      <a class="navbar-brand" href="#">Sign Up</a>
    </div>
 </nav>
 
@@ -45,39 +45,112 @@
       <div class="jumbotron d-none d-md-block">
          <h1>Welcome to Pizza World!</h1>
       </div>
+
+
+      <!--nav tabs-->
+
+      <ul class="nav nav-tabs">
+         <li class="nav-item">
+
+            <a class="nav-link active" href="#">
+               <span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#sauce">
+               <span class="badge badge-pill badge-secondary">2</span>
+               Cheese and sauce</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">
+               <span class="badge badge-pill badge-secondary">3</span>
+               Toppings</a>
+         </li>
+      </ul>
+
+      <!--cards--
+      --size and crust-->
+
+      <div class="card">
+         <div class="card-header bg-primary text-white">Choose size and crust
+         </div>
+         <div class="card" style="width: calc(100% - 2em)">
+            <div class="card-header">
+                  Hand Tossed
+            </div>
+               <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                  <li class="list-group-item"><input type="radio" name="hand" id="hand" value="1"> Small (10")</li>
+                  <li class="list-group-item"><input type="radio" name="hand" id="hand1" value="2"> Medium (12")</li>
+               </ul>
+         </div>
+
+
+               <div class="card" style="width: calc(100% - 2em)">
+                  <div class="card-header">
+                     Crispy Thin
+                  </div>
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
+                     <li class="list-group-item"><input type="radio" name="crispy" id="crispy" value="1"> Medium (12")</li>
+                     <li class="list-group-item"><input type="radio" name="crispy" id="crispy1" value="2"> Large (14")</li>
+                  </ul>
+               </div>
+            <div class="card-footer text-muted">
+               <a href="#sauce" class="btn btn-primary">Next Step</a>
+            </div>
+         </div>
+      </div>
+
+<!--   cheese and sauce-->
+
+   <a id="sauce"></a>
+   <div class="card">
+      <div class="card-header bg-primary text-white w-100">Choose cheese and sauce
+      </div>
+      <div class="card md-3" style="width: calc(100% - 2em)">
+         <div class="card-header ">
+            Cheese
+         </div>
+         <div class="mx-3 mb-4">
+            <label for="inputGroupSelect01" class="mt-3">How much?</label>
+            <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Light</option>
+                  <option value="1">Medium</option>
+                  <option value="2">Double Medium</option>
+                  <option value="3">Go hard on the cheese, man!</option>
+            </select>
+         </div>
+     </div>
+   <div class="card md-3" style="width: calc(100% - 2em)" >
+      <div class="card-header">
+               Sauce
+      </div>
+      <div class="mx-3 mb-4">
+         <label for="inputGroupSelect01" class="mt-3">What type?</label>
+            <select class="custom-select" id="inputGroupSelect02">
+               <option selected>Tomato sauce</option>
+               <option value="1">Alfredo</option>
+               <option value="2">Barbecue</option>
+               <option value="3">Sauce is for the weak.</option>
+            </select>
+            <label for="inputGroupSelect01" class="mt-3">How much?</label>
+            <select class="custom-select" id="inputGroupSelect02">
+               <option selected>Light</option>
+               <option value="1">Medium</option>
+               <option value="2">Double Medium</option>
+               <option value="3">Go hard on the sauce, man!</option>
+            </select>
+      </div>
+      <div class="card-footer text-muted">
+         <a href="#sauce" class="btn btn-primary">Next Step</a>
+         <a href="#sauce" class="btn btn-primary">Previous Step</a>
+      </div>
    </div>
-
-<!--nav tabs-->
-
-<ul class="nav nav-tabs">
-   <li class="nav-item">
-
-      <a class="nav-link active" href="#">
-         <span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
-   </li>
-   <li class="nav-item">
-      <a class="nav-link" href="#">
-         <span class="badge badge-pill badge-secondary">2</span>
-         Cheese and sauce</a>
-   </li>
-   <li class="nav-item">
-      <a class="nav-link" href="#">
-         <span class="badge badge-pill badge-secondary">3</span>
-         Toppings</a>
-   </li>
-</ul>
-
-<!--cards-->
-
-
-
-<div class="card" style="width: 18rem;">
-   <img src="..." class="card-img-top" alt="...">
-   <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+         </div>
+      </div>
    </div>
+</div>
+
 </div>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

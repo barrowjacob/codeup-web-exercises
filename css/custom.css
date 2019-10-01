@@ -13,4 +13,11 @@
     width: 100vw;
     text-align: center;
 }
+.card {
+    margin: 1em;
+}
+.btn {
+    float: right;
+}
+.card
 
