@@ -3,6 +3,9 @@
 }
 .jumbotron h1 {
     opacity: .6;
+    position: relative;
+    margin-left: -30px;
+    width: 100vw;
     }
 .card {
     margin: 1em;
