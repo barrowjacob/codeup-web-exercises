@@ -40,10 +40,9 @@
 
    <!--jumbotron-->
 
-      <div class="container-fluid">
-
-         <div class="jumbotron d-none d-md-block vw-100">
-            <h1 class="vw-100 d-flex justify-content-center">Welcome to Pizza World!</h1>
+      <div>
+         <div class="jumbotron d-none d-md-block">
+            <h1 class="display-4  text-center bg-white">Welcome to Pizza World!</h1>
          </div>
 
    <!--nav tabs-->
@@ -92,7 +91,7 @@
                   <li class="list-group-item"><input type="radio" name="crispy" id="crispy1" value="2"> Large (14")</li>
                </ul>
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer text-muted text-right p-2">
                <a href="#sauce" class="btn btn-primary">Next Step <i class="fas fa-chevron-right"></i></a>
             </div>
          </div>
@@ -137,9 +136,11 @@
                      <option value="3">Go hard on the sauce, man!</option>
                   </select>
             </div>
-            <div class="card-footer text-muted">
-               <a href="#toppings" class="btn btn-primary">Next Step <i class="fas fa-chevron-right"></i></a>
-               <a href="#size" class="btn btn-primary"><i class="fas fa-chevron-left"></i> Previous Step</a>
+            <div class="text-right">
+            <div class="btn-group" role="group" aria-label="Basic example">
+               <button type="button" class="btn btn-primary">Previous Step</button>
+               <button type="button" class="btn btn-primary">Next Step</button>
+            </div>
             </div>
          </div>
 
@@ -172,11 +173,11 @@
                   </ul>
                </div>
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer text-muted text-right p-2">
                <a href="https://visa.com" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Checkout</a>
             </div>
          </div>
-      </div>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      </div>
    </body>
 </html>
