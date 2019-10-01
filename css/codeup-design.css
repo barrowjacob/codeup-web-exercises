@@ -1,0 +1,13 @@
+
+.blue {
+    border: 2px solid blue;
+}
+.red {
+    border: 3px dashed red;
+}
+.green {
+    border: 2px dotted green;
+}
+.big-row {
+    height: 300px;
+}
