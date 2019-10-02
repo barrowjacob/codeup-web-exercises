@@ -1,13 +1,20 @@
-
-.blue {
-    border: 2px solid blue;
+* {
+    margin: 0;
+    padding: 0;
 }
-.red {
-    border: 3px dashed red;
+.big {
+    height: 100px;
 }
-.green {
-    border: 2px dotted green;
+.small {
+    height: 100px;
 }
-.big-row {
-    height: 300px;
+img {
+    overflow: visible;
+}
+#ipad {
+    border: 12px solid lightgrey;
+    border-radius: 10px;
+}
+body {
+    background-color: lightgrey;
 }
