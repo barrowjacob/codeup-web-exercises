@@ -17,4 +17,12 @@ img {
 }
 body {
     background-color: lightgrey;
+    box-sizing: border-box;
+}
+#red_circle {
+    height: 250px;
+    width: 250px;
+    border: 12px solid white;
+    border-radius: 200px;
+    background-color: red;
 }
