@@ -6,10 +6,61 @@
 </head>
 <body>
    <script>
-      alert("Hello!");
-      alert("My name is Jacob!");
-      var name = prompt("What is your name?");
-      alert("Wow, " + name + " is my favorite name!");
+
+      function movieCosts(x)
+      {
+          var lm = 3;
+          var bb = 5;
+          var h = 1;
+      return (lm + bb + h) * x;
+      }
+      console.log(movieCosts(3));
+
+      function makingBank(x, y, z)
+      {
+          var goo = 400;
+          var ama = 380;
+          var fb = 350;
+      return ((goo * x) + (ama * y) + (fb * z));
+      }
+      console.log(makingBank(6, 4, 10));
+
+      function classTime() {
+          var full = true;
+          var conflict = true;
+          if (full && !conflict) {
+              return "enrolled"
+          } else {
+              return "can't enroll!"
+          }
+      }
+      console.log(classTime());
+
+      function premium() {
+          var moreThanTwo = true;
+          var expired = true;
+          var premium = true;
+          if ((moreThanTwo && !expired) || premium) {
+              return true;
+          } else {
+              return false;
+          }
+      }
+
+      function canLogin() {
+          var atLeastFiveCharactersPw = true;
+          var notIncludeUsername = true;
+          var pwUnderTwenty = true;
+          var hasWhiteSpace = true;
+
+          if (atLeastFiveCharactersPw && notIncludeUsername && pwUnderTwenty && hasWhiteSpace) {
+              return true;
+          }  else {
+              return false;
+          }
+      }
+
+
 
    </script>
 </body>
