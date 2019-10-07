@@ -82,8 +82,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-    var tipPercentage = prompt("What is your tip percentage?");
+
     var totalBill = prompt("What is your total bill?");
+    var tipPercentage = prompt("What is your tip percentage?");
     alert("You should tip $" + calculateTip(tipPercentage, totalBill));
 /**
  * TODO:
