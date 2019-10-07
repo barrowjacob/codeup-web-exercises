@@ -11,7 +11,7 @@ if (submitColor !== "") {
 }
 alert("Wow! " + submitColor + " is my favorite color, too!");
 
-var movieNum = prompt("How much was the rental cost each day?");
+var movieNum = parseInt(prompt("How much was the rental cost each day?"));
 
 function movieCosts()
 {
@@ -22,12 +22,13 @@ function movieCosts()
 }
 alert("Wow, that's $" + movieCosts());
 
-var gooHours = prompt("How many hours at Google?");
-var amaHours = prompt("How many hours at Amazon?");
-var fbHours = prompt("How many hours at Facebook?");
 
 function makingBank()
 {
+    var gooHours = parseInt(prompt("How many hours at Google?"));
+    var amaHours = parseInt(prompt("How many hours at Amazon?"));
+    var fbHours = parseInt(prompt("How many hours at Facebook?"));
+
     var goo = 400;
     var ama = 380;
     var fb = 350;
@@ -60,15 +61,3 @@ function premium() {
         return "Denied, proletariat. You do not get a discount.";
     }
 }
-alert(premium());
-
-var password = prompt("Username?");
-var username = prompt("Password?");
-function canLogin() {
-    if (password.length >= 5 && password.indexOf(username) === -1 && username.length <= 20 && username === username.trim() && password === password.trim()) ;
-    {
-        return "Your username and password are strong. This login is awesome!";
-    }
-}
-
-alert(canLogin());
