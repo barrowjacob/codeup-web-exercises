@@ -4,13 +4,12 @@ console.log("Hola from external Javascript!");
 
 alert("Bienvenidos a My Website!");
 
-var color = prompt("What's your favorite color?!");
+var submitColor = prompt("What's your favorite color?!");
 
-if (color !== "") {
-    document.getElementById("colorId").innerHTML = color + " is my all-time best, most beloved favorite color, too!";
+if (submitColor !== "") {
+    document.getElementById("colorId").innerHTML = submitColor + ", nice!";
 }
-
-alert("Wow! " + color + " is my favorite color, too!");
+alert("Wow! " + submitColor + " is my favorite color, too!");
 
 var movieNum = prompt("How much was the rental cost each day?");
 
@@ -36,36 +35,39 @@ function makingBank()
 }
 alert("Wow, you made $" + makingBank());
 
+var full = confirm("Is your class full?");
+var conflict = confirm("Is there a schedule conflict?");
+
 function classTime() {
-    var full = true;
-    var conflict = true;
+
     if (!full && !conflict) {
-        return "can enroll!"
+        return "Great! You can enroll!"
     } else {
-        return "can't enroll!"
+        return "Sorry, but you can't enroll!"
     }
 }
-alert("Nice, you " + classTime());
+alert(classTime());
+
+var two = confirm("Did you buy at least two items?");
+var expired = confirm("Is it expired?");
+var premium1 = confirm("Do you have premium?");
 
 function premium() {
-    var moreThanTwo = true;
-    var expired = true;
-    var premium = true;
-    if ((moreThanTwo || premium) && !expired) {
+
+    if ((two || premium1) && !expired) {
         return "full access granted";
     } else {
-        return "denied, proletariat";
+        return "Denied, proletariat. You do not get a discount.";
     }
 }
 alert(premium());
 
+var password = prompt("Username?");
+var username = prompt("Password?");
 function canLogin() {
-    var username = 'codeup';
-    var password = 'notastrongpassword';
-
     if (password.length >= 5 && password.indexOf(username) === -1 && username.length <= 20 && username === username.trim() && password === password.trim()) ;
     {
-        return "This login is awesome!";
+        return "Your username and password are strong. This login is awesome!";
     }
 }
 

@@ -1,17 +1,53 @@
-.styled {
-    color: #F3409F;
-    animation: red 4s infinite linear;
-    font-size: 4em;
+
+#h1div {
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 
 }
-.red {
+#h1div h1 {
+    margin-right: 50px;
+}
+.styled {
     color: red;
     font-size: 2em;
+    animation: red 4s infinite linear;
+}
+#colorId {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @keyframes red {
     0% { color: #F3409F;
+        transform: rotate(360deg);
     }
-    50% {
+    14% {
+        color: orange;
+
+    }
+    28% {
+        color: yellow;
+
+    }
+    42% {
+        color: green;
+
+    }
+    56% {
         color: blue;
+
+    }
+    70% {
+        color: indigo;
+
+    }
+    84% {
+        color: violet;
+
+    }
+    100% {
+        color: #F3409F;
     }
 }
