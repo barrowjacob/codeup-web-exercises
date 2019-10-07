@@ -6,9 +6,13 @@ alert("Bienvenidos a My Website!");
 
 var color = prompt("What's your favorite color?!");
 
+if (color !== "") {
+    document.getElementById("colorId").innerHTML = color + " is my all-time best, most beloved favorite color, too!";
+}
+
 alert("Wow! " + color + " is my favorite color, too!");
 
-var movieNum = prompt("How much was it per day, again?");
+var movieNum = prompt("How much was the rental cost each day?");
 
 function movieCosts()
 {
@@ -17,11 +21,12 @@ function movieCosts()
     var h = 1;
     return (lm + bb + h) * movieNum;
 }
-console.log(movieCosts());
+alert("Wow, that's $" + movieCosts());
 
 var gooHours = prompt("How many hours at Google?");
 var amaHours = prompt("How many hours at Amazon?");
 var fbHours = prompt("How many hours at Facebook?");
+
 function makingBank()
 {
     var goo = 400;
@@ -29,40 +34,39 @@ function makingBank()
     var fb = 350;
     return ((goo * gooHours) + (ama * amaHours) + (fb * fbHours));
 }
-console.log(makingBank());
+alert("Wow, you made $" + makingBank());
 
 function classTime() {
     var full = true;
     var conflict = true;
-    if (full && !conflict) {
-        return "enrolled"
+    if (!full && !conflict) {
+        return "can enroll!"
     } else {
         return "can't enroll!"
     }
 }
-console.log(classTime());
+alert("Nice, you " + classTime());
 
 function premium() {
     var moreThanTwo = true;
     var expired = true;
     var premium = true;
-    if ((moreThanTwo && !expired) || premium) {
+    if ((moreThanTwo || premium) && !expired) {
         return "full access granted";
     } else {
         return "denied, proletariat";
     }
 }
-console.log(premium());
+alert(premium());
 
 function canLogin() {
-    var atLeastFiveCharactersPw = true;
-    var notIncludeUsername = true;
-    var pwUnderTwenty = true;
-    var hasWhiteSpace = true;
-    if (atLeastFiveCharactersPw && notIncludeUsername && pwUnderTwenty && hasWhiteSpace) {
+    var username = 'codeup';
+    var password = 'notastrongpassword';
+
+    if (password.length >= 5 && password.indexOf(username) === -1 && username.length <= 20 && username === username.trim() && password === password.trim()) ;
+    {
         return "This login is awesome!";
-    }  else {
-        return "You need to work on your login";
     }
 }
-console.log(canLogin());
+
+alert(canLogin());

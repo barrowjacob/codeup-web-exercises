@@ -1,0 +1,17 @@
+.styled {
+    color: #F3409F;
+    animation: red 4s infinite linear;
+    font-size: 4em;
+
+}
+.red {
+    color: red;
+    font-size: 2em;
+}
+@keyframes red {
+    0% { color: #F3409F;
+    }
+    50% {
+        color: blue;
+    }
+}
