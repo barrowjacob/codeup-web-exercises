@@ -14,4 +14,4 @@ var divide = function(x,y) {
 };
 
 
-})()
+})();
