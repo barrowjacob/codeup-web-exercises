@@ -57,9 +57,24 @@ if (isNaN(typedNumber)) {
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-    function analyzeColor(str) {
 
-}
+    function analyzeColor(str) {
+        if (str === "blue") {
+            return "Wow, that's blue!"
+        } else if ( str === "red") {
+            return "wow, that's red!"
+        } else if (str === "green") {
+            return "Wow, that's green!"
+        } else if (str === "orange") {
+            return "Yep, that's orange."
+        } else if (str === "yellow") {
+            return "Wow, yellow!"
+        } else {
+            return "This doesn't fit within the confines of my understanding."
+        }
+    }
+console.log(analyzeColor());
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -73,11 +88,49 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message everytime you refresh the page
  */
+function analyzeColor(randomColor) {
+    if (randomColor === "blue") {
+        return "Wow, that's blue!";
+    } else if (randomColor === "red") {
+        return "wow, that's red!";
+    } else if (randomColor === "green") {
+        return "Wow, that's green!";
+    } else if (randomColor === "orange") {
+        return "Yep, that's orange.";
+    } else if (randomColor === "yellow") {
+        return "Wow, yellow!";
+    } else {
+        return "This doesn't fit within the confines of my understanding.";
+    }
+}
+console.log(analyzeColor(randomColor));
+
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+switch (randomColor) {
+    case (randomColor === "blue"):
+        console.log("Wow, that's blue!");
+        break;
+     case (randomColor === "red"):
+        console.log("wow, that's red!");
+         break;
+    case (randomColor === "green"):
+        console.log("Wow, that's green!");
+        break;
+    case (randomColor === "orange"):
+        console.log("Yep, that's orange.");
+        break;
+    case (randomColor === "yellow"):
+        console.log("Wow, yellow!");
+        break;
+    default:
+        console.log("This doesn't fit within the confines of my understanding.");
+        break;
+}
 
 /**
  * TODO:
@@ -85,6 +138,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+    var colorPrompt  = prompt("What color should I type?");
+    var newColor = analyzeColor(colorPrompt);
+    alert(newColor);
 
 /* ########################################################################## */
 
@@ -107,13 +164,35 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+    function calculateTotal(luckyNumber, totalBill) {
+        if (luckyNumber === 1) {
+            return (totalBill - (totalBill * .1));
+        }
+        if (luckyNumber === 2) {
+            return (totalBill - (totalBill * .25));
+        }
+        if (luckyNumber === 3) {
+            return (totalBill - (totalBill * .35));
+        }
+        if (luckyNumber === 4) {
+            return (totalBill - (totalBill* .5));
+        }
+        if (luckyNumber === 5) {
+            return ("It's all free!!!!");
+        }
+}
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
  * Prompt the user for their total bill, then use your `calculateTotal` function
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
- */
+//  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var totalBill = prompt("How much was your total bill?");
+var realTotal = calculateTotal(luckyNumber, totalBill);
+ alert("Your lucky number is " + luckyNumber);
+ alert("Your price before discount was " + totalBill);
+ alert("Your new, better-looking, discounted price is now " + realTotal);
