@@ -1,15 +1,10 @@
 "use strict";
 
 // 10/8
-var userNum = parseInt(prompt("Please type a number here"));
 function greaterThanFive() {
-    if (userNum > 5) {
-        return true;
-    } else {
-        return false;
-    }
+    var userNum = parseInt(prompt("Please type a number here"));
+    return userNum > 5;
 }
-console.log(greaterThanFive());
 
 // 10/7
 
