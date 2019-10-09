@@ -5,8 +5,74 @@
    <title>$Title$</title>
 </head>
 <body>
+This is my JS Practice Page, Y'all.
    <script>
 
+      // ------herein lies conditionals w/o loops --------//
+      function isOdd(x) {
+          if (x % 2 !== 0) {
+              return "That's odd!";
+          } else {
+              return "That's even!";
+          }
+      }
+
+      function isEven(x) {
+          if (x % 2 === 0) {
+              return "That's even!";
+          } else {
+              return "That's odd!";
+          }
+      }
+
+      function identity(input) {
+          return input;
+      }
+
+      function isFive(x) {
+          if (x === 5) {
+              return true;
+          } else {
+              return false;
+          }
+      }
+
+      function addFive(x) {
+          return (x + 5);
+      }
+
+      function isMultipleOfFive(x) {
+          if (x % 5 === 0) {
+              return true;
+          } else {
+              return false;
+          }
+      }
+
+
+      function randomNum() {
+          return Math.floor(Math.random() * 100);
+      }
+
+      function getRandomNum(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function rest(str) {
+          var subStr = str.slice(1);
+          return subStr;
+      }
+      console.log(rest("sandwich"));
+
+      function first(str) {
+          var slao = str[0];
+          return slao;
+      }
+      console.log(first("panda"));
+
+      // ---------------------------------- //
       function movieCosts(x)
       {
           var lm = 3;
