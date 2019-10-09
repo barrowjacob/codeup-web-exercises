@@ -15,25 +15,35 @@
  *
  * Can you refactor your code to use functions?
  */
-var numbers = confirm("Would you like to enter a number?");
-if (numbers === true) {
-    var typedNumber = parseInt(prompt("Please enter a number:"));
-} if (isNaN(typedNumber)) {
-    alert("That wasn't a number, gosh.")
-} else {
-    if (typedNumber % 2 === 0) {
-        alert("That number is even!");
-    } else {
-        alert("That number is odd!");
-    }
-    alert("Your number, plus one hundred, is " + (parseInt(typedNumber) + 100));
+function numberStuff() {
+    var numbers = confirm("Would you like to enter a number?");
+    if (numbers === true) {
+        var typedNumber = parseInt(prompt("Please enter a number:"));
+        if (!isNaN(typedNumber)) {
+            if (typedNumber % 2 === 0) {
+                alert("That number is even!");
+            } else {
+                alert("That number is odd!");
+            }
+            alert("Your number, plus one hundred, is " + (parseInt(typedNumber) + 100));
 
-    if (typedNumber > 0) {
-        alert("Your number is positive");
+            if (typedNumber > 0) {
+                alert("Your number is positive");
+            } else {
+                alert("Your number is negative");
+            }
+            if (isNaN(typedNumber)) {
+                alert("That wasn't a number, gosh.")
+            }
+        } else {
+            alert("That's not a number.");
+        }
     } else {
-        alert("Your number is negative");
+        alert("gosh.");
     }
 }
+
+
 
 
 
@@ -72,7 +82,7 @@ if (numbers === true) {
             return "This doesn't fit within the confines of my understanding."
         }
     }
-console.log(analyzeColor());
+console.log(analyzeColor(randomColor));
 
 
 // Don't change the next two lines!
@@ -87,23 +97,6 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message everytime you refresh the page
  */
-function analyzeColor(randomColor) {
-    if (randomColor === "blue") {
-        return "Wow, that's blue!";
-    } else if (randomColor === "red") {
-        return "wow, that's red!";
-    } else if (randomColor === "green") {
-        return "Wow, that's green!";
-    } else if (randomColor === "orange") {
-        return "Yep, that's orange.";
-    } else if (randomColor === "yellow") {
-        return "Wow, yellow!";
-    } else {
-        return "This doesn't fit within the confines of my understanding.";
-    }
-}
-console.log(analyzeColor(randomColor));
-
 
 /**
  * TODO:
