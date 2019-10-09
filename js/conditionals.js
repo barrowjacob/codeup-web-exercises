@@ -18,9 +18,7 @@
 var numbers = confirm("Would you like to enter a number?");
 if (numbers === true) {
     var typedNumber = parseInt(prompt("Please enter a number:"));
-}
-
-if (isNaN(typedNumber)) {
+} if (isNaN(typedNumber)) {
     alert("That wasn't a number, gosh.")
 } else {
     if (typedNumber % 2 === 0) {
@@ -28,7 +26,6 @@ if (isNaN(typedNumber)) {
     } else {
         alert("That number is odd!");
     }
-
     alert("Your number, plus one hundred, is " + (parseInt(typedNumber) + 100));
 
     if (typedNumber > 0) {
@@ -37,6 +34,8 @@ if (isNaN(typedNumber)) {
         alert("Your number is negative");
     }
 }
+
+
 
 /* ########################################################################## */
 
@@ -179,6 +178,9 @@ switch (randomColor) {
         }
         if (luckyNumber === 5) {
             return ("It's all free!!!!");
+        }
+        else {
+            return totalBill;
         }
 }
 /**
