@@ -184,7 +184,6 @@ function colorPicker () {
 var luckyNumber = Math.floor(Math.random() * 6);
 
 var totalBill = prompt("How much was your total bill?");
-var realTotal = calculateTotal(luckyNumber, totalBill);
  alert("Your lucky number is " + luckyNumber);
  alert("Your price before discount was " + totalBill);
- alert("Your new, better-looking, discounted price is now " + realTotal);
+ alert("Your new, better-looking, discounted price is now " + (calculateTotal(luckyNumber, totalBill)));
