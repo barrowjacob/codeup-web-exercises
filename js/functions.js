@@ -73,9 +73,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
     function calculateTip(x, y) {
-        return (x * y) / 100;
+        return x * y;
 }
-    console.log(calculateTip(.25, 12))
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
