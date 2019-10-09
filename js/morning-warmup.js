@@ -1,3 +1,5 @@
+(function() {
+
 "use strict";
 
 
@@ -105,3 +107,5 @@ function sum(a, b) {
 console.log(sum(2,2));
 
 /* end of exercises */
+
+}())
