@@ -26,7 +26,6 @@ function numberStuff() {
                 alert("That number is odd!");
             }
             alert("Your number, plus one hundred, is " + (parseInt(typedNumber) + 100));
-
             if (typedNumber > 0) {
                 alert("Your number is positive");
             } else {
@@ -82,7 +81,6 @@ function numberStuff() {
             return "This doesn't fit within the confines of my understanding."
         }
     }
-console.log(analyzeColor(randomColor));
 
 
 // Don't change the next two lines!
@@ -97,31 +95,30 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message everytime you refresh the page
  */
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
-switch (randomColor) {
-    case (randomColor === "blue"):
-        console.log("Wow, that's blue!");
-        break;
-     case (randomColor === "red"):
-        console.log("wow, that's red!");
-         break;
-    case (randomColor === "green"):
-        console.log("Wow, that's green!");
-        break;
-    case (randomColor === "orange"):
-        console.log("Yep, that's orange.");
-        break;
-    case (randomColor === "yellow"):
-        console.log("Wow, yellow!");
-        break;
-    default:
-        console.log("This doesn't fit within the confines of my understanding.");
-        break;
+function colorPicker () {
+    var returnMessage;
+    switch (randomColor) {
+        case (randomColor === "blue"):
+            returnMessage = "Wow,that's blue!";
+        case (randomColor === "red"):
+            returnMessage = "Wow, taht's red!";
+        case (randomColor === "green"):
+            returnMessage = "Wow, that's green!";
+        case (randomColor === "orange"):
+            returnMessage = "Yep, that's orange.";
+        case (randomColor === "yellow"):
+            returnMessage = "yellow yellow yellow!";
+        default:
+            returnMessage = "This doesn't fit within the confines of my understanding.";
+    }
+    return returnMessage;
 }
 
 /**
@@ -160,16 +157,16 @@ switch (randomColor) {
         if (luckyNumber === 1) {
             return (totalBill - (totalBill * .1));
         }
-        if (luckyNumber === 2) {
+        else if (luckyNumber === 2) {
             return (totalBill - (totalBill * .25));
         }
-        if (luckyNumber === 3) {
+        else if (luckyNumber === 3) {
             return (totalBill - (totalBill * .35));
         }
-        if (luckyNumber === 4) {
+        else if (luckyNumber === 4) {
             return (totalBill - (totalBill* .5));
         }
-        if (luckyNumber === 5) {
+        else if (luckyNumber === 5) {
             return ("It's all free!!!!");
         }
         else {
