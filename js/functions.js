@@ -1,4 +1,6 @@
-"use strict";
+(function() {
+    "use strict";
+
 
 /**
  * TODO:
@@ -104,3 +106,4 @@ var random = Math.floor((Math.random() * 3) + 1);
     return (x - (x * y));
 }
 console.log(applyDiscount(100, .25));
+})()
