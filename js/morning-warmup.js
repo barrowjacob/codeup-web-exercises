@@ -1,5 +1,19 @@
 "use strict";
 
+
+// 10/9
+
+function stranger() {
+    return "Hello there, stranger."
+    alert(stranger());
+}
+function strangerer(str = "stranger") {
+    return "Hello there" + str;
+}
+var nice = prompt("input something here dawg");
+alert(strangerer(nice));
+
+
 // 10/8
 function greaterThanFive() {
     var userNum = parseInt(prompt("Please type a number here"));
