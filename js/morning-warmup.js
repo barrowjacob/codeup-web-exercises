@@ -3,10 +3,19 @@
 "use strict";
 
 
+
+
+// 10/10
+
+function lengthArray(arr) {
+    return arr.length;
+}
+console.log(lengthArray([7,2,3,4]));
+
 // 10/9
 
 function stranger() {
-    return "Hello there, stranger."
+    return "Hello there, stranger.";
     alert(stranger());
 }
 function strangerer(str = "stranger") {
