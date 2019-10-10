@@ -187,10 +187,10 @@ function colorPicker () {
             discountRate = .5;
         }
         else if (luckyNumber === 5) {
-            ("It's all free!!!!");
+            return "It's all free!!!!";
         }
         else {
-            totalBill;
+            return totalBill;
         }
         return (totalBill - (totalBill * discountRate));
 }
