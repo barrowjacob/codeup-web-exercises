@@ -15,32 +15,45 @@
  *
  * Can you refactor your code to use functions?
  */
+
+/* (WRITE OUT PSEUDO CODE TO HELP SOLVE PROBLEMS)
+    1. I need a confirm to ask the user if they want to enter a number. (if they don't enter #, skip down to final 'else').
+    2. ((nested)) if they click confirm (we need a conditional) ask the user for a number (prompt)
+    3. if this is a number or not.
+    4. if number, even odd, number + 100, neg/pos
+    5. if not, tell them it's not.
+*/
+
 function numberStuff() {
     var numbers = confirm("Would you like to enter a number?");
     if (numbers === true) {
         var typedNumber = parseInt(prompt("Please enter a number:"));
-        if (!isNaN(typedNumber)) {
-            if (typedNumber % 2 === 0) {
-                alert("That number is even!");
+        console.log("The user's number: " + typedNumber);
+        var isNumber = (!isNaN(typedNumber));
+        console.log("The user typed an actual number: " + isNumber);
+            if (isNumber) {
+                if (typedNumber % 2 === 0) {
+                    alert("That number is even!");
+                } else {
+                    alert("That number is odd!");
+                }
+                alert("Your number, plus one hundred, is " + (parseInt(typedNumber) + 100));
+                if (typedNumber > 0) {
+                    alert("Your number is positive");
+                } else {
+                    alert("Your number is negative");
+                }
+                if (isNaN(typedNumber)) {
+                    alert("That wasn't a number, gosh.")
+                }
             } else {
-                alert("That number is odd!");
-            }
-            alert("Your number, plus one hundred, is " + (parseInt(typedNumber) + 100));
-            if (typedNumber > 0) {
-                alert("Your number is positive");
-            } else {
-                alert("Your number is negative");
-            }
-            if (isNaN(typedNumber)) {
-                alert("That wasn't a number, gosh.")
-            }
-        } else {
-            alert("That's not a number.");
+                alert("That's not a number.");
         }
     } else {
         alert("gosh.");
     }
 }
+numberStuff();
 
 
 
@@ -66,17 +79,17 @@ function numberStuff() {
  * console.logging the function's return value
  */
 
-    function analyzeColor(str) {
-        if (str === "blue") {
+    function analyzeColor(color) {
+        if (color === "blue") {
             return "Wow, that's blue!"
-        } else if ( str === "red") {
-            return "wow, that's red!"
-        } else if (str === "green") {
+        } else if (color === "red") {
+            return "Wow, that's red!"
+        } else if (color === "green") {
             return "Wow, that's green!"
-        } else if (str === "orange") {
+        } else if (color === "orange") {
             return "Yep, that's orange."
-        } else if (str === "yellow") {
-            return "Wow, yellow!"
+        } else if (color === "yellow") {
+            return "Huh. Yellow!"
         } else {
             return "This doesn't fit within the confines of my understanding."
         }
@@ -107,16 +120,22 @@ function colorPicker () {
     switch (randomColor) {
         case (randomColor === "blue"):
             returnMessage = "Wow,that's blue!";
+            break;
         case (randomColor === "red"):
             returnMessage = "Wow, taht's red!";
+            break;
         case (randomColor === "green"):
             returnMessage = "Wow, that's green!";
+            break;
         case (randomColor === "orange"):
             returnMessage = "Yep, that's orange.";
+            break;
         case (randomColor === "yellow"):
             returnMessage = "yellow yellow yellow!";
+            break;
         default:
             returnMessage = "This doesn't fit within the confines of my understanding.";
+            break;
     }
     return returnMessage;
 }
@@ -154,25 +173,29 @@ function colorPicker () {
  * return value.
  */
     function calculateTotal(luckyNumber, totalBill) {
+       var discountRate = 0;
         if (luckyNumber === 1) {
-            return (totalBill - (totalBill * .1));
+            discountRate = .1;
         }
         else if (luckyNumber === 2) {
-            return (totalBill - (totalBill * .25));
+            discountRate = .25;
         }
         else if (luckyNumber === 3) {
-            return (totalBill - (totalBill * .35));
+            discountRate = .35;
         }
         else if (luckyNumber === 4) {
-            return (totalBill - (totalBill* .5));
+            discountRate = .5;
         }
         else if (luckyNumber === 5) {
-            return ("It's all free!!!!");
+            ("It's all free!!!!");
         }
         else {
-            return totalBill;
+            totalBill;
         }
+        return (totalBill - (totalBill * discountRate));
 }
+
+(calculateTotal(4, 35));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -183,8 +206,7 @@ function colorPicker () {
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
 
-var totalBill = prompt("How much was your total bill?");
+var totalBill = parseFloat(prompt("How much was your total bill?"));
 var realTotal = calculateTotal(luckyNumber, totalBill);
- alert("Your lucky number is " + luckyNumber);
- alert("Your price before discount was " + totalBill);
- alert("Your new, better-looking, discounted price is now " + (realTotal));
+ alert("Your lucky number is " + luckyNumber + "Your price before discount was " + totalBill + "Your new, better-looking, discounted price is now " + realTotal);
+
