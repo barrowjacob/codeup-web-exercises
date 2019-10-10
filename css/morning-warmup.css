@@ -1,0 +1,19 @@
+#shadow {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    left: 50%;
+    top: 50%;
+    box-shadow: 250px 250px 450px 250px blue,
+    -250px -250px 450px 250px red,
+    250px -250px 450px 250px yellow,
+    -250px 250px 450px 250px green;
+    animation: spin 10s infinite linear;
+    background-color: black;
+    z-index: -1;
+}
+@keyframes spin {
+    from {
+        transform: rotate(360deg);
+    }
+}
