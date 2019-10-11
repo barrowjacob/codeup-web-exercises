@@ -1,9 +1,16 @@
 (function() {
 
-"use strict";
+    "use strict";
 
+// 10/11
 
-
+    function onlyTwo(x, y) {
+        if (arguments.length == 2) {
+            return (x / y);
+        } else {
+            return false;
+        }
+    }
 
 // 10/10
 
