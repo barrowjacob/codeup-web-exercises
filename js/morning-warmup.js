@@ -1,16 +1,31 @@
 (function() {
 
     "use strict";
+// 10/15
+
+    function logArray(arr) {
+        for (var i = 0; i < arr.length; i++) {
+               console.log(arr[i]);
+        }
+    }
 
 // 10/11
 
-    function onlyTwo(x, y) {
-        if (arguments.length == 2) {
+    function quotient(x, y) {
+        if (typeof x === "number" && typeof y === "number") {
             return (x / y);
         } else {
             return false;
         }
     }
+    //i thought the prompt was for 2, not 3 or 4 numbers. lol.
+    // function onlyTwo(x, y) {
+    //     if (arguments.length === 2) {
+    //         return (x / y);
+    //     } else {
+    //         return false;
+    //     }
+    // }
 
 // 10/10
 
@@ -22,8 +37,8 @@ console.log(lengthArray([7,2,3,4]));
 // 10/9
 
 function stranger() {
-    return "Hello there, stranger.";
-    alert(stranger());
+    var yep = "Hello there, stranger.";
+    alert(yep);
 }
 function strangerer(str = "stranger") {
     return "Hello there" + str;
