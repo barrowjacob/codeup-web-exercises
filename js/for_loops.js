@@ -14,4 +14,15 @@ function showMultiplicationTable(x) {
         }
     }
 
-    // idk even wat for #4. nested for-loop? ugh. :-\ no se puede.
+    // for (i = 1; i < 10; i++) {
+    //     console.log(i);
+    //     for (var j = 1; j < 100; j *= 11) {
+    //     console.log(j);}
+    //     console.log(i * j);
+    //
+    // }
+
+    for (i = 100; i > 0; i-=5) {
+        console.log(i);
+    }
+

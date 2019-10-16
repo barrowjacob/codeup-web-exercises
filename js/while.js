@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var x = 1;
 while (x < 65536) {
     console.log(x *= 2);
@@ -10,14 +10,15 @@ while (allCones > 0) {
     if (reqCones < allCones) {
         allCones -= reqCones;
         console.log("You can buy your requested " + reqCones + " cones!");
-    } if (reqCones > allCones) {
+    }
+    if (reqCones > allCones) {
         console.log("You can't buy " + reqCones + " cones, crazy!");
-    } if (reqCones === allCones) {
+    }
+    if (reqCones === allCones) {
         allCones -= reqCones;
         console.log("You bought the last of our cones!");
     }
 }
-=======
 //
 // var i = 2;
 // while (i < 65700) {
@@ -41,6 +42,4 @@ while (allCones > 0) {
 //     }
 // } while (allCones > 0);
 //
-
->>>>>>> a2dca00136f3c3fa8e245c042af87f42c39d0314
 
