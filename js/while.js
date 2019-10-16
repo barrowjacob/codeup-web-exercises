@@ -5,20 +5,20 @@ while (x < 65536) {
 }
 var allCones = Math.floor(Math.random() * 50) + 50;
 
-while (allCones > 0) {
+do {
     var reqCones = Math.floor(Math.random() * 5) + 1;
     if (reqCones < allCones) {
         allCones -= reqCones;
         console.log("You can buy your requested " + reqCones + " cones!");
     }
-    if (reqCones > allCones) {
+    else if (reqCones > allCones) {
         console.log("You can't buy " + reqCones + " cones, crazy!");
     }
-    if (reqCones === allCones) {
+    else if (reqCones === allCones) {
         allCones -= reqCones;
         console.log("You bought the last of our cones!");
     }
-}
+} while (allCones > 0);
 //
 // var i = 2;
 // while (i < 65700) {
