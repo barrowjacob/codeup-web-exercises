@@ -1,6 +1,6 @@
 console.log("Number to skip is 27!");
 
-for  (i = 1; i < 50; i++) {
+for  (var i = 1; i < 50; i++) {
     if (i === 27) {
         console.log("Yikes, skipping number 27!");
         continue;

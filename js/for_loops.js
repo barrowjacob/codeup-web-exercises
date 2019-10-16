@@ -1,6 +1,6 @@
 function showMultiplicationTable(x) {
     for (var i = 0; i < 11; i++) {
-        console.log(x * i);
+        console.log(x + " x " + i + " = " + (x * i));
     }
 }
 
@@ -14,13 +14,12 @@ function showMultiplicationTable(x) {
         }
     }
 
-    // for (i = 1; i < 10; i++) {
-    //     console.log(i);
-    //     for (var j = 1; j < 100; j *= 11) {
-    //     console.log(j);}
-    //     console.log(i * j);
-    //
-    // }
+
+
+    for(i = 1; i <= 9; i++) {
+        console.log(("" + i).repeat(i));
+    }
+
 
     for (i = 100; i > 0; i-=5) {
         console.log(i);
