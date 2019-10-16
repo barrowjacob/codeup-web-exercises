@@ -1,3 +1,11 @@
+/* another example
+    while(true) {
+         var num = prompt("Enter an odd number between 1 and 50.");
+         if (num % 2 !== 0 && num <= 50 && num >= 1) {
+            break;
+        }
+ */
+
 var userNum;
 for (var x = 0; x < 50; x++) {
     userNum = parseFloat(prompt("Enter an odd number."));
@@ -12,7 +20,6 @@ for (var y = 1; y < 50; y+=2) {
         continue;
     }console.log(y);
 }
-
 
 
 
