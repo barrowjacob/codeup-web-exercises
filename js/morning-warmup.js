@@ -1,6 +1,12 @@
 (function() {
 
     "use strict";
+
+    // 10/17
+    function string(input) {
+        return (input.length === 8 && typeof(input) === "string");
+    }
+    console.log(string("thistest"));
 // 10/15
 
     function logArray(arr) {
