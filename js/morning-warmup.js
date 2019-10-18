@@ -2,6 +2,17 @@
 
     "use strict";
 
+
+    // 10/18
+
+    function roundDown(x) {
+        if (typeof(x) === "number") {
+            return Math.floor(x);
+        } else {
+            return false;
+        }
+    }
+
     // 10/17
     function string(input) {
         return (input.length === 8 && typeof(input) === "string");
