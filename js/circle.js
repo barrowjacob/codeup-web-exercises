@@ -18,9 +18,9 @@
             // TODO: complete this method.
 
             if (doRounding) {
-                var area = Math.round(Math.PI * (Math.pow(circle.radius, 2)));
+                var area = Math.round(this.getArea());
             } else {
-                console.log(Math.PI * (Math.pow(circle.radius, 2)));
+                area = console.log(this.getArea());
             }
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
