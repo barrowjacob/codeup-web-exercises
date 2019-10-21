@@ -28,7 +28,7 @@
      */
 
     person.sayHello = function () {
-        console.log("Hello from " + person.firstName + " " + person.lastName)
+        return "Hello from " + person.firstName + " " + person.lastName;
     };
     person.sayHello();
     /** TODO:
@@ -85,41 +85,41 @@
      */
 
     var books = [
-        // {
-        //     title: "moby dick",
-        //     author: {
-        //         firstName: "herman",
-        //         lastName: "melville"
-        //     }
-        // },
-        // {
-        //     title: "musashi",
-        //     author: {
-        //         firstName: "miyamoto",
-        //         lastName: "musashi"
-        //     }
-        // },
-        // {
-        //     title: "pawn",
-        //     author: {
-        //         firstName: "steven",
-        //         lastName: "james"
-        //     }
-        // },
-        // {
-        //     title: "narnia",
-        //     author: {
-        //         firstName: "cs",
-        //         lastName: "lewis"
-        //     }
-        // },
-        // {
-        //     title: "pet semetary",
-        //     author: {
-        //         firstName: "stephen",
-        //         lastName: "king"
-        //     }
-        // }
+        {
+            title: "moby dick",
+            author: {
+                firstName: "herman",
+                lastName: "melville"
+            }
+        },
+        {
+            title: "musashi",
+            author: {
+                firstName: "miyamoto",
+                lastName: "musashi"
+            }
+        },
+        {
+            title: "pawn",
+            author: {
+                firstName: "steven",
+                lastName: "james"
+            }
+        },
+        {
+            title: "narnia",
+            author: {
+                firstName: "cs",
+                lastName: "lewis"
+            }
+        },
+        {
+            title: "pet semetary",
+            author: {
+                firstName: "stephen",
+                lastName: "king"
+            }
+        }
     ];
 
     /**
@@ -147,11 +147,12 @@
      *      ...
      */
 
-    books.forEach(showBookInfo);
 
     function showBookInfo(book, index) {
-        console.log(book.title + book.author.firstName + book.author.lastName);
+        console.log(book.title  + book.author.firstName + book.author.lastName);
     }
+
+    books.forEach(showBookInfo);
 
 
     /**
@@ -172,17 +173,11 @@
             firstName: y,
             lastName: z
         };
-
+        return theBook;
     }
 
-    books.push("here is a title", "first name", "last name");
+    books.push(createBook("here is a title", "first name", "last name"));
 console.log(books);
 
- //
- // function showBookInfo(books) {
- //     books.forEach(function(bookalo){
- //         console.log(bookalo.title + bookalo.author.firstName + bookalo.author.lastName);
- //     });
- //    }
 
 })();
