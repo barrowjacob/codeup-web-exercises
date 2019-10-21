@@ -57,7 +57,7 @@ function stranger() {
     var yep = "Hello there, stranger.";
     alert(yep);
 }
-function strangerer(str = "stranger") {
+function strangerer(str) {
     return "Hello there" + str;
 }
 var nice = prompt("input something here dawg");
