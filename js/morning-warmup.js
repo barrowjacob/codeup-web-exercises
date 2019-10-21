@@ -2,6 +2,14 @@
 
     "use strict";
 
+    //10/21
+
+    function oneUp(x) {
+        for (var i = 1; i <= x; i++) {
+            console.log(i);
+        }
+    }
+    oneUp(12);
 
     // 10/18
 
