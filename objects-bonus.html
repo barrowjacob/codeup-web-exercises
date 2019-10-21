@@ -90,26 +90,29 @@ var salesReport = {
     ],
     getEmployeeCount: function () {
         console.log(this.employees.length + " is the number of employees");
-    }
-};
-
-   function getTotalSales() {
-           var total = 0;
-        for (var i = 0; i < this.employees.length; i++) {
-            total += salesReport.employees[i].salesUnit;
-        }
-     }
-         console.log(total);
     },
-      getAverageSalesPerEmployee: function() {
-         var AverageSales;
-         this.employees.forEach(function(employee) {
-            console.log()
-         })
+
+
+    getTotalSales: function () {
+        var total = 0;
+        for (var i = 0; i < this.employees.length; i++) {
+            total += this.employees[i].salesUnit;
+
+        }
+        console.log(total);
+    },
+    getAverageSalesPerEmployee: function () {
+        var averageSales;
+        var total = 0;
+        this.employees.forEach(function (employee,index) {
+            total += salesReport.employees[index].salesUnit;
+        });
+        averageSales = (total / 11);
+      console.log(averageSales);
+    }
+
+
 };
-
-
-
 var profiles =     [
         {
             "_id": "54e23c3e46ab53a440b580e8",
