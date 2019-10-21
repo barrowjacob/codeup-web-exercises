@@ -110,8 +110,6 @@ var salesReport = {
         averageSales = (total / 11);
       console.log(averageSales);
     }
-
-
 };
 var profiles =     [
         {
@@ -1013,7 +1011,50 @@ var profiles =     [
    :
        "strawberry"
    }
-   ]
+   ];
+
+   var profileReport = {
+       getProfileCount: function () {
+           console.log(profiles.length);
+           return profiles.length;
+       },
+       getActiveCount: function () {
+           var activeProfiles = 0;
+           profiles.forEach(function (profile, index) {
+               if (profiles[index].isActive) {
+                   activeProfiles++;
+               }
+           });
+           console.log(activeProfiles)
+       },
+       getInactiveCount: function() {
+           var inactiveProfiles = 0;
+           profiles.forEach(function(profile,index) {
+               if ((profiles[index].isActive) !== true) {
+                  inactiveProfiles++;
+               }
+           });
+           console.log(inactiveProfiles);
+       },
+       sumOfAllBalances: function() {
+         var sumBalance = 0;
+         profiles.forEach(function(profile,i) {
+             var balance = profiles[i].balance;
+            var splitArray = balance.split('');
+            splitArray.shift();
+            splitArray.splice(1,1);
+            var joinArray = splitArray.join('');
+             sumBalance += parseFloat(joinArray);
+         });
+         console.log(sumBalance);
+       },
+       getAverageBalance: function() {
+           console.log(profileReport.sumOfAllBalances() / (profileReport.getActiveCount() + profileReport.getInactiveCount()));
+       }
+   }
+
+
+
 
 
 

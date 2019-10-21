@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>js alalalala</title>
+</head>
+<body>
+
+<script>
+
+
+ var doggos = [
+        {
+            name: "Chompers",
+            breed: "pug",
+            age: 7
+        },
+        {
+            name: "freddy",
+            breed: "lab",
+            age: 4
+        },
+        {
+            name: "mr. pig",
+            breed: "mastiff",
+            age: 10
+        }
+    ];
+
+function getOlder(array) {
+   doggos.forEach(function(dog, index) {
+       var newAge = doggos[index].age++;
+   });
+    console.log(doggos);
+}
+
+
+
+</script>
+</body>
+</html>
