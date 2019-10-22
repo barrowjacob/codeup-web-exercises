@@ -24,44 +24,81 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="btn1" type="submit">bu'en</button><br>
+<button id="btn2" type="submit">bu'en-1</button><br>
+<button id="btn3" type="submit">bu'en-2</button><br>
+<button id="btn4" type="submit">bu'en-3</button><br>
 
 <script>
     (function() {
-        "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        document.getElementById("main-header").innerHTML = "JavaScript is Cool";
-        // TODO: Uncomment the next line and get the sub header element by id
+        document.getElementById("btn1").addEventListener("click", cool);
+        document.getElementById("btn1").addEventListener("click", bgfun);
+        document.getElementById("btn2").addEventListener("click", subBlue);
+        document.getElementById("btn3").addEventListener("click", listems);
+        document.getElementById("btn4").addEventListener("click", bluesClues);
+        document.getElementById("btn4").addEventListener("click", subs);
+
+
+
+
+
+
+        // "use strict";
+        // // TODO: Uncomment next line and get the main header element by id
+        // var mainHeader = document.getElementById("main-header");
+        //
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+
+    function bgfun() {
+        document.getElementsByTagName("body")[0].style.backgroundColor = "lightblue";
+    }
+        function cool() {
+         document.getElementById("main-header").innerHTML = "JavaScript is Cool"; }
+
+
+        // // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
+        //
+        // // TODO: Set the text color of subHeader to blue
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
-        // TODO: Uncomment the next line and get all list items
+
+        function subBlue() {
+            subHeader.style.color = "blue";
+        }
+        // // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
+        //
+        // // TODO: Set text color on every other list item to grey
 
-        // TODO: Set text color on every other list item to grey
-        for (var i =0; i < document.getElementsByTagName("li").length; i++) {
-            if (i % 2 !== 0) {
-                document.getElementsByTagName("li")[i].style.color = "orange";
+        function listems() {
+            for (var i =0; i < document.getElementsByTagName("li").length; i++) {
+                if (i % 2 !== 0) {
+                    document.getElementsByTagName("li")[i].style.color = "orange";
+                }
             }
         }
 
 
+        //
+        //
+        // // TODO: Set text color of li with dbid = 1 to blue
+        //
 
-        // TODO: Set text color of li with dbid = 1 to blue
-
-        for (i = 0; i < (listItems.length); i++) {
+        function bluesClues() {for (i = 0; i < (listItems.length); i++) {
             if (listItems[i].getAttribute("data-dbid") === "1") {
                 listItems[i].style.color = "blue";
             }
         }
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+    }
+        //
+        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "mission accomplished";
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        function subs() {
+            subParagraphs[0].innerText = "mission accomplished";
+        }
     })();
 </script>
 </body>
