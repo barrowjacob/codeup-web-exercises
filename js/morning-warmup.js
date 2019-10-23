@@ -1,6 +1,17 @@
 (function() {
 
     "use strict";
+    //10/23
+    var personObject = {};
+
+    function createPersonObject(name, age) {
+        personObject = {
+            name: name,
+            age: age
+        }
+    }
+    createPersonObject("jacob", 29);
+    console.log("my name is " + personObject.name + " and my age is " + personObject.age);
 
     //10/21
 
