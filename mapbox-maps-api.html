@@ -37,16 +37,21 @@
        draggable: true
    };
 
-   var marker = new mapboxgl.Marker(markerOptions)
-       .setLngLat([-98.487484, 29.42389])
-       .addTo(map);
 
    var popup = new mapboxgl.Popup()
        .setLngLat([-98.487484, 29.42389])
        .setHTML("<p>McDonalds</p>")
        .addTo(map);
 
+
+   var marker = new mapboxgl.Marker(markerOptions)
+       .setLngLat([-98.487484, 29.42389])
+       .addTo(map)
+       .togglePopup()
+       .setPopup(popup);
+
    marker.setPopup(popup);
+
    console.log(marker.getLngLat());
 
    geocode("101 Alamo Plaza, San Antonio, TX 78205",  mapboxToken).then(function(result){
