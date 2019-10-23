@@ -11,85 +11,75 @@
       }
    </style>
 </head>
-<body>
-   <div id="map">
-   </div>
-   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-   <script src="js/keys.js"></script>
-   <script src="js/mapbox-geocoder-utils.js"></script>
-   <script>
+   <body>
+      <h1>Hello Deimos!</h1>
 
+      <div id="map"></div>
 
-      var array = [
-          {
-            name: "McDonalds",
-            address: "101 Alamo Plaza, San Antonio, TX 78205"
-          },
-          {
-           name: "subway",
-           address: "240 E Houston St, San Antonio, TX 78205"
-          },
-          {
-              name: "my wife's cooking",
-              address: "12310 Switchgrass, San Antonio, TX 78252"
-          }
-      ];
+      <!--begin scripts-->
 
-      mapboxgl.accessToken = mapboxToken;
-      var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/mapbox/satellite-streets-v10',
-          zoom: 20,
-          center: [-98.487484, 29.42389]
-      });
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+      <script src="js/keys.js"></script>
+      <script src="js/mapbox-geocoder-utils.js"></script>
+      <script>
 
-      array.forEach(function (element, index){
+         /***************/
+         //create array//
+         /**************/
 
+         var array = [
+             {
+               name: "McDonalds",
+               address: "101 Alamo Plaza, San Antonio, TX 78205"
+             },
+             {
+              name: "subway",
+              address: "240 E Houston St, San Antonio, TX 78205"
+             },
+             {
+                 name: "my wife's cooking",
+                 address: "12310 Switchgrass, San Antonio, TX 78252"
+             }
+         ];
 
+         /**************/
+         // build map //
+         /*************/
+
+         mapboxgl.accessToken = mapboxToken;
+         var map = new mapboxgl.Map({
+             container: 'map',
+             style: 'mapbox://styles/mapbox/satellite-streets-v10',
+             zoom: 20,
+             center: [-98.487484, 29.42389]
+         });
+
+         /*******************/
+         // marker options //
+         /*******************/
+
+         var markerOptions = {
+             color: "#ff0000",
+             draggable: true
+         };
+
+         /***************/
+         // begin array //
+         /**************/
+
+         array.forEach(function (element, index){
           geocode(element.address, mapboxToken).then(function(result){
-
-
-          var popup = new mapboxgl.Popup()
-              .setText(element.name)
-              .addTo(map);
-
-          var marker = new mapboxgl.Marker(markerOptions)
-              .setLngLat(result)
-              .togglePopup()
-              .addTo(map)
-              .setPopup(popup);
-
-              console.log("This is the " + index + " one.");
-
-
-  var markerOptions = {
-      color: "#ff0000",
-      draggable: true
-  };
-          //
-          //
-          // marker.setPopup(popup);
-          //
-          // console.log(marker.getLngLat());
-          //
-
-  // var popup = new mapboxgl.Popup()
-  //     .setLngLat([-98.487484, 29.42389])
-  //     .setHTML("<p>McDonalds</p>")
-  //     .addTo(map);
-  //
-  //
-  // var marker = new mapboxgl.Marker(markerOptions)
-  //     .setLngLat([-98.487484, 29.42389])
-  //     .addTo(map)
-  //     .togglePopup()
-  //     .setPopup(popup);
-
-          });
-      });
-
-
-
-   </script>
-</body>
+             var popup = new mapboxgl.Popup()
+                 .setText(element.name)
+                 .addTo(map);
+             var marker = new mapboxgl.Marker(markerOptions)
+                 .setLngLat(result)
+                 .togglePopup()
+                 .addTo(map)
+                 .setPopup(popup);
+                 console.log("This is the " + index + " one.");
+             });
+         });
+      </script>
+   </body>
 </html>
