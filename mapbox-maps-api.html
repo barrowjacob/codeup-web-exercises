@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <title>MAPS! MAPS! MAPS!</title>
+   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
    <style>
       #map {
          width: 100%;
@@ -12,25 +13,48 @@
 </head>
 <body>
 
-<div id="map">
+   <div id="map">
+   </div>
 
-</div>
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-<script src="js/keys.js"></script>
-<script src="js/mapbox-geocoder-utils.js"></script>
-<script>
-mapboxgl.accessToken = mapboxToken;
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-streets-v10',
-    zoom: 15,
-    center: [-98.489615, 29.426827]
-});
-var devine = geocode("Devine, TX",  mapboxToken).then(function(result){
-    console.log(result);
-});
 
-</script>
+
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+   <script src="js/keys.js"></script>
+   <script src="js/mapbox-geocoder-utils.js"></script>
+   <script>
+
+   mapboxgl.accessToken = mapboxToken;
+   var map = new mapboxgl.Map({
+       container: 'map',
+       style: 'mapbox://styles/mapbox/satellite-streets-v10',
+       zoom: 20,
+       center: [-98.487484, 29.42389]
+   });
+
+   var markerOptions = {
+       color: "#04ffbf",
+       draggable: true
+   };
+
+   var marker = new mapboxgl.Marker(markerOptions)
+       .setLngLat([-98.487484, 29.42389])
+       .addTo(map);
+
+   var popup = new mapboxgl.Popup()
+       .setLngLat([-98.487484, 29.42389])
+       .setHTML("<p>McDonalds</p>")
+       .addTo(map);
+
+   marker.setPopup(popup);
+   console.log(marker.getLngLat());
+
+   geocode("101 Alamo Plaza, San Antonio, TX 78205",  mapboxToken).then(function(result){
+       console.log(result);
+   });
+
+
+
+   </script>
 </body>
 </html>

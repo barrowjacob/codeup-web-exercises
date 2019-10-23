@@ -63,13 +63,13 @@ var markerOptions = {
 
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
-// var popup = new mapboxgl.Popup()
-//     .setLngLat([-98.489615, 29.426827])
-//     .setHTML("<p>Codeup Rocks!</p>")
-//     .addTo(map)
-//
-// marker.setPopup(popup);
-// console.log(marker.getLngLat());
+var popup = new mapboxgl.Popup()
+    .setLngLat([-98.489615, 29.426827])
+    .setHTML("<p>Codeup Rocks!</p>")
+    .addTo(map)
+
+marker.setPopup(popup);
+console.log(marker.getLngLat());
 
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
 
