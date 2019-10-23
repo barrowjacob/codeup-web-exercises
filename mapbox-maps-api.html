@@ -12,51 +12,81 @@
    </style>
 </head>
 <body>
-
    <div id="map">
    </div>
-
-
-
-
    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
    <script src="js/keys.js"></script>
    <script src="js/mapbox-geocoder-utils.js"></script>
    <script>
 
-   mapboxgl.accessToken = mapboxToken;
-   var map = new mapboxgl.Map({
-       container: 'map',
-       style: 'mapbox://styles/mapbox/satellite-streets-v10',
-       zoom: 20,
-       center: [-98.487484, 29.42389]
-   });
 
-   var markerOptions = {
-       color: "#04ffbf",
-       draggable: true
-   };
+      var array = [
+          {
+            name: "McDonalds",
+            address: "101 Alamo Plaza, San Antonio, TX 78205"
+          },
+          {
+           name: "subway",
+           address: "240 E Houston St, San Antonio, TX 78205"
+          },
+          {
+              name: "my wife's cooking",
+              address: "12310 Switchgrass, San Antonio, TX 78252"
+          }
+      ];
+
+      mapboxgl.accessToken = mapboxToken;
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/satellite-streets-v10',
+          zoom: 20,
+          center: [-98.487484, 29.42389]
+      });
+
+      array.forEach(function (element, index){
 
 
-   var popup = new mapboxgl.Popup()
-       .setLngLat([-98.487484, 29.42389])
-       .setHTML("<p>McDonalds</p>")
-       .addTo(map);
+          geocode(element.address, mapboxToken).then(function(result){
 
 
-   var marker = new mapboxgl.Marker(markerOptions)
-       .setLngLat([-98.487484, 29.42389])
-       .addTo(map)
-       .togglePopup()
-       .setPopup(popup);
+          var popup = new mapboxgl.Popup()
+              .setText(element.name)
+              .addTo(map);
 
-   marker.setPopup(popup);
+          var marker = new mapboxgl.Marker(markerOptions)
+              .setLngLat(result)
+              .togglePopup()
+              .addTo(map)
+              .setPopup(popup);
 
-   console.log(marker.getLngLat());
+              console.log("This is the " + index + " one.");
 
-   geocode("101 Alamo Plaza, San Antonio, TX 78205",  mapboxToken).then(function(result){
-       console.log(result);
-   });
+
+  var markerOptions = {
+      color: "#ff0000",
+      draggable: true
+  };
+          //
+          //
+          // marker.setPopup(popup);
+          //
+          // console.log(marker.getLngLat());
+          //
+
+  // var popup = new mapboxgl.Popup()
+  //     .setLngLat([-98.487484, 29.42389])
+  //     .setHTML("<p>McDonalds</p>")
+  //     .addTo(map);
+  //
+  //
+  // var marker = new mapboxgl.Marker(markerOptions)
+  //     .setLngLat([-98.487484, 29.42389])
+  //     .addTo(map)
+  //     .togglePopup()
+  //     .setPopup(popup);
+
+          });
+      });
 
 
 
