@@ -24,7 +24,7 @@ mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-streets-v10',
-    zoom: 18,
+    zoom: 15,
     center: [-98.489615, 29.426827]
 });
 var devine = geocode("Devine, TX",  mapboxToken).then(function(result){
