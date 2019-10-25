@@ -1,6 +1,15 @@
 
 
     "use strict";
+        function onlyFive(string) {
+            if (typeof(string) === "string" && string == 5) {
+                console.log(parseInt(string));
+            } else {
+                return "Not 5"
+            }
+        }
+        console.log(onlyFive("potato"));
+
 
     //10/24
      function fizzBuzz() {
