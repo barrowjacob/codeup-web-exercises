@@ -1,6 +1,46 @@
 
 
     "use strict";
+
+        //10/28
+
+    var shoppingCarts = [
+        {
+            apples: 8,
+            bananas: 2,
+            oranges: 4,
+            grapes: 24
+        }, {
+            apples: 3,
+            bananas: 6,
+            oranges: 8,
+            grapes: 12
+        } , {
+            apples: 0,
+            bananas: 12,
+            oranges: 0,
+            grapes: 0
+        } , {
+            apples: 4,
+            bananas: 0,
+            oranges: 12,
+            grapes: 10
+        }
+    ];
+    var finalCart;
+    function mostOrangesShoppingCart(carts) {
+        var winner = carts[0];
+        carts.forEach(function(el){
+            if (carts.oranges > winner.oranges) {
+            winner = el;
+            }
+        });
+        return winner;
+    }
+
+    console.log(mostOrangesShoppingCart(shoppingCarts));
+
+       //10/25
         function onlyFive(string) {
             if (typeof(string) === "string" && string == 5) {
                 console.log(parseInt(string));
