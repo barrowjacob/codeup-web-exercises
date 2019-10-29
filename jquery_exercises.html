@@ -7,17 +7,17 @@
 </head>
 <body>
 
-<nav>Hello, this is a webpage!</nav>
+<nav><h1>Hello, this is a webpage!</h1></nav>
 <main>
-   <div id="divId" class="div">
+   <div id="divId" class="codeup">
       <p id="paragraph" class="para">Here is a collection of words!</p>
    </div>
-   <div id="midDiv" class="div">
+   <div id="midDiv" class="codeup">
       <img src="img/man.jpg" id="manPic" height="300px" >
    </div>
    <hr>
    <p class="para">I was thinking about a moose. This moose's name was James. James the Moose. James was quite a friendly moose. He would wave to his neighbors, and always left a bottle of water for the garbageman. James died, unfortunately.</p>
-   <div id="listDiv" class="div">
+   <div id="listDiv" class="codeup">
       <ul>Here is a list of things:
          <li>Things that I like</li>
          <li>Things that I don't like</li>
@@ -26,20 +26,21 @@
    </div>
 </main>
 <script src="js/jquery-2.2.4.js"></script>
-
 <script>
    $(document).ready(function(){
 
-       alert($('.div').html());
 
+       $('.codeup').css("border", "1px solid red");
+      $('li').css("font-size","20px");
+      $('p, li, h1').css("background-color","yellow");
+
+   alert($('h1').html());
 
    })
+
+
 </script>
-<!--<script>-->
-<!--    $(document).ready(function() {-->
-<!--        alert("Hey, man! The DOM has finished loading!");-->
-<!--    })-->
-<!--</script>-->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
