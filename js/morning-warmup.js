@@ -2,6 +2,46 @@
 
     "use strict";
 
+    //10/29
+
+    var students = [
+        {
+            name: "Mary",
+            grade: 10,
+            gpa: 3.7,
+            isRegistered: true
+        },
+        {
+            name: "Tim",
+            grade: 12,
+            gpa: 3.2,
+            isRegistered: false
+        },
+        {
+            name: "Ellie",
+            grade: 9,
+            gpa: 4.0,
+            isRegistered: false
+        },
+        {
+            name: "Alex",
+            grade: 10,
+            gpa: 3.9,
+            isRegistered: true
+        }
+    ];
+    function registeredStudents(arr) {
+        var unRegistered = [];
+       students.forEach(function(student){
+           if (student.isRegistered === false) {
+               unRegistered.push(student);
+           }
+       }); return unRegistered;
+    }
+    console.log(registeredStudents());
+
+
+
         //10/28
 
     var shoppingCarts = [
