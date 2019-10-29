@@ -25,17 +25,18 @@ $(document).ready(function() {
     // $('#some-id');
 
     // TODO TOGETHER: Select the contents/html of the id 'book-welcome' and set equal to the variable 'contents'. Console.log the contents
-
+    var contents = $('#book-welcome').html();
 
     // TODO TOGETHER: Change the background color of the id 'book-welcome'
-
+    $('#book-welcome').css({"background-color": "blue", "color": "lightblue", "display": "flex", "justify-content": "center"});
 
     // TODO: Select the contents/html of the id 'book-bundle-one' and set equal to the variable 'bookBundle'. Console.log the contents
-
+    var bookBundle = $('#book-bundle-one').html();
+    console.log(bookBundle);
 
     // TODO: Change one css property of the id 'container'
 
-
+    $('#container').css({"font-size": "1.2em", "background-color": "gold", "box-shadow": "0 0 15px 10px darkblue", "padding": "15px"});
 
     /**********************************************
      * 			** CLASS Selector **
@@ -44,12 +45,13 @@ $(document).ready(function() {
 
     // TODO TOGETHER: Change the font size of all the .main-headings
 
-
+        $('.main-headings').css("font-size","3em");
     // TODO: Explore the following JS Bin example:
     //  https://jsbin.com/topupe/1/edit?js,output
 
 
     // TODO BONUS: Add additional class names to the page, and practice changing the css or viewing the contents
+
 
 
 
@@ -60,10 +62,19 @@ $(document).ready(function() {
 
     // TODO TOGETHER: Change the background color of all paragraph tags
 
-
+    $('p').css({"background-color": "goldenrod", "width": "30%"});
     // TODO: Explore the following JS Bin example:
     //  https://jsbin.com/gayir/1/edit?js,output
 
+    $( "p" ).click(function() {
+            $('h4').slideToggle();
+    });
+
+
+
+    function slide() {
+        $('p').slideUp();
+    }
 
     // TODO BONUS: Add additional elements to the page, and practice changing the css or viewing the contents
 
@@ -76,7 +87,7 @@ $(document).ready(function() {
 
     // TODO TOGETHER: Change the background color of id 'mystery-genre' and 'book-bundle-three' to red
 
-
+    $('#mystery-genre, #book-bundle-three').css("background-color", "red");
 
     // TODO: Explore the following JS Bin example:
     //  https://jsbin.com/qejeli/1/edit?output
@@ -93,7 +104,7 @@ $(document).ready(function() {
 
     // TODO TOGETHER: Create a border around all elements
 
-
+    $('*').css("border","1px dashed green");
 
     // TODO: Explore the following JS Bin example:
     //  https://jsbin.com/fivucu/1/edit?js,output
