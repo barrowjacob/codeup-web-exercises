@@ -36,18 +36,31 @@
 <script>
     $(document).ready(function () {
 
-        alert($('h1').html());
+        // alert($('h1').html());
 
-        $('li').css("font-size", "20px");
-        $('p, li, h1').css("background-color", "yellow");
+        // $('li').css("font-size", "20px");
+        // $('p, li, h1').css("background-color", "yellow");
 
 
-        // $('#box').click(function() {
-        //     $('#box').animate({
-        //         left: "200px"
-        //     });
-        //
-        // })
+        $('#box').click(function () {
+            $('#box').animate({
+                marginLeft: "100%",
+                // 'transform': "rotate(1800deg)"
+            }, 300, "linear");
+
+        });
+
+        $('h1').click(function () {
+            $('h1').css("background-color", "blue");
+        });
+        $('p').dblclick(function () {
+            $('p').css("font-size", "18px");
+        });
+        $('li').hover(function () {
+            $(this).css("color", "red");
+        }, function () {
+            $(this).css("color", "black");
+        });
 
 
 
