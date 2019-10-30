@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+
+<h1>Konami Code!</h1>
+<div></div>
+<audio id="nope" src="nope.mp3"></audio>
+<script src="js/jquery-2.2.4.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+    var i = 0;
+    var o = 0;
+   var nope = new Audio('nope1.mp3');
+   var punch = new Audio('punch_sound2.mp3');
+   var party = new Audio('party_horn.mp3');
+   var sad = new Audio('sad_sound.mp3');
+
+    var keyCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a','Enter'];
+    var typedKey = function(event) {
+          if (event.key === keyCode[i]) {
+              i++;
+              console.log(event.key);
+              console.log("it matches!");
+              punch.play();
+
+          } else {
+              i = 0;
+              if (o >= 10) {
+                  sad.play();
+                  $("body").after().html("<img src='img/fail.jpg'>");
+              } else {
+                  console.log(event.key);
+                  console.log("Womp womp! Try again!");
+                  nope.play();
+                  o++;
+              }
+          }
+         if ( o === 10) {
+             sad.play();
+         }
+         if (i === keyCode.length) {
+             console.log("WOW MAN! YOU DID THE SECRET THING!!");
+             party.play();
+             $("body").after().html("<img src='img/venture.gif' style='width:500px'>");
+         }
+    };
+        $(document).keyup(typedKey)
+
+
+
+
+
+   //
+   // if (typedKey === keyCode) {
+   //     console.log("Yes!");
+   // }
+
+
+
+
+
+
+
+});
+</script>
+
+</body>
+</html>
