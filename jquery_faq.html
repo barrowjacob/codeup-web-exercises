@@ -3,9 +3,19 @@
 <head>
    <meta charset="UTF-8">
    <title>Title</title>
+   <style>
+      .invisible {
+         visibility: hidden;
+      }
+      .darkMode {
+         background: linear-gradient(to right, black, darkslategrey);
+         color: goldenrod;
+         font-size: 2em;
+      }
+   </style>
 </head>
 <body>
-
+<a href="#">Click me to toggle visibility!</a>
    <dl>
       <dt>How many acres are covered by the National Park System?</dt>
       <dd>In the National Park System, there are 407 sites covering more than 84 million acres of land.</dd>
@@ -28,6 +38,23 @@
       <dt>Are National Parks actually cool?</dt>
       <dd>Yes.</dd>
    </dl>
-
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+   $(document).ready(function(){
+       $('dd').addClass('invisible');
+   });
+   $('a').click(function () {
+       $('dd').toggleClass('invisible');
+       $('body').toggleClass('darkMode');
+   });
+   $('dt').click(function() {
+       var currentDt = $(this);
+       currentDt.css("background-color", "blue");
+       setTimeout(function() {
+           console.log("setTimeout running");
+           currentDt.css("background-color", "");
+       }, 500)
+   })
+</script>
 </body>
 </html>
