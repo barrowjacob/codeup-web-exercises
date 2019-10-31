@@ -148,9 +148,7 @@
 <button id="one">Yellow-ify!</button>
 
 <div id="griddy">
-   <div class="divs flex" style="height: 100px" id="two">
-      <div class="div1"></div>
-   </div>
+   <div class="div1 divs flex" style="height: 100px" id="two"></div>
    <div class="div2 divs flex" style="height: 100px" id="three"></div>
    <div class="div3 divs flex" style="height: 100px" id="four"></div>
    <button id="five">---></button>
@@ -197,12 +195,14 @@
 
 
        $('#five').click(function () {
-           $(this).parent().children().first().children().removeClass();
-           $(this).parent().children().first().addClass('div2');
-           $(this).parent().children().first().next().removeClass('div2');
-           $(this).parent().children().first().next().addClass('div1');
-       })
-       $()
+           if ($(this).parent().children().first().next() === 'div2') {
+                  $(this).parent().children().first().removeClass('div1');
+                  $(this).parent().children().first().addClass('div2');
+                  $(this).parent().children().first().next().removeClass('div2');
+                  $(this).parent().children().first().next().addClass('div1');
+           }
+           // }) else if ($(this).parent().children().first().next().class === 'div3')
+       };
 
 
    });
