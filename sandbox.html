@@ -3,6 +3,12 @@
 <head>
    <meta charset="UTF-8">
    <title>Title</title>
+   <style>
+      .darkMode {
+         background: linear-gradient(to right, black, darkslategrey);
+         color: goldenrod;
+      }
+   </style>
 </head>
 <body style="height: 500px">
 
@@ -13,9 +19,20 @@
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-   $('body').keyup(function(){
-       $('#yep').toggle();
-   })
+
+   $('body').click(function () {
+      console.log("body clicked");
+       $(this).addClass('darkMode');
+   });
+
+   if ($('body').hasClass('darkMode')) {
+       $('h1').click(function() {
+           $(this).toggleClass();
+       });
+   }
+
+
+
 
 
 </script>
