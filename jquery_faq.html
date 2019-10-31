@@ -7,27 +7,41 @@
       .invisible {
          visibility: hidden;
       }
+      .lightMode {
+         background: linear-gradient(to right, orange, orangered);
+         color: darkblue;
+         font-size: 1.2em;
+         border: 3px solid #b4d455;
+         padding: 10px;
+         width: 33%;
+      }
       .darkMode {
-         background: linear-gradient(to right, black, darkslategrey);
-         color: goldenrod;
-         font-size: 2em;
+         background: linear-gradient(to right, midnightblue, darkblue);
+         color: lightyellow;
+         font-size: 1.7em;
          border: 4px solid wheat;
          padding: 10px;
+         width: 50%;
       }
       .gif {
          height: 500px;
          position: absolute;
          top: 20px;
-         right: 50px;
-
+         right: 20px;
       }
       .visible {
          display: none;
       }
+      .white {
+         color: cornsilk;
+      }
+      .seen {
+         display: inline-block;
+      }
    </style>
 </head>
 <body style="background-color: lightgrey">
-<div>
+<div class="lightMode">
    <a href="#">Click me to toggle visibility!</a>
       <dl>
          <dt>How many acres are covered by the National Park System?</dt>
@@ -51,7 +65,8 @@
          <dt>Are National Parks actually cool?</dt>
          <dd>Yes.</dd>
       </dl>
-   <img class="gif" src="img/family-hike.gif">
+   <img id="gif1" class="gif" src="img/family-hike.gif">
+   <img id="gif2" class="gif visible" src="img/night_hike.gif" >
 </div>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -60,9 +75,11 @@
    });
    $('a').click(function () {
        $('dd').toggleClass('invisible');
+       $('div').toggleClass('lightMode');
        $('div').toggleClass('darkMode');
-
-       $('img').toggleClass('visible');
+       $('#gif2').toggleClass("visible");
+       $('#gif1').toggleClass('visible');
+       $('a').toggleClass('white');
    });
    $('dt').click(function() {
        var currentDt = $(this);
