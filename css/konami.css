@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    background: linear-gradient(to right, lightblue, blue);
+}
+h1 {
+    grid-area: h1;
+    display: flex;
+    justify-content: center;
+}
+
+#pic {
+    background: blue;
+    height: 50px;
+}
