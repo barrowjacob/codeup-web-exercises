@@ -31,6 +31,22 @@
        });
    }
 
+   var yep = $('div').click(function() {
+       if ($(this).attr('id') == imp[m]) {
+           var imp = ['parkLists', 'other', 'parkLists'];
+           m++;
+           console.log("what what what!!!");
+           console.log(m);
+
+       } else {
+           console.log("dangit");
+       }
+       if (m === imp.length) {
+           console.log("The number of correct clicks equals the length of the array!");
+       }
+   });
+
+
 
 
 
