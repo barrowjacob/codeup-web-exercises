@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Online Store</title>
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
-    <thead>
+<table id="products" style="border: 1px solid black; width: 100%" >
+    <thead >
         <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
+            <th id="title" style="border: 1px solid black"><h3>Title</h3></th>
+            <th id="quantity" style="border: 1px solid black"><h3>Quantity</h3></th>
+            <th id="price" style="border: 1px solid black"><h3>Price</h3></th>
+            <th id="categories" style="border: 1px solid black"><h3>Categories</h3></th>
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="btn">Refresh!</button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
@@ -25,6 +27,32 @@
 (function() {
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
+        function dataQueryStoreThing() {
+            var inventoryData = $.get("data/inventory.json");
+            inventoryData.done(function (data) {
+                console.log(data);
+                $.each(data, function (index, tool) {
+                    var titleContent = tool.title;
+                    $('#title').append("<br>" + titleContent + "<br>");
+                    var quantityContent = tool.quantity;
+                    $('#quantity').append("<br>" + quantityContent + "<br>");
+                    var priceContent = tool.price;
+                    $('#price').append("<br>" + priceContent + "<br>");
+                    var categoriesContent = tool.categories;
+                    $('#categories').append("<br>" + categoriesContent + "<br>");
+                })
+            })
+        }
+        dataQueryStoreThing();
+
+        $('#btn').click(function () {
+            $('#title').html("");
+            $('#quantity').html("");
+            $('#price').html("");
+            $('#categories').html("");
+            dataQueryStoreThing();
+        });
+
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
