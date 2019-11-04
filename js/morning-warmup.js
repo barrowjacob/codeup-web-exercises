@@ -1,8 +1,23 @@
 
 
     "use strict";
+
+    //11/4
+
+    function writeNumbers(num) {
+        var i = num;
+        var array = [0, "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+        return array[i];
+    }
+    console.log(writeNumbers(9));
+
     //10/30
 
+
+    /* Google Docs. Store papers anywhere.
+        Codepen. Uesful demonstrations.
+        Neopets. Because science.
+     */
 
     var hamsters = [
         {
@@ -349,6 +364,7 @@ console.log(hamsterObjects(hamsters));
          }
 
          console.log(sum(2, 2));
+
 
 /* end of exercises */
 
