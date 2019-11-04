@@ -5,9 +5,8 @@
     //11/4
 
     function writeNumbers(num) {
-        var i = num;
         var array = [0, "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-        return array[i];
+        return array[num];
     }
     console.log(writeNumbers(9));
 
