@@ -257,8 +257,8 @@ console.log(hamsterObjects(hamsters));
              return "Hello there" + str;
          }
 
-         var nice = prompt("input something here dawg");
-         alert(strangerer(nice));
+         // var nice = prompt("input something here dawg");
+         // alert(strangerer(nice));
 
 
 // 10/8
