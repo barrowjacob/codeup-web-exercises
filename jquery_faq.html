@@ -195,7 +195,7 @@
 
 
        $('#five').click(function () {
-           if ($(this).parent().children().first().next() === 'div2') {
+           if ($(this).parent().children().first($('.div2')) === 'div2') {
                   $(this).parent().children().first().removeClass('div1');
                   $(this).parent().children().first().addClass('div2');
                   $(this).parent().children().first().next().removeClass('div2');
