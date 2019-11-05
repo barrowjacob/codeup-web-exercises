@@ -3,19 +3,40 @@
 <head>
     <meta charset="utf-8">
     <title>Online Store</title>
+    <style>
+        th {
+            background: #2B5B80;
+            color: #FFF;
+        }
+        h1 {
+            text-align: center;
+            color: darkslateblue;
+            font-size: 5em;
+        }
+        html {
+            background: linear-gradient(to top, #571845,  #900C3E,#C70039, #FF5733, #FFC300);
+            height: 100vh;
+        }
+        table {
+            background: #D5EFF5;
+        }
+    </style>
 </head>
 <body>
 
 <h1>My Tool Store</h1>
+<h1 style="position: absolute; color: whitesmoke; top: .6%; left: 33%; z-index: -1">My Tool Store</h1>
+
 
 <table id="products" style="border: 1px solid black; width: 100%" >
     <thead >
         <tr>
-            <th id="title" style="border: 1px solid black"><h3>Title</h3></th>
-            <th id="quantity" style="border: 1px solid black"><h3>Quantity</h3></th>
-            <th id="price" style="border: 1px solid black"><h3>Price</h3></th>
-            <th id="categories" style="border: 1px solid black"><h3>Categories</h3></th>
+            <th style="border: 1px solid black"><h3>Title</h3></th>
+            <th style="border: 1px solid black"><h3>Quantity</h3></th>
+            <th style="border: 1px solid black"><h3>Price</h3></th>
+            <th style="border: 1px solid black"><h3>Categories</h3></th>
         </tr>
+
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
@@ -32,24 +53,17 @@
             inventoryData.done(function (data) {
                 console.log(data);
                 $.each(data, function (index, tool) {
-                    var titleContent = tool.title;
-                    $('#title').append("<br>" + titleContent + "<br>");
-                    var quantityContent = tool.quantity;
-                    $('#quantity').append("<br>" + quantityContent + "<br>");
-                    var priceContent = tool.price;
-                    $('#price').append("<br>" + priceContent + "<br>");
-                    var categoriesContent = tool.categories;
-                    $('#categories').append("<br>" + categoriesContent + "<br>");
+                    $('#insertProducts').append("<tr><td style='border: 1px solid black'>" + tool.title + "</td>" +
+                    "<td style='border: 1px solid black'>" + tool.quantity + "</td>" +
+                    "<td style='border: 1px solid black'>" + tool.price + "</td>" +
+                    "<td style='border: 1px solid black'>" + tool.categories + "</td></tr>");
                 })
             })
         }
         dataQueryStoreThing();
 
         $('#btn').click(function () {
-            $('#title').html("");
-            $('#quantity').html("");
-            $('#price').html("");
-            $('#categories').html("");
+            $('#insertProducts').html("");
             dataQueryStoreThing();
         });
 

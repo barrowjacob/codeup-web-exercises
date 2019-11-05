@@ -37,5 +37,33 @@
             "tasty eats"
         ],
         "price": 5
+    }, {
+        "title": "New Shoes",
+        "quantity": 1.5,
+        "categories": [
+            "footwear"
+        ],
+        "price": 25
+    },{
+        "title": "Old Shoes",
+        "quantity": 1.5,
+        "categories": [
+            "footwear"
+        ],
+        "price": 15
+    },{
+    "title": "Orange Skinny-Jeans",
+    "quantity": 1,
+    "categories": [
+        "leggings"
+    ],
+    "price": 50
+}, {
+    "title": "One Single Banana",
+    "quantity": 100,
+    "categories": [
+        "throwing weapon"
+    ],
+    "price": 3
 }
 ]
