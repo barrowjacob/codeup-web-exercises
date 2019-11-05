@@ -2,6 +2,21 @@
 
     "use strict";
 
+        //11/5
+
+    function soWelcome(obj) {
+        if (obj.gratitude === "Thank You") {
+            return "You're Welcome"
+        } else {
+            console.log("Darnit Nico get off my junk.");
+        }
+    }
+
+    console.log(soWelcome({
+        mario: "kart"
+        }
+    ));
+
     //11/4
 
     function writeNumbers(num) {
