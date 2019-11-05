@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>DOM Review</title>
+
+   <style>
+      .highlight {
+         background: yellow;
+      }
+      .dbl {
+         background: purple;
+      }
+   </style>
+</head>
+<body>
+<div class="container">
+   <div id="main">
+      <input type="text" id="input">
+      <button id="add-to-list">Add to List</button>
+
+      <h4>Favorite Food:</h4>
+      <ul id="favorite-food">
+         <li>Ramen</li>
+         <li>Sushi</li>
+         <li>Curry</li>
+      </ul>
+
+      <h4 id="change-me">Change Me</h4>
+
+      <h4>My Cohort: <span id="my-cohort"></span></h4>
+      <input type="text" id="cohort-name">
+      <button id="change-cohort">Update</button>
+
+      <br>
+      <button id="change-to-red">Change to Red</button>
+   </div>
+</div>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+   $('#add-to-list').click(function() {
+       var sandwich = $('#input').val();
+       console.log(sandwich);
+       $('#favorite-food').append('<li>' + sandwich + '</li>');
+   });
+
+   $('#change-me').dblclick(function() {
+       $('#change-me').toggleClass('dbl');
+   });
+   $('#change-cohort').click(function() {
+       var newCohort = $('#cohort-name').val();
+       $('#my-cohort').html("");
+       $('#my-cohort').html(newCohort);
+   });
+   $('#change-to-red').click(function() {
+       $('#my-cohort').toggleClass('highlight');
+   });
+   setTimeout(function() {
+       $('.container').css({'background-color': 'pink'});
+   }, 4000);
+
+
+</script>
+</body>
+</html>
