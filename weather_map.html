@@ -10,12 +10,44 @@
          justify-content: space-around;
          margin-top: 5%;
       }
+      div {
+         text-align: center;
+      }
+      #mainDiv {
+         width: 30%;
+
+      }
+      .card-title {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      h3 {
+         margin-bottom: 0;
+      }
+      .inputDiv {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .leftMarg {
+         margin-left: 2%
+      }
    </style>
 </head>
 <body>
 
+
    <div id="weatherDisplay" class="container-fluid">
    </div>
+   <h1 class="display-4 text-center mt-3">Choose Your Location!</h1>
+   <div class="inputDiv mt-3">
+      <input type="text" placeholder="Enter Latitude!" id="latty">
+      <input type="text" placeholder="Enter Longitude!" id="longy" class="leftMarg">
+      <button id="latLngButton" style="margin-left: 1%">Submit!</button>
+   </div>
+
+
 
    <script src="js/jquery-2.2.4.js"></script>
    <script src="js/keys.js"></script>
