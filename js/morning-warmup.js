@@ -2,6 +2,15 @@
 
     "use strict";
 
+    //11/6
+    function randomBoolean() {
+        var randomBoo = (Math.floor(Math.random() * 1) +1);
+        console.log(randomBoo);
+        return randomBoo === 1;
+    }
+    console.log(randomBoolean());
+
+
         //11/5
 
     function soWelcome(obj) {
