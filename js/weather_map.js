@@ -103,20 +103,30 @@ $(document).ready(function () {
         newNew();
 
 
-        // begin mapbox functionality
 
 
     });
+    // begin mapbox functionality
 
-    var newMap = function() {
+    //create a mapbox
         mapboxgl.accessToken = mapboxToken;
         var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/satellite-streets-v10',
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            center: [-98.4936, 29.4241], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+
 
         });
-    }
-    newMap();
+
+        // marker options
+    var markerOptions = {
+        color: "#ff0000",
+        draggable: true
+    };
+        var marker = new mapboxgl.Marker(markerOptions)
+            .setLngLat([-98.4936, 29.4241])
+            .addTo(map);
 
 
 
