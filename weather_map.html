@@ -3,7 +3,12 @@
 <head>
    <meta charset="UTF-8">
    <title>Weather Map</title>
+   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+
+
    <style>
       #weatherDisplay {
          display: flex;
@@ -33,6 +38,15 @@
       .leftMarg {
          margin-left: 2%
       }
+      #map {
+         height: 400px;
+         width: 100%;
+         margin-right: 200px;
+         padding: 0;
+         position: absolute;
+         z-index: -1;
+         bottom: 10%;
+      }
    </style>
 </head>
 <body>
@@ -46,6 +60,7 @@
       <input type="text" placeholder="Enter Longitude!" id="longy" class="leftMarg">
       <button id="latLngButton" style="margin-left: 1%">Submit!</button>
    </div>
+   <div id="map"></div>
 
 
 
@@ -54,6 +69,8 @@
    <script src="js/weather_map.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+
 
 </body>
 </html>

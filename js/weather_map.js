@@ -13,17 +13,17 @@ $(document).ready(function () {
 
                     $('#weatherDisplay').append(
                         "<div class='card bg-dark p-1' id='mainDiv'>" +
-                            "<div class='card-title bg-info p-1'>" +
-                            "<h3>" + dateObj + "</h3>" +
-                            "</div>" +
-                            "<div class='card-body bg-light p-1'>" +
-                                "<div class='w_icon'></div>" +
-                                "<h5>" + data.currently.summary + " </h5>" +
-                                "<h6> " + data.currently.apparentTemperature + "°F </h6>" +
-                                "<h6>Humidity: " + Math.round(data.currently.humidity * 100) + "% </h6>" +
-                                "<h6>Wind Speed: " + Math.round(data.currently.windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
-                                "<h6>Pressure: " + Math.round(data.currently.pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
-                            "</div>" +
+                        "<div class='card-title bg-info p-1'>" +
+                        "<h3>" + dateObj + "</h3>" +
+                        "</div>" +
+                        "<div class='card-body bg-light p-1'>" +
+                        "<div class='w_icon'></div>" +
+                        "<h5>" + data.currently.summary + " </h5>" +
+                        "<h6> " + data.currently.apparentTemperature + "°F </h6>" +
+                        "<h6>Humidity: " + Math.round(data.currently.humidity * 100) + "% </h6>" +
+                        "<h6>Wind Speed: " + Math.round(data.currently.windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
+                        "<h6>Pressure: " + Math.round(data.currently.pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
+                        "</div>" +
                         "</div>");
                     console.log(data);
                     i++;
@@ -32,17 +32,17 @@ $(document).ready(function () {
                     console.log(dateObj);
                     $('#weatherDisplay').append(
                         "<div   class='card bg-dark p-1' id='mainDiv'>" +
-                            "<div class='card-title bg-info p-1'>" +
-                            "<h3>" + dateObj + "</h3>" +
-                            "</div>" +
-                            "<div class='card-body bg-light p-1'>" +
-                                "<div class='w_icon'></div>" +
-                                "<h5>" + data.daily.data[i].summary + " </h5>" +
-                                "<h6> High: " + parseInt(data.daily.data[i].temperatureHigh) + "°F / Low: " + parseInt(data.daily.data[i].temperatureLow) + "°F </h6>" +
-                                "<h6>Humidity: " + (data.daily.data[i].humidity * 100) + "% </h6>" +
-                                "<h6>Wind Speed: " + parseInt(data.daily.data[i].windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
-                                "<h6>Pressure: " + parseInt(data.daily.data[i].pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
-                            "</div>" +
+                        "<div class='card-title bg-info p-1'>" +
+                        "<h3>" + dateObj + "</h3>" +
+                        "</div>" +
+                        "<div class='card-body bg-light p-1'>" +
+                        "<div class='w_icon'></div>" +
+                        "<h5>" + data.daily.data[i].summary + " </h5>" +
+                        "<h6> High: " + parseInt(data.daily.data[i].temperatureHigh) + "°F / Low: " + parseInt(data.daily.data[i].temperatureLow) + "°F </h6>" +
+                        "<h6>Humidity: " + (data.daily.data[i].humidity * 100) + "% </h6>" +
+                        "<h6>Wind Speed: " + parseInt(data.daily.data[i].windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
+                        "<h6>Pressure: " + parseInt(data.daily.data[i].pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
+                        "</div>" +
                         "</div>");
                     console.log(data);
                     i++;
@@ -52,8 +52,7 @@ $(document).ready(function () {
                         }
                     });
                 }
-            }
-            ;
+            };
         });
     };
     //begin weather icons arrra
@@ -102,7 +101,23 @@ $(document).ready(function () {
         console.log(longitude);
         currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + latitude + "," + longitude);
         newNew();
+
+
+        // begin mapbox functionality
+
+
     });
+
+    var newMap = function() {
+        mapboxgl.accessToken = mapboxToken;
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/satellite-streets-v10',
+
+        });
+    }
+    newMap();
+
 
 
 });
