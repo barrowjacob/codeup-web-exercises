@@ -59,14 +59,12 @@
 
    <div id="weatherDisplay" class="container-fluid">
    </div>
-   <h1 class="display-4 text-center mt-3">Choose Your Location!</h1>
-   <div class="inputDiv mt-3">
-      <input type="text" placeholder="Enter Latitude!" id="latty">
-      <input type="text" placeholder="Enter Longitude!" id="longy" class="leftMarg">
-      <button id="latLngButton" style="margin-left: 1%">Submit!</button>
-   </div>
    <div id="map"></div>
-
+   <div id="searchBox" class="mt-2">
+      <label for="searchInput"><h2>Where would you like to go?</h2></label>
+      <input type="text" placeholder="City, State" id="searchInput">
+      <button id="searchButton">Submit</button>
+   </div>
 
 
    <script src="js/jquery-2.2.4.js"></script>

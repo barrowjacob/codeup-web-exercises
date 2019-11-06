@@ -38,10 +38,10 @@ $(document).ready(function () {
                         "<div class='card-body bg-light p-1'>" +
                         "<div class='w_icon'></div>" +
                         "<h5>" + data.daily.data[i].summary + " </h5>" +
-                        "<h6> High: " + parseInt(data.daily.data[i].temperatureHigh) + "°F / Low: " + parseInt(data.daily.data[i].temperatureLow) + "°F </h6>" +
-                        "<h6>Humidity: " + (data.daily.data[i].humidity * 100) + "% </h6>" +
-                        "<h6>Wind Speed: " + parseInt(data.daily.data[i].windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
-                        "<h6>Pressure: " + parseInt(data.daily.data[i].pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
+                        "<h6> High: " + Math.round(data.daily.data[i].temperatureHigh) + "°F / Low: " + parseInt(data.daily.data[i].temperatureLow) + "°F </h6>" +
+                        "<h6>Humidity: " + Math.round(data.daily.data[i].humidity * 100) + "% </h6>" +
+                        "<h6>Wind Speed: " + Math.round(data.daily.data[i].windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
+                        "<h6>Pressure: " + Math.round(data.daily.data[i].pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
                         "</div>" +
                         "</div>");
                     console.log(data);
@@ -92,12 +92,13 @@ $(document).ready(function () {
     //end weather icons
     newNew();
 
-
+var latitude;
+var longitude;
     $('#latLngButton').click(function () {
         $('#weatherDisplay').html("");
-        var latitude = $('#latty').val();
+        latitude = $('#latty').val();
         console.log(latitude);
-        var longitude = $('#longy').val();
+        longitude = $('#longy').val();
         console.log(longitude);
         currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + latitude + "," + longitude);
         newNew();
@@ -129,5 +130,35 @@ $(document).ready(function () {
             .addTo(map);
 
 
-
+        function onDragEnd() {
+            var latLng = marker.getLngLat();
+                $('#weatherDisplay').html("");
+            console.log(latLng);
+            latitude = latLng.lat;
+            console.log("this is the lat " + latitude);
+            longitude = latLng.lng;
+            console.log("this is the long " + longitude);
+            currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + latitude + "," + longitude);
+            newNew();
+        };
+var latLng;
+        marker.on('dragend',onDragEnd);
+        var search;
+        var token;
+        $('#searchButton').click(function() {
+            onDragEnd();
+            marker.remove();
+            search = $('#searchInput').val();
+            token = mapboxToken;
+            geocode(search, mapboxToken).then(function(result) {
+                 map.flyTo({
+                    center: result,
+                    zoom: 14,
+                    speed: 0.2
+                });
+                marker = new mapboxgl.Marker(markerOptions)
+                    .setLngLat(result)
+                    .addTo(map);
+            });
+        })
 });
