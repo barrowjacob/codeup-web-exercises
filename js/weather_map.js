@@ -176,15 +176,7 @@ $(document).ready(function () {
 
 
 
-    $('#latLngButton').click(function () {
-        $('#weatherDisplay').html("");
-        latitude = $('#latty').val();
-        console.log(latitude);
-        longitude = $('#longy').val();
-        console.log(longitude);
-        currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + latitude + "," + longitude);
-        newNew();
-    });
+
 
 //******************************
 //  SET MARKER LATLONG DRAGEND
