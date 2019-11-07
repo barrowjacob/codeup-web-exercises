@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <title>Weather Map</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,8 +12,19 @@
 
 
       <style>
+         .bglight {
+            background-color: #BBDAE4;
+         }
+         h2 {
+            color: #F8F7F4;
+            text-shadow: black 1px 1px 1px;
+         }
          body {
-            background: linear-gradient(to bottom,#0182B0, lightblue);
+            background: linear-gradient(to top,#141B29, #36204E, #984673, #EDC7B4, #F8F7F4);
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            height: 150vh;
+
          }
          #weatherDisplay {
             display: flex;
@@ -23,9 +35,6 @@
          }
          .card:hover {
             box-shadow:  2px 2px 10px 5px black;
-            transform: skew(-1deg);
-            width: 25%;
-            z-index: 2;
          }
          .card {
             box-shadow: 2px 2px 5px 2px black;
@@ -47,7 +56,7 @@
          }
          #map {
             display: flex;
-            height: 300px;
+            height: 500px;
             margin-left: 20%;
             margin-right: 20%;
             padding: 0;
@@ -61,27 +70,77 @@
             top: 100px;
             left: 40%;
             z-index: 2;
+            height: 100px;
+         }
+         nav {
+            background-color: cornflowerblue;
+            color: #F8F7F4;
+            box-shadow:  0 0 5px 3px darkslategrey;
+         }
+         footer {
+            background-color: cornflowerblue;
+            color: #F8F7F4;
+            box-shadow:  0 0 5px 3px darkslategrey;
+            position: absolute;
+            width: 100%;
+            bottom: -375px;
+         }
+         nav h5 {
+            color: #F8F7F4;
+         }
+         #searchBox {
+            font-size: .5em;
+         }
+         #searchInput {
+            height: 30px;
+            margin-top: 3.4%;
+            box-shadow: 1px 1px 1px 1px black;
+         }
+         #searchButton {
+            height: 30px;
+            margin-top: 3.4%;
+            box-shadow: 1px 1px 1px 1px black;
+         }
+         #logo {
+            position: absolute;
+            left: 280px;
+            top: 5px;
+            height: 80px;
+         }
+         #footer {
+            height: 25px;
          }
 
       </style>
    </head>
    <body>
-      <div id="heading">
-         <h1>Weather Map</h1>
-         <h5>Making Weather Predictions Smarter</h5>
+   <nav class="navbar navbar-expand-lg navbar-light d-flex align-items-start justify-content-between ">
+      <div id="header" class="ml-3">
+         <img src="img/weather.png" id="logo">
+         <h1 class="ml-n4">Weather Map</h1>
+         <h6>Making Weather Predictions Smarter</h6>
       </div>
+
+      <div id="searchBox" class="mt-2 m-0 d-flex" >
+         <label for="searchInput" class="d-flex align-items-center mt-3"><h2>Where would you like to go?</h2></label>
+         <input type="text" placeholder="City, State" id="searchInput" class=" ml-2">
+         <button id="searchButton" >Submit</button>
+      </div>
+      </nav>
+      <div id="weatherLocation"></div>
       <div id="masterDiv">
          <img src="img/loading2.gif" class="imageClass">
          <div id="weatherDisplay" class="container-fluid">
-      </div>
+         </div>
       </div>
 
       <div id="map"></div>
-      <div id="searchBox" class="mt-2">
-         <label for="searchInput"><h2>Where would you like to go?</h2></label>
-         <input type="text" placeholder="City, State" id="searchInput">
-         <button id="searchButton">Submit</button>
-      </div>
+      <footer id="footer" class="py-4 mt-2 text-white-50 d-flex align-items-center">
+         <div class="container d-flex justify-content-left ml-n1">
+            <small>Copyright &copy; Jacob Barrow 2019</small>
+         </div>
+      </footer>
+
 
 
       <script src="js/jquery-2.2.4.js"></script>

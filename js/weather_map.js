@@ -15,7 +15,8 @@ $(document).ready(function () {
         center: [-98.4936, 29.4241],
         zoom: 9
     });
-    var markerOptions = {
+
+        var markerOptions = {
         color: "#ff0000",
         draggable: true
     };
@@ -63,90 +64,98 @@ $(document).ready(function () {
     var newNew = function () {
         currentWeather.done(function (data) {
             $('.imageClass').hide();
-            i = 0;
-            while (i <= 2) {
 
-    //****************************************
-    //  BUILD FIRST DIV WITH .CURRENTLY DATA
-    //****************************************
-                if (i <= 0) {
-                    var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
+            //****************************************
+            //  BUILD FIRST DIV WITH .CURRENTLY DATA
+            //****************************************
+            var dateObj = JSON.stringify(new Date(data.currently.time * 1000)).split('').slice(1, 11).join('');
 
-                    $('#weatherDisplay').append(
-                        "<div class='card bg-dark p-1' id='mainDiv'>" +
-                        "<div class='card-title bg-info p-1'>" +
-                        "<h3>" + dateObj + "</h3>" +
-                        "</div>" +
-                        "<div class='card-body bg-light p-1'>" +
-                        "<div class='w_icon'></div>" +
-                        "<h5>" + data.currently.summary + " </h5>" +
-                        "<h6> " + Math.round(data.currently.apparentTemperature) + "°F </h6>" +
-                        "<h6>Humidity: " + Math.round(data.currently.humidity * 100) + "% </h6>" +
-                        "<h6>Wind Speed: " + Math.round(data.currently.windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
-                        "<h6>Pressure: " + Math.round(data.currently.pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
-                        "</div>" +
-                        "</div>");
-                    console.log(data);
-                    i++;
+            $('#weatherDisplay').append(
+                "<div class='card bg-dark p-1' id='mainDiv'>" +
+                "<div class='card-title bglight p-1'>" +
+                "<h3>" + dateObj + "</h3>" +
+                "</div>" +
+                "<div class='card-body bg-light p-1'>" +
+                "<div class='w_icon'></div>" +
+                "<h5>" + data.currently.summary + " </h5>" +
+                "<h6> " + Math.round(data.currently.apparentTemperature) + "°F </h6>" +
+                "<h6>Humidity: " + Math.round(data.currently.humidity * 100) + "% </h6>" +
+                "<h6>Wind Speed: " + Math.round(data.currently.windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
+                "<h6>Pressure: " + Math.round(data.currently.pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
+                "</div>" +
+                "</div>");
+            console.log(data);
 
 
-    //*****************************************
-    //  BUILD REMAINING DIVS WITH .DAILY DATA
-    //*****************************************
+            //*****************************************
+            //  BUILD REMAINING DIVS WITH .DAILY DATA
+            //*****************************************
 
+            dateObj = JSON.stringify(new Date(data.daily.data[1].time * 1000)).split('').slice(1, 11).join('');
+            console.log(dateObj);
+            $('#weatherDisplay').append(
+                "<div class='card bg-dark p-1' id='otherDivs'>" +
+                "<div class='card-title bglight p-1'>" +
+                "<h3>" + dateObj + "</h3>" +
+                "</div>" +
+                "<div class='card-body bg-light p-1'>" +
+                "<div class='w_icon1'></div>" +
+                "<h5>" + data.daily.data[1].summary + " </h5>" +
+                "<h6> High: " + Math.round(data.daily.data[1].temperatureHigh) + "°F / Low: " + parseInt(data.daily.data[1].temperatureLow) + "°F </h6>" +
+                "<h6>Humidity: " + Math.round(data.daily.data[1].humidity * 100) + "% </h6>" +
+                "<h6>Wind Speed: " + Math.round(data.daily.data[1].windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
+                "<h6>Pressure: " + Math.round(data.daily.data[1].pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
+                "</div>" +
+                "</div>");
+            console.log(data);
+
+            dateObj = JSON.stringify(new Date(data.daily.data[2].time * 1000)).split('').slice(1, 11).join('');
+            console.log(dateObj);
+            $('#weatherDisplay').append(
+                "<div class='card bg-dark p-1' id='otherDivs'>" +
+                "<div class='card-title bglight p-1'>" +
+                "<h3>" + dateObj + "</h3>" +
+                "</div>" +
+                "<div class='card-body bg-light p-1'>" +
+                "<div class='w_icon2'></div>" +
+                "<h5>" + data.daily.data[2].summary + " </h5>" +
+                "<h6> High: " + Math.round(data.daily.data[2].temperatureHigh) + "°F / Low: " + parseInt(data.daily.data[2].temperatureLow) + "°F </h6>" +
+                "<h6>Humidity: " + Math.round(data.daily.data[2].humidity * 100) + "% </h6>" +
+                "<h6>Wind Speed: " + Math.round(data.daily.data[2].windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
+                "<h6>Pressure: " + Math.round(data.daily.data[2].pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
+                "</div>" +
+                "</div>");
+            console.log(data);
+
+
+            //************************************
+            // LOOP THROUGH ARRAY ICON CONDITIONAL
+            //************************************
+
+            weatherIcons.forEach(function (type) {
+                if (data.currently.icon === type.summary) {
+                    $('.w_icon').html(type.image);
                 } else {
-                    dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
-                    console.log(dateObj);
-                    $('#weatherDisplay').append(
-                        "<div class='card bg-dark p-1' id='otherDivs'>" +
-                        "<div class='card-title bg-info p-1'>" +
-                        "<h3>" + dateObj + "</h3>" +
-                        "</div>" +
-                        "<div class='card-body bg-light p-1'>" +
-                        "<div class='w_icon'></div>" +
-                        "<h5>" + data.daily.data[i].summary + " </h5>" +
-                        "<h6> High: " + Math.round(data.daily.data[i].temperatureHigh) + "°F / Low: " + parseInt(data.daily.data[i].temperatureLow) + "°F </h6>" +
-                        "<h6>Humidity: " + Math.round(data.daily.data[i].humidity * 100) + "% </h6>" +
-                        "<h6>Wind Speed: " + Math.round(data.daily.data[i].windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
-                        "<h6>Pressure: " + Math.round(data.daily.data[i].pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
-                        "</div>" +
-                        "</div>");
-                    console.log(data);
-                    i++;
-
+                    console.log('nope');
                 }
-                    //************************************
-                    // LOOP THROUGH ARRAY ICON CONDITIONAL
-                    //************************************
+            });
+            weatherIcons.forEach(function (type) {
+                if (data.daily.data[1].icon === type.summary) {
+                    $('.w_icon1').html(type.image);
+                } else {
+                    console.log('nope');
+                }
+            });
+            weatherIcons.forEach(function (type) {
+                if (data.daily.data[2].icon === type.summary) {
+                    $('.w_icon2').html(type.image);
+                } else {
+                    console.log('nope');
+                }
+            });
 
-                weatherIcons.forEach(function (type) {
-                    if (data.daily.data[0] === type.summary) {
-                        $('.w_icon').html(type.image);
-                    }
-                    else {
-                        console.log('nope');
-                    }
-                });
-                weatherIcons.forEach(function (type) {
-                    if (data.daily.data[1].icon === type.summary) {
-                        $('.w_icon').html(type.image);
-                    }
-                    else {
-                        console.log('nope');
-                    }
-                });
-                weatherIcons.forEach(function (type) {
-                    if (data.daily.data[2].icon === type.summary) {
-                        $('.w_icon').html(type.image);
-                    }
-                    else {
-                        console.log('nope');
-                    }
-                });
-            };
 
         });
-
     };
     newNew();
 
