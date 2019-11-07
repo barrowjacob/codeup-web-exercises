@@ -174,10 +174,6 @@ $(document).ready(function () {
     };
     newNew();
 
-
-
-
-
 //******************************
 //  SET MARKER LATLONG DRAGEND
 //******************************
