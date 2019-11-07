@@ -85,6 +85,21 @@ $(document).ready(function () {
                 "</div>" +
                 "</div>");
             console.log(data);
+            $('#logo').click(function () {
+                var newMath = Math.round((((Math.round(data.currently.apparentTemperature)) -32) * (5/9)) + 273.15);
+                var newMath2 = Math.round((((Math.round(data.daily.data[1].temperatureHigh)) - 32) * (5/9)) +273.15);
+                var newMath25 = Math.round((((Math.round(data.daily.data[1].temperatureLow)) -32) * (5/9)) + 273.15);
+                var newMath3 = Math.round((((Math.round(data.daily.data[2].temperatureHigh)) - 32) * (5/9)) +273.15);
+                var newMath35 = Math.round((((Math.round(data.daily.data[2].temperatureLow)) -32) * (5/9)) + 273.15);
+                $('#kelImg').fadeIn();
+                $('#kelvin').fadeIn();
+                $('#kelvin').text( + newMath  + "K");
+                $('#kelvin2').fadeIn();
+                $('#kelvin2').text("High: " + newMath2 + "/ Low: " + newMath25 + "K");
+                $('#kelvin3').fadeIn();
+                $('#kelvin3').text("High: " + newMath3 + "/ Low: " + newMath35 + "K");
+            });
+
 
 
             //*****************************************
@@ -211,10 +226,5 @@ $(document).ready(function () {
         })
     }
     typedLocation();
-    // $('.card').mouseenter(function() {
-    //     $(this).animate({
-    //         width: "800px",
-    //     })
-    // })
 
 });

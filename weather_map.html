@@ -110,12 +110,50 @@
          #footer {
             height: 25px;
          }
+         #kelvin {
+            height: 30px;
+            width: 50px;
+            background-color: #BBDAE4;
+            position: absolute;
+            z-index: 1;
+            top: 51%;
+            left: 28%;
+            display: none;
+         }
+         #kelvin2 {
+            height: 30px;
+            width: 175px;
+            background-color: #BBDAE4;
+            position: absolute;
+            z-index: 1;
+            top: 54%;
+            left: 44%;
+            display: none;
+         }
+         #kelvin3 {
+            height: 30px;
+            width: 175px;
+            background-color: #BBDAE4;
+            position: absolute;
+            z-index: 1;
+            top: 54%;
+            left: 63%;
+            display: none;
+         }
+         #kelImg {
+            height: 48px;
+            position: absolute;
+            left: 21%;
+            z-index: 1;
+            display: none;
+         }
 
       </style>
    </head>
    <body>
    <nav class="navbar navbar-expand-lg navbar-light d-flex align-items-start justify-content-between ">
       <div id="header" class="ml-3">
+         <img src="img/kelvin.png" id="kelImg">
          <img src="img/weather.png" id="logo">
          <h1 class="ml-n4">Weather Map</h1>
          <h6>Making Weather Predictions Smarter</h6>
@@ -127,15 +165,25 @@
          <button id="searchButton" >Submit</button>
       </div>
       </nav>
-      <div id="weatherLocation"></div>
+
       <div id="masterDiv">
+         <div id="top"></div>
          <img src="img/loading2.gif" class="imageClass">
          <div id="weatherDisplay" class="container-fluid">
+            <div id="kelvin" class="bg-light">
+               <p></p>
+            </div>
+            <div id="kelvin2" class="bg-light" >
+               <p></p>
+            </div>
+            <div id="kelvin3" class="bg-light">
+               <p></p>
+            </div>
          </div>
       </div>
 
       <div id="map"></div>
-      <footer id="footer" class="py-4 mt-2 text-white-50 d-flex align-items-center">
+   <footer id="footer" class="py-4 mt-2 text-white-50 d-flex align-items-center">
          <div class="container d-flex justify-content-left ml-n1">
             <small>Copyright &copy; Jacob Barrow 2019</small>
          </div>
