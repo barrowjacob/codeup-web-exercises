@@ -1,13 +1,73 @@
 $(document).ready(function () {
-//original ajax get
-    var currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + 29.4241 + "," + -98.4936);
-    var i = 0;
 
-    //create function build divs and input data from darksky
+//*******************************
+//          VARIABLES
+//*******************************
+    var currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + 29.4241 + "," + -98.4936);
+    var latLng;
+    var i = 0;
+    var latitude;
+    var longitude;
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-98.4936, 29.4241], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+    var markerOptions = {
+        color: "#ff0000",
+        draggable: true
+    };
+    var marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([-98.4936, 29.4241])
+        .addTo(map);
+    var weatherIcons = [
+        {
+            summary: "clear-day",
+            image: '<img src="icons/sunny.png" alt="weather icon">'
+        }, {
+            summary: "clear-night",
+            image: '<img src="icons/quarterMoon.png" alt="weather icon">'
+        }, {
+            summary: "rain",
+            image: '<img src="icons/rain.png" alt="weather icon">'
+        }, {
+            summary: "snow",
+            image: '<img src="icons/snow.png" alt="weather icon">'
+        }, {
+            summary: "sleet",
+            image: '<img src="icons/snow.png" alt="weather icon">'
+        }, {
+            summary: "windy",
+            image: '<img src="icons/windy.png" alt="weather icon">'
+        }, {
+            summary: "fog",
+            image: '<img src="icons/windy.png" alt="weather icon">'
+        }, {
+            summary: "cloudy",
+            image: '<img src="icons/cloudy.png" alt="weather icon">'
+        }, {
+            summary: "partly-cloudy-day",
+            image: '<img src="icons/partly-cloudy.png" alt="weather icon">'
+        }, {
+            summary: "partly-cloudy-night",
+            image: '<img src="icons/partly-cloudy-night.png" alt="weather icon">'
+        }
+    ];
+
+//*******************************
+//  BUILD DIVS WITH DARKSKY
+//*******************************
+
     var newNew = function () {
         currentWeather.done(function (data) {
             i = 0;
             while (i <= 2) {
+
+//*****************************************
+//  BUILD DIV FIRST DIV WITH CURRENTLY DATA
+//*****************************************
                 if (i <= 0) {
                     var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
 
@@ -19,7 +79,7 @@ $(document).ready(function () {
                         "<div class='card-body bg-light p-1'>" +
                         "<div class='w_icon'></div>" +
                         "<h5>" + data.currently.summary + " </h5>" +
-                        "<h6> " + data.currently.apparentTemperature + "°F </h6>" +
+                        "<h6> " + Math.round(data.currently.apparentTemperature) + "°F </h6>" +
                         "<h6>Humidity: " + Math.round(data.currently.humidity * 100) + "% </h6>" +
                         "<h6>Wind Speed: " + Math.round(data.currently.windSpeed) + "<span style='font-size: .8em'>mph</span></h6>" +
                         "<h6>Pressure: " + Math.round(data.currently.pressure) + "<span style='font-size: .8em'>hPa</span></h6> " +
@@ -27,8 +87,13 @@ $(document).ready(function () {
                         "</div>");
                     console.log(data);
                     i++;
+
+//*****************************************
+//  BUILD REMAINING DIVS WITH DAILY DATA
+//*****************************************
+
                 } else {
-                    var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
+                     dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
                     console.log(dateObj);
                     $('#weatherDisplay').append(
                         "<div   class='card bg-dark p-1' id='mainDiv'>" +
@@ -55,45 +120,10 @@ $(document).ready(function () {
             };
         });
     };
-    //begin weather icons arrra
-    var weatherIcons = [
-        {
-            summary: "clear-day",
-            image: '<img src="icons/sunny.png">'
-        }, {
-            summary: "clear-night",
-            image: '<img src="icons/quarterMoon.png">'
-        }, {
-            summary: "rain",
-            image: '<img src="icons/rain.png">'
-        }, {
-            summary: "snow",
-            image: '<img src="icons/snow.png">'
-        }, {
-            summary: "sleet",
-            image: '<img src="icons/snow.png">'
-        }, {
-            summary: "windy",
-            image: '<img src="icons/windy.png">'
-        }, {
-            summary: "fog",
-            image: '<img src="icons/windy.png">'
-        }, {
-            summary: "cloudy",
-            image: '<img src="icons/cloudy.png">'
-        }, {
-            summary: "partly-cloudy-day",
-            image: '<img src="icons/partly-cloudy.png">'
-        }, {
-            summary: "partly-cloudy-night",
-            image: '<img src="icons/cloud-moon.png">'
-        }
-    ];
-    //end weather icons
+
     newNew();
 
-var latitude;
-var longitude;
+
     $('#latLngButton').click(function () {
         $('#weatherDisplay').html("");
         latitude = $('#latty').val();
@@ -102,56 +132,36 @@ var longitude;
         console.log(longitude);
         currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + latitude + "," + longitude);
         newNew();
-
-
-
-
     });
-    // begin mapbox functionality
 
-    //create a mapbox
-        mapboxgl.accessToken = mapboxToken;
-        var map = new mapboxgl.Map({
-            container: 'map', // container id
-            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-            center: [-98.4936, 29.4241], // starting position [lng, lat]
-            zoom: 9 // starting zoom
-
-
-        });
-
-        // marker options
-    var markerOptions = {
-        color: "#ff0000",
-        draggable: true
-    };
-        var marker = new mapboxgl.Marker(markerOptions)
-            .setLngLat([-98.4936, 29.4241])
-            .addTo(map);
-
-
-        function onDragEnd() {
-            var latLng = marker.getLngLat();
+//******************************
+//  SET MARKER LATLONG DRAGEND
+//******************************
+    function onDragEnd() {
+            latLng = marker.getLngLat();
                 $('#weatherDisplay').html("");
-            console.log(latLng);
             latitude = latLng.lat;
-            console.log("this is the lat " + latitude);
             longitude = latLng.lng;
-            console.log("this is the long " + longitude);
             currentWeather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + latitude + "," + longitude);
             newNew();
-        };
-var latLng;
-        marker.on('dragend',onDragEnd);
+        }
+    marker.on('dragend', onDragEnd);
+
+//*******************************
+//  SET MARKER TYPED LOCATION
+//*******************************
+
+    function typedLocation() {
+        marker.on('dragend', onDragEnd);
         var search;
         var token;
-        $('#searchButton').click(function() {
+        $('#searchButton').click(function () {
             onDragEnd();
             marker.remove();
             search = $('#searchInput').val();
             token = mapboxToken;
-            geocode(search, mapboxToken).then(function(result) {
-                 map.flyTo({
+            geocode(search, mapboxToken).then(function (result) {
+                map.flyTo({
                     center: result,
                     zoom: 14,
                     speed: 0.2
@@ -161,4 +171,8 @@ var latLng;
                     .addTo(map);
             });
         })
+    }
+    typedLocation();
+
+
 });
