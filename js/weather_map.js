@@ -89,15 +89,16 @@ $(document).ready(function () {
                     console.log(data);
                     i++;
 
+
     //*****************************************
     //  BUILD REMAINING DIVS WITH .DAILY DATA
     //*****************************************
 
                 } else {
-                     dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
+                    dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
                     console.log(dateObj);
                     $('#weatherDisplay').append(
-                        "<div   class='card bg-dark p-1' id='mainDiv'>" +
+                        "<div class='card bg-dark p-1' id='otherDivs'>" +
                         "<div class='card-title bg-info p-1'>" +
                         "<h3>" + dateObj + "</h3>" +
                         "</div>" +
@@ -113,20 +114,42 @@ $(document).ready(function () {
                     console.log(data);
                     i++;
 
+                }
                     //************************************
                     // LOOP THROUGH ARRAY ICON CONDITIONAL
                     //************************************
-                    weatherIcons.forEach(function (type) {
-                        if (data.currently.icon === type.summary || data.daily.data[i].icon === type.summary) {
-                            $('.w_icon').html(type.image);
-                        }
-                    });
-                }
-            };
-        });
-    };
 
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[0] === type.summary) {
+                        $('.w_icon').html(type.image);
+                    }
+                    else {
+                        console.log('nope');
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[1].icon === type.summary) {
+                        $('.w_icon').html(type.image);
+                    }
+                    else {
+                        console.log('nope');
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[2].icon === type.summary) {
+                        $('.w_icon').html(type.image);
+                    }
+                    else {
+                        console.log('nope');
+                    }
+                });
+            };
+
+        });
+
+    };
     newNew();
+
 
 
     $('#latLngButton').click(function () {
@@ -179,6 +202,10 @@ $(document).ready(function () {
         })
     }
     typedLocation();
-
+    // $('.card').mouseenter(function() {
+    //     $(this).animate({
+    //         width: "800px",
+    //     })
+    // })
 
 });
