@@ -49,16 +49,26 @@
          padding: 0;
          /*position: absolute;*/
          text-align: justify;
-
+      }
+      #masterDiv {
+         height: 400px;
+      }
+      .imageClass {
+         position: absolute;
+         top: 100px;
+         left: 40%;
+         z-index: 2;
       }
    </style>
 </head>
 <body>
 
 
-
+<div id="masterDiv"><img src="img/loading2.gif" class="imageClass">
    <div id="weatherDisplay" class="container-fluid">
-   </div>
+</div>
+</div>
+
    <div id="map"></div>
    <div id="searchBox" class="mt-2">
       <label for="searchInput"><h2>Where would you like to go?</h2></label>

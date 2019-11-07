@@ -10,10 +10,10 @@ $(document).ready(function () {
     var longitude;
     mapboxgl.accessToken = mapboxToken;
     var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-        center: [-98.4936, 29.4241], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.4936, 29.4241],
+        zoom: 9
     });
     var markerOptions = {
         color: "#ff0000",
@@ -62,12 +62,13 @@ $(document).ready(function () {
 
     var newNew = function () {
         currentWeather.done(function (data) {
+            $('.imageClass').hide();
             i = 0;
             while (i <= 2) {
 
-//*****************************************
-//  BUILD DIV FIRST DIV WITH CURRENTLY DATA
-//*****************************************
+    //****************************************
+    //  BUILD FIRST DIV WITH .CURRENTLY DATA
+    //****************************************
                 if (i <= 0) {
                     var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
 
@@ -88,9 +89,9 @@ $(document).ready(function () {
                     console.log(data);
                     i++;
 
-//*****************************************
-//  BUILD REMAINING DIVS WITH DAILY DATA
-//*****************************************
+    //*****************************************
+    //  BUILD REMAINING DIVS WITH .DAILY DATA
+    //*****************************************
 
                 } else {
                      dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
@@ -111,6 +112,10 @@ $(document).ready(function () {
                         "</div>");
                     console.log(data);
                     i++;
+
+                    //************************************
+                    // LOOP THROUGH ARRAY ICON CONDITIONAL
+                    //************************************
                     weatherIcons.forEach(function (type) {
                         if (data.currently.icon === type.summary || data.daily.data[i].icon === type.summary) {
                             $('.w_icon').html(type.image);
@@ -155,6 +160,7 @@ $(document).ready(function () {
         marker.on('dragend', onDragEnd);
         var search;
         var token;
+
         $('#searchButton').click(function () {
             onDragEnd();
             marker.remove();
@@ -166,9 +172,9 @@ $(document).ready(function () {
                     zoom: 14,
                     speed: 0.2
                 });
-                marker = new mapboxgl.Marker(markerOptions)
-                    .setLngLat(result)
-                    .addTo(map);
+                marker.setLngLat(result);
+                marker.addTo(map);
+
             });
         })
     }
