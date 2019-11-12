@@ -93,7 +93,7 @@ users.forEach(function(user) {
 //
 
   for (let developer of developers) {
-    console.log(`${list}<li>${developer}</li>${endList}`);
+    console.log(`<li>${developer}</li>${endList}`);
 //
 //
 //   // TODO: rewrite the assignment below to use template strings
