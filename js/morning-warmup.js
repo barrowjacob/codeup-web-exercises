@@ -2,6 +2,18 @@
 
     "use strict";
 
+    //11/12
+
+    function evenNumbers(arr) {
+        var evens = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                evens.push(arr[i]);
+            }
+        } return evens;
+    }
+    console.log(evenNumbers([1,2,3,4,5]));
+
     //11/6
     function randomBoolean() {
         var randomBoo = (Math.floor(Math.random() * 1) +1);
