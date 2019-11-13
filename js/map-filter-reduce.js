@@ -46,15 +46,18 @@ console.log(eachElementUserEmail);
 let totalYearsExperience = users.reduce((total, current) => {return total + current.yearsOfExperience},0);
 console.log(totalYearsExperience);
 
-let longestEmail = users.reduce((a, b) => {
-    if (a.email.length > b.email.length) {
-    return a;
+let averageExp = totalYearsExperience/users.length;
+console.log(averageExp);
+
+let longestEmail = users.reduce((longest, user) => {
+    if (user.email.length > longest.length) {
+    return user.email;
         } else {
-        return b;
+        return longest;
     }
-});
+}, "");
 console.log(longestEmail);
 
 let userNamesString = users.reduce((total, current) => {
-    return `${total} ${current.name}` },"");
+    return `${total} ${current.name},` },"");
     console.log(`The instructors are ${userNamesString}`);
