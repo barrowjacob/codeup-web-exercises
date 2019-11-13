@@ -37,16 +37,16 @@ const users = [
 ];
 
 
-var moreThanThree = users.filter((user) => {return user.languages.length >= 3});
+let moreThanThree = users.filter((user) => {return user.languages.length >= 3});
 console.log(moreThanThree);
 
-var eachElementUserEmail = users.map((user) => {return user.email});
+let eachElementUserEmail = users.map((user) => {return user.email});
 console.log(eachElementUserEmail);
 
-var totalYearsExperience = users.reduce((total, current) => {return total + current.yearsOfExperience},0);
+let totalYearsExperience = users.reduce((total, current) => {return total + current.yearsOfExperience},0);
 console.log(totalYearsExperience);
 
-var longestEmail = users.reduce((a, b) => {
+let longestEmail = users.reduce((a, b) => {
     if (a.email.length > b.email.length) {
     return a;
         } else {
@@ -54,3 +54,7 @@ var longestEmail = users.reduce((a, b) => {
     }
 });
 console.log(longestEmail);
+
+let userNamesString = users.reduce((total, current) => {
+    return `${total} ${current.name}` },"");
+    console.log(`The instructors are ${userNamesString}`);
