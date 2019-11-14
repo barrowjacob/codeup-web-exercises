@@ -12,10 +12,9 @@
                 }
             })
         };
-        promisePromise(42).then((results) =>
-        {console.log("great job man. what a resolve!")})
-            .catch((results) =>
-            {console.log("womp womp. what a reject.")});
+        promisePromise(42)
+            .then(result => console.log("great job man. what a resolve!"))
+            .catch(error => console.log("womp womp. what a reject."));
 
 
     //11/12
