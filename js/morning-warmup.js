@@ -1,6 +1,22 @@
 
 
     "use strict";
+    //11/14
+
+        const promisePromise = (num) => {
+            return new Promise((resolve, reject) => {
+                if (num % 2 === 0) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            })
+        };
+        promisePromise(42).then((results) =>
+        {console.log("great job man. what a resolve!")})
+            .catch((results) =>
+            {console.log("womp womp. what a reject.")});
+
 
     //11/12
 
