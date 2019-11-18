@@ -1,65 +1,73 @@
 
 
     "use strict";
+
+    //11/18
+
+    const newPi = () => {
+        return parseFloat(Math.PI.toFixed(6));
+    };
+    console.log(newPi());
+
     //11/14
-
-        const promisePromise = (num) => {
-            return new Promise((resolve, reject) => {
-                if (num % 2 === 0) {
-                    resolve();
-                } else {
-                    reject();
-                }
-            })
-        };
-        promisePromise(42)
-            .then(result => console.log("great job man. what a resolve!"))
-            .catch(error => console.log("womp womp. what a reject."));
-
-
-    //11/12
-
-    function evenNumbers(arr) {
-        var evens = [];
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 === 0) {
-                evens.push(arr[i]);
-            }
-        } return evens;
-    }
-    console.log(evenNumbers([1,2,3,4,5]));
-
-    //11/6
-    function randomBoolean() {
-        var randomBoo = (Math.floor(Math.random() * 1) +1);
-        console.log(randomBoo);
-        return randomBoo === 1;
-    }
-    console.log(randomBoolean());
-
-
-        //11/5
-
-    function soWelcome(obj) {
-        if (obj.gratitude === "Thank You") {
-            return "You're Welcome"
-        } else {
-            console.log("Darnit Nico get off my junk.");
-        }
-    }
-
-    console.log(soWelcome({
-        mario: "kart"
-        }
-    ));
-
-    //11/4
-
-    function writeNumbers(num) {
-        var array = [0, "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-        return array[num];
-    }
-    console.log(writeNumbers(9));
+    //
+    //     const promisePromise = (num) => {
+    //         return new Promise((resolve, reject) => {
+    //             if (num % 2 === 0) {
+    //                 resolve();
+    //             } else {
+    //                 reject();
+    //             }
+    //         })
+    //     };
+    //     promisePromise(42)
+    //         .then(result => console.log("great job man. what a resolve!"))
+    //         .catch(error => console.log("womp womp. what a reject."));
+    //
+    //
+    // //11/12
+    //
+    // function evenNumbers(arr) {
+    //     var evens = [];
+    //     for (var i = 0; i < arr.length; i++) {
+    //         if (arr[i] % 2 === 0) {
+    //             evens.push(arr[i]);
+    //         }
+    //     } return evens;
+    // }
+    // console.log(evenNumbers([1,2,3,4,5]));
+    //
+    // //11/6
+    // function randomBoolean() {
+    //     var randomBoo = (Math.floor(Math.random() * 1) +1);
+    //     console.log(randomBoo);
+    //     return randomBoo === 1;
+    // }
+    // console.log(randomBoolean());
+    //
+    //
+    //     //11/5
+    //
+    // function soWelcome(obj) {
+    //     if (obj.gratitude === "Thank You") {
+    //         return "You're Welcome"
+    //     } else {
+    //         console.log("Darnit Nico get off my junk.");
+    //     }
+    // }
+    //
+    // console.log(soWelcome({
+    //     mario: "kart"
+    //     }
+    // ));
+    //
+    // //11/4
+    //
+    // function writeNumbers(num) {
+    //     var array = [0, "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+    //     return array[num];
+    // }
+    // console.log(writeNumbers(9));
 
     //10/30
 
