@@ -2,13 +2,15 @@
 
     "use strict";
 
+    // 11/21
+
 
 
     //11/18
-    const newPi = () => {
-        return parseFloat(Math.PI.toFixed(6));
-    };
-    console.log(newPi());
+    // const newPi = () => {
+    //     return parseFloat(Math.PI.toFixed(6));
+    // };
+    // console.log(newPi());
 
     //11/14
     //
