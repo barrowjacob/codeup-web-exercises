@@ -11,3 +11,14 @@ h1 {
 img {
     height: 40vh;
 }
+li {
+    list-style: none;
+}
+li:hover {
+    cursor: pointer;
+    font-size: 1.15em;
+}
+i {
+    color: red;
+    margin-right: 10px;
+}
