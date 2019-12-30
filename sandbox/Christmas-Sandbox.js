@@ -15,51 +15,33 @@ function prebuildQuery(id){
     newSearch = "https://youtube.com/results?search_query=";
     newSearch += finalQuery;
 }
-
-
 $("#1").click(function(){
     prebuildQuery("1");
     window.open(newSearch);
-    // window.open("https://www.youtube.com/watch?v=w9QLn7gM-hY");
 });
 $("#2").click(function(){
-    prebuildQuery("2")
-    // window.open("https://www.youtube.com/watch?v=Ae7CtryWCkc&list=OLAK5uy_l6olFPG-UrfC2EJFciCWv5cbYBoesK_0I");
+    prebuildQuery("2");
+    window.open(newSearch);
 });
 $("#3").click(function(){
     prebuildQuery("3");
-    // window.open("https://www.youtube.com/watch?v=aRmcbo5RAks&list=PLPP6w1_F70wkaLp2hynlPPzEkADGz5fza&index=4");
+    window.open(newSearch);
 });
 
-//the above works
-//the below does not so much
-// stuck trying to correctly append innertext of newly created list items to youtube search query
-//might be a 'this' issue,
-// or maybe an id issue
+//starts num at 4 because 1,2,3 are the ids of prebuilt list items
 var num = 4;
 var newValue = "";
 $("#inputButton").click(function () {
     newValue = $("#inputText").val();
     $("#ul-1").append("<li class='list-item' id="+ num + "><i class='fab fa-youtube'></i>" + "\"" + newValue + "\"</li>");
-    // this.id = JSON.stringify(num);
-    // let newId = this.id;
-    // console.log(newId);
-    // num++;
-    var finalQuery = "";
     $("li").click(function () {
         console.log(num);
         var newText = document.getElementById(JSON.stringify(num)).innerText;
-
         console.log(newText);
         if (num >= 4) {
-         prebuildQuery(num)
-            newSearch = "https://youtube.com/results?search_query=";
-            newSearch += finalQuery;
-
-
-
-            // prebuildQuery(num);
-            window.open(newSearch);
+    //the num has to be stringified to be used
+         prebuildQuery(num.toString());
+         window.open(newSearch);
         } else {
             console.log("it should open another way")
         }
