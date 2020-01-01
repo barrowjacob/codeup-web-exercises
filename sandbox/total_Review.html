@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<!-- HEAD SHOULD ALWAYS INCLUDE:
+meta charset,
+title,
+stylesheets,
+breakpoints,
+
+-->
+
+   <head>
+      <!--these top two should always be include-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- the rest of these are optional-->
+      <meta name="description" content="Total Full-Stack Review">
+      <meta name="author" content="Jacob Barrow">
+      <meta name="keywords" content="Full-Stack, Tutorial, Web Development">
+      <!-- title and stylesheets should always be included-->
+      <title>Total Review</title>
+      <link rel="stylesheet" href="total_review.css">
+   </head>
+   <body>
+   <!--here is a form and some of the things you can do with it-->
+      <form action="https://theurlyouresubmittingto" method="POST">
+         <fieldset>
+            <!--fieldset groups everything with a border-->
+            <legend>Form Example</legend>
+            <!--legend allows for caption 'within' the border-->
+            <label for="userInputName">Name:</label>
+            <input type="text" id="userInputName">
+            <label for="userInputEmail">Email:</label>
+            <input type="text" id="userInputEmail">
+            <label for="userInputComment">Say Hello:</label>
+            <textarea id="userInputComment" rows="4" cols="50"></textarea>
+            <label for="userSelectMovie">Favorite Movie:</label>
+            <select id="userSelectMovie">
+               <optgroup label="first two movies">
+                  <!--optgroup gives you special groupings within select dropdown-->
+                  <option value="movie 1">Movie 1</option>
+                  <option selected>Movie 2</option>
+               </optgroup>
+               <optgroup label="next two movies">
+                  <option value="movie 3">Movie 3</option>
+                  <option value="movie 4">Movie 4</option>
+               </optgroup>
+            </select>
+            <button type="submit" id="userSubmitButton">Submit</button>
+         </fieldset>
+      </form>
+
+   </body>
+</html>
