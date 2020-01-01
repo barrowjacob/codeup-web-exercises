@@ -1,6 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    /* always add box-sizing border box to ensure the size of item includes border */
+    /* consider importing Reboot to work with your boostrap */
+    box-sizing: border-box;
 }
 body {
     background-color: paleturquoise;
