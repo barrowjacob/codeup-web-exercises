@@ -21,33 +21,64 @@ breakpoints,
       <link rel="stylesheet" href="total_review.css">
    </head>
    <body>
+      <nav>
+         <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Gallery</li>
+            <li>Buy Now</li>
+         </ul>
+      </nav>
+      <main>
+         <div id="mainContentParagraphs">
+            <h1>Content</h1>
+            <p>Here is a lot of content about things. Lorem ipsum, etc. at infinitum.</p>
+            <img src="tree.png" height="400px" width="200px" alt="tree image">
+         </div>
+         <div id="mainContentSecondSection">
+            <h2>Here are some sub things</h2>
+            <p>Panda sandwiches make the brightest of days and the happiest of tummies.</p>
+         </div>
+         <div id="radios">
+            <form id="formExample" action="http://yesurl.com" method="POST">
+            <h3>I'm on the Radio</h3>
+            <label>You like <mark>radios</mark>?
+               Yes!<input type="radio" name="radioExample" id="radio1" value="radio1">
+               No!<input type="radio" name="radioExample" id="radio2" value="radio2">
+               Wat.<input type="radio" name="radioExample" id="radio3" value="radio3">
+            </label>
+            <button type="submit">Clicky</button>
+            </form>
+         </div>
+      </main>
+      <div class="formDiv">
    <!--here is a form and some of the things you can do with it-->
-      <form action="https://theurlyouresubmittingto" method="POST">
-         <fieldset>
-            <!--fieldset groups everything with a border-->
-            <legend>Form Example</legend>
-            <!--legend allows for caption 'within' the border-->
-            <label for="userInputName">Name:</label>
-            <input type="text" id="userInputName">
-            <label for="userInputEmail">Email:</label>
-            <input type="text" id="userInputEmail">
-            <label for="userInputComment">Say Hello:</label>
-            <textarea id="userInputComment" rows="4" cols="50"></textarea>
-            <label for="userSelectMovie">Favorite Movie:</label>
-            <select id="userSelectMovie">
-               <optgroup label="first two movies">
-                  <!--optgroup gives you special groupings within select dropdown-->
-                  <option value="movie 1">Movie 1</option>
-                  <option selected>Movie 2</option>
-               </optgroup>
-               <optgroup label="next two movies">
-                  <option value="movie 3">Movie 3</option>
-                  <option value="movie 4">Movie 4</option>
-               </optgroup>
-            </select>
-            <button type="submit" id="userSubmitButton">Submit</button>
-         </fieldset>
-      </form>
-
+         <form action="https://theurlyouresubmittingto" method="POST">
+            <fieldset>
+               <!--fieldset groups everything with a border-->
+               <legend>Form Example</legend>
+               <!--legend allows for caption 'within' the border-->
+               <label for="userInputName">Name:</label>
+               <input type="text" id="userInputName">
+               <label for="userInputEmail">Email:</label>
+               <input type="text" id="userInputEmail">
+               <label for="userInputComment">Say Hello:</label>
+               <textarea id="userInputComment" rows="4" cols="50"></textarea>
+               <label for="userSelectMovie">Favorite Movie:</label>
+               <select id="userSelectMovie">
+                  <optgroup label="first two movies">
+                     <!--optgroup gives you special groupings within select dropdown-->
+                     <option value="movie 1">Movie 1</option>
+                     <option selected>Movie 2</option>
+                  </optgroup>
+                  <optgroup label="next two movies">
+                     <option value="movie 3">Movie 3</option>
+                     <option value="movie 4">Movie 4</option>
+                  </optgroup>
+               </select>
+               <button type="submit" id="userSubmitButton">Submit</button>
+            </fieldset>
+         </form>
+      </div>
    </body>
 </html>
