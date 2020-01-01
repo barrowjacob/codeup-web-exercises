@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: paleturquoise;
+}
+nav {
+    background-color: coral;
+    padding: 1%;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul>li {
+    margin-right: 2%;
+}
+li:nth-child(1) {
+    margin-right: auto;
+}
+/* make sure to add breakpoints like below to make site mobile responsive */
+/* base the widths on prebuilt firefox/chrome browser mobile developer options */
+@media screen and (min-device-width: 500px) and (max-width: 1000px) {
+    body {
+        background: lightgreen;
+    }
+}
